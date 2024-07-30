@@ -1,5 +1,5 @@
-<div class="py-4">
-    <div class="flex justify-center items-center mb-2 text-sm">rajariandhana@gmail.com</div>
+<div class="py-4 flex flex-col justify-center items-center text-sm text-gray-900 gap-2">
+    <div class="flex justify-center items-center">rajariandhana@gmail.com</div>
     <ul class="flex justify-center items-center gap-2">
         <li>
             <a href="">
@@ -23,6 +23,6 @@
                   </svg>
             </a>
         </li>
-
     </ul>
+    <span class="">@2024</span>
 </div>
