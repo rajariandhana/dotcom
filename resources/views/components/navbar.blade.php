@@ -1,4 +1,4 @@
-<nav x-data="{ open: true }" @click.outside="open=false" class="flex px-6 py-3 justify-between items-center w-full">
+<nav x-data="{ open: false }" @click.outside="open=false" class="flex px-6 py-3 justify-between items-center w-full">
     <a href="/" class=" text-2xl">
         ralfazza.com
     </a>
@@ -31,6 +31,9 @@
                 </li>
                 <li>
                     <a href="/cv">CV</a>
+                </li>
+                <li>
+                    <a href="/test">test</a>
                 </li>
             </ul>
         </div>
