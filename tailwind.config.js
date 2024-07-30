@@ -6,7 +6,13 @@ export default {
       "./resources/**/*.vue",
     ],
     theme: {
-      extend: {},
+      extend: {
+        fontFamily:{
+          roboto: "'Roboto', sans-serif",
+          poppins:"'Poppins', sans-serif",
+          montserrat:"'Montserrat', sans-serif",
+        }
+      },
     },
     plugins: [],
   }
