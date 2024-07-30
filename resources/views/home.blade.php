@@ -8,17 +8,18 @@
         bg-gradient-to-r from-indigo-500 to-rose-500 p-1 mb-12">
         <h1
             class="bg-gradient-to-r from-indigo-500 to-rose-500 inline-block text-transparent bg-clip-text
-        text-xl font-mono font-bold mb-2">
+        text-xl font-mono font-bold">
             Hello, world!
         </h1>
-        <p class="text-lg text-justify">
+        🌎
+        <p class="text-justify">
             You'll find several of my best works such as my projects as a developer, my interest in photography, clothes that I design and sell, as well as other surprises.
         </p>
-        <span class="text-md text-gray-600">Feel free to hit me up in any of my social media</span>
+        <span class="text-sm text-gray-600">Feel free to hit me up in any of my social media</span>
     </div>
 
     <div>
-        <h2 class="text-lg font-semibold">Best works</h2>
+        <h2 class="text-xl font-semibold">Best works</h2>
 
     </div>
 </x-layout>

@@ -26,7 +26,7 @@
 
 {{-- <body class="h-full bg-red-100 bg-gray-50 md:bg-green-100 lg:bg-blue-100"> --}}
 
-<body class="h-full min-h-full bg-gray-100 font-montserrat">
+<body class="h-full min-h-full bg-gray-100 font-poppins">
     <x-navbar></x-navbar>
     <main>
         <div class="flex flex-col justify-center px-6 py-6 mx-auto max-w-3xl sm:px-6 lg:px-8">
