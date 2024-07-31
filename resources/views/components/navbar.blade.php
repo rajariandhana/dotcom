@@ -1,5 +1,5 @@
 <nav x-data="{ open: false }" @click.outside="open=false" class="flex px-6 py-3 justify-between items-center w-full">
-    <a href="/" class=" text-2xl">
+    <a href="{{route('home')}}" class=" text-2xl">
         ralfazza.com
     </a>
     <button @click="open = !open">
@@ -24,13 +24,13 @@
             </div>
             <ul class="text-white text-lg ml-4">
                 <li>
-                    <a href="/projects">Projects</a>
+                    <a href="">Projects</a>
                 </li>
                 <li>
-                    <a href="/merch">Merch</a>
+                    <a href="">Merch</a>
                 </li>
                 <li>
-                    <a href="/cv">CV</a>
+                    <a href="{{route('cv')}}">CV</a>
                 </li>
                 <li>
                     <a href="/test">test</a>
