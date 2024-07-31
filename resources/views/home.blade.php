@@ -3,9 +3,20 @@
 
     <div class="w-full mb-8">
         {{-- <span class="font-mono text-lg font-semibold text-indigo-500">Hello, world!</span> --}}
-        <img src="/ProfilePicture.jpg" alt=""
-            class="size-32 rounded-full object-cover
-        bg-gradient-to-r from-indigo-500 to-rose-500 p-1 mb-12">
+        <div class="flex">
+            <img src="/ProfilePicture.jpg" alt=""
+                class="size-32 rounded-full object-cover
+            bg-gradient-to-r from-indigo-500 to-rose-500 p-1 mb-12">
+            <div class="ml-4">
+                <span class="ml-4 text-xs">quotes of the day</span>
+                <div class="mt-2 max-w-52 px-2 py-2 text-xs bg-gray-300 rounded-xl shadow-lg">
+                    Wealth, fame, power, The King of The Pirates, Gol D. Roger attained everything this world had to offer
+                </div>
+                <div class="">
+
+                </div>
+            </div>
+        </div>
         <h1
             class="bg-gradient-to-r from-indigo-500 to-rose-500 inline-block text-transparent bg-clip-text
         text-xl font-mono font-bold">
