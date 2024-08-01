@@ -52,22 +52,34 @@
         </div> --}}
         <div class="flex items-center justify-center gap-2">
             <div class="grid h-full w-full grid-cols-3 grid-rows-2 gap-2">
-                <div class="col-span-1 row-span-1 size-36 bg-red-400 rounded-xl flex justify-center items-center text-white">1</div>
-                <div class="col-span-2 row-span-2 size-36 bg-yellow-400 rounded-xl flex justify-center items-center text-white">3</div>
-                <div class="col-span-1 row-span-1 size-36 bg-orange-400 rounded-xl flex justify-center items-center text-white">2</div>
+                <div
+                    class="col-span-1 row-span-1 size-36 bg-red-400 rounded-xl flex justify-center items-center text-white">
+                    1</div>
+                <div
+                    class="col-span-2 row-span-2 size-36 bg-yellow-400 rounded-xl flex justify-center items-center text-white">
+                    3</div>
+                <div
+                    class="col-span-1 row-span-1 size-36 bg-orange-400 rounded-xl flex justify-center items-center text-white">
+                    2</div>
             </div>
         </div>
 
         <div class="flex h-64 w-64 md:h-96 md:w-96 items-center justify-center gap-2">
             <div class="grid h-full w-full grid-cols-3 grid-rows-4 gap-2">
-                <div class="col-span-1 row-span-1 bg-red-400 rounded-xl flex justify-center items-center text-white">1</div>
-                <div class="col-span-2 row-span-2 bg-yellow-400 rounded-xl flex justify-center items-center text-white">3</div>
-                <div class="col-span-1 row-span-1 bg-orange-400 rounded-xl flex justify-center items-center text-white">2</div>
+                <div class="col-span-1 row-span-1 bg-red-400 rounded-xl flex justify-center items-center text-white">1
+                </div>
+                <div class="col-span-2 row-span-2 bg-yellow-400 rounded-xl flex justify-center items-center text-white">
+                    3</div>
+                <div class="col-span-1 row-span-1 bg-orange-400 rounded-xl flex justify-center items-center text-white">
+                    2</div>
 
 
-                <div class="col-span-2 row-span-1 bg-green-400 rounded-xl flex justify-center items-center text-white">4</div>
-                <div class="col-span-1 row-span-2 bg-indigo-400 rounded-xl flex justify-center items-center text-white">6</div>
-                <div class="col-span-2 row-span-1 bg-blue-400 rounded-xl flex justify-center items-center text-white">5</div>
+                <div class="col-span-2 row-span-1 bg-green-400 rounded-xl flex justify-center items-center text-white">4
+                </div>
+                <div class="col-span-1 row-span-2 bg-indigo-400 rounded-xl flex justify-center items-center text-white">
+                    6</div>
+                <div class="col-span-2 row-span-1 bg-blue-400 rounded-xl flex justify-center items-center text-white">5
+                </div>
             </div>
         </div>
     </div>
@@ -75,4 +87,17 @@
         <h2 class="text-xl font-semibold mb-4 text-center">Developer Journey</h2>
 
     </div>
+    {{-- <div>
+        <script src="https://cdn.rawgit.com/IonicaBizau/github-calendar/gh-pages/dist/github-calendar.min.js"></script>
+
+        <link rel="stylesheet"
+            href="https://cdn.rawgit.com/IonicaBizau/github-calendar/gh-pages/dist/github-calendar.css" />
+        <div class="calendar">
+            Loading the data just for you.
+        </div>
+
+        <script>
+            new GitHubCalendar(".calendar", "rajariandhana");
+        </script>
+    </div> --}}
 </x-layout>

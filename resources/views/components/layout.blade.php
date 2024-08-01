@@ -23,6 +23,7 @@
                 radial-gradient(circle, #bdbdbd 2px, rgba(0, 0, 0, 0) 1px);
             }
     </style>
+
 </head>
 
 {{-- <body class="h-full bg-red-100 bg-gray-50 md:bg-green-100 lg:bg-blue-100"> --}}
