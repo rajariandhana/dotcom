@@ -9,3 +9,11 @@
         /* font-style: normal; */
     }
 }
+@layer utilities{
+    .paused{
+        animation-play-state: paused;
+    }
+}
+/* .scroller{
+    max-width: 600px;
+} */

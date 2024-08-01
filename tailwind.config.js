@@ -12,7 +12,23 @@ export default {
           roboto: "'Roboto', sans-serif",
           poppins:"'Poppins', sans-serif",
           montserrat:"'Montserrat', sans-serif",
-        }
+        },
+        animation: {
+            'infinite-scroll-5-LR': 'infinite-scroll-LR 5s linear infinite',
+            'infinite-scroll-5-RL': 'infinite-scroll-RL 5s linear infinite',
+            'infinite-scroll-10-LR': 'infinite-scroll-LR 10s linear infinite',
+            'infinite-scroll-10-RL': 'infinite-scroll-RL 10s linear infinite',
+          },
+        keyframes: {
+            'infinite-scroll-LR': {
+                from: { transform: 'translateX(0)' },
+                to: { transform: 'translateX(-100%)' },
+            },
+            'infinite-scroll-RL': {
+                from: { transform: 'translateX(-100%)' },
+                to: { transform: 'translateX(0)' },
+            },
+        },
       },
     },
     plugins: [

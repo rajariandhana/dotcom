@@ -9,7 +9,7 @@
         </svg>
     </button>
     <div :class="{ 'translate-x-0': open, 'translate-x-full': !open }"
-        class="fixed top-0 right-0 w-80 h-full bg-gray-900 shadow-lg transform transition-transform duration-300 ease-in-out translate-x-full
+        class="z-10 fixed top-0 right-0 w-80 h-full bg-gray-900 shadow-lg transform transition-transform duration-300 ease-in-out translate-x-full
         px-6 py-3 flex flex-col justify-between rounded-tl-xl rounded-bl-xl">
         <div class="">
             <div class="flex justify-between items-center mb-4">
