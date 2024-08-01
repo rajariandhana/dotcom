@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Employer;
 use Illuminate\Http\Request;
 
 class CVController extends Controller
@@ -50,8 +51,11 @@ class CVController extends Controller
                 ],
             ],
         ];
-        $companies = json_decode(json_encode($companiesArray));
-        return view('cv', compact('companies'));
+        // $companies = json_decode(json_encode($companiesArray));
+        // return view('cv', compact('companies'));
+        return view('cv',[
+            'employers'=>Employer::all()
+        ]);
     }
     // public function GetCompanies(){
 
