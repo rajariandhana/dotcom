@@ -8,8 +8,12 @@
     };
 @endphp
 
-<div class="rounded-lg block overflow-hidden justify-center items-center  {{ $boxClass }}">
+<div class="rounded-lg block overflow-hidden justify-center items-center  {{ $boxClass }}
+
+">
     <a href="/projects/{{$project->slug}}">
+    <div class="relative hidden hover:hidden hover:bg-black {{$boxClass}} hover:opacity-30"></div>
+
     <img src="Projects/{{$project->name}}/1.{{$project->extension}}" alt=""
          class="hover:scale-110 ease-in duration-150 w-20 h-20 object-cover object-top {{$boxClass}}">
         </a>

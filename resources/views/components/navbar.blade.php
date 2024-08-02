@@ -39,8 +39,11 @@ class="fixed top-0 flex px-6 py-3 justify-between items-center w-full">
             </ul>
         </div>
         <div class="text-white flex flex-col gap-1">
+            @php
+                $currentLanguage = session('language', 'en'); // Default to 'en' if no language is set
+            @endphp
             <label class="cursor-pointer">
-                <input type="radio" class="peer sr-only" name="HERE" value="HERE" selected />
+                <input type="radio" class="peer sr-only" name="HERE" value="HERE" @checked($currentLanguage == 'en')/>
                 <div
                     class="flex justify-start items-center rounded-lg px-2 py-2 transition-all
             peer-checked:bg-gray-800">
@@ -65,7 +68,7 @@ class="fixed top-0 flex px-6 py-3 justify-between items-center w-full">
                 </div>
             </label>
             <label class="cursor-pointer">
-                <input type="radio" class="peer sr-only" name="HERE" value="HERE" />
+                <input type="radio" class="peer sr-only" name="HERE" value="HERE" @checked($currentLanguage == 'id')/>
                 <div
                     class="flex justify-start items-center rounded-lg px-2 py-2 transition-all
             peer-checked:bg-gray-800">
@@ -80,7 +83,7 @@ class="fixed top-0 flex px-6 py-3 justify-between items-center w-full">
                 </div>
             </label>
             <label class="cursor-pointer">
-                <input type="radio" class="peer sr-only" name="HERE" value="HERE" />
+                <input type="radio" class="peer sr-only" name="HERE" value="HERE" @checked($currentLanguage == 'jp')/>
                 <div
                     class="flex justify-start items-center rounded-lg px-2 py-2 transition-all
             peer-checked:bg-gray-800">
