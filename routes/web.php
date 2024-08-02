@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\CVController;
 use App\Http\Controllers\ProjectController;
+use App\Models\Project;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -15,6 +16,7 @@ Route::get('/download-cv', function () {
 });
 
 Route::get('/projects',[ProjectController::class,'index'])->name('projects');
+Route::get('projects/{slug}', [ProjectController::class, 'show'])->name('project.show');
 
 Route::get('/test', function () {
     $generalfile=[

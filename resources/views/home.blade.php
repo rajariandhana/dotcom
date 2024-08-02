@@ -32,6 +32,7 @@
         <span class="text-sm text-gray-600">Feel free to hit me up in any of my social media</span>
     </div>
 
+
     <div>
         <h2 class="text-xl font-semibold mb-4">Best works</h2>
         <div class="flex gap-2">
@@ -41,46 +42,6 @@
             </div>
             <div class="flex flex-col">
                 <div class="size-40 bg-yellow-400 rounded-xl flex justify-center items-center text-white">3</div>
-            </div>
-        </div>
-        {{-- <div class="grid grid-cols-3 gap-4 h-full">
-            <div class="col-span-2 h-24 w-56 bg-red-400 rounded-lg"></div>
-            <div class="row-span-2 h-56 w-24 bg-orange-400 rounded-lg"></div>
-            <div class="col-span-1 h-24 w-24 bg-yellow-400 rounded-lg"></div>
-            <div class="col-span-1 h-24 w-24 bg-green-400 rounded-lg"></div>
-            <div class="col-span-1 h-24 w-24 bg-blue-400 rounded-lg"></div>
-            <div class="col-span-1 h-24 w-24 bg-indigo-400 rounded-lg"></div>
-        </div> --}}
-        <div class="flex items-center justify-center gap-2">
-            <div class="grid h-full w-full grid-cols-3 grid-rows-2 gap-2">
-                <div
-                    class="col-span-1 row-span-1 size-36 bg-red-400 rounded-xl flex justify-center items-center text-white">
-                    1</div>
-                <div
-                    class="col-span-2 row-span-2 size-36 bg-yellow-400 rounded-xl flex justify-center items-center text-white">
-                    3</div>
-                <div
-                    class="col-span-1 row-span-1 size-36 bg-orange-400 rounded-xl flex justify-center items-center text-white">
-                    2</div>
-            </div>
-        </div>
-
-        <div class="flex h-64 w-64 md:h-96 md:w-96 items-center justify-center gap-2">
-            <div class="grid h-full w-full grid-cols-3 grid-rows-4 gap-2">
-                <div class="col-span-1 row-span-1 bg-red-400 rounded-xl flex justify-center items-center text-white">1
-                </div>
-                <div class="col-span-2 row-span-2 bg-yellow-400 rounded-xl flex justify-center items-center text-white">
-                    3</div>
-                <div class="col-span-1 row-span-1 bg-orange-400 rounded-xl flex justify-center items-center text-white">
-                    2</div>
-
-
-                <div class="col-span-2 row-span-1 bg-green-400 rounded-xl flex justify-center items-center text-white">4
-                </div>
-                <div class="col-span-1 row-span-2 bg-indigo-400 rounded-xl flex justify-center items-center text-white">
-                    6</div>
-                <div class="col-span-2 row-span-1 bg-blue-400 rounded-xl flex justify-center items-center text-white">5
-                </div>
             </div>
         </div>
     </div>
@@ -101,4 +62,8 @@
             new GitHubCalendar(".calendar", "rajariandhana");
         </script>
     </div> --}}
+    <div class="mb-8">
+        <p class="text-center w-auto mb-10 px-4 py-2 text-sm text-gray-500 rounded-md">This website is made with these 👇</span></p>
+        <x-tall></x-tall>
+    </div>
 </x-layout>
