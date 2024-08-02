@@ -8,7 +8,7 @@
     };
 @endphp
 
-<div class="rounded-lg block overflow-hidden justify-center items-center {{ $boxClass }}">
+<div class="rounded-lg block overflow-hidden justify-center items-center  {{ $boxClass }}">
     <img src="Projects/{{$project->name}}/1.{{$project->extension}}" alt=""
-         class="hover:scale-110 ease-in duration-150 w-20 h-20 object-cover {{$boxClass}}">
+         class="hover:scale-110 ease-in duration-150 w-20 h-20 object-cover object-top {{$boxClass}}">
 </div>

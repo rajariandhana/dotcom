@@ -2,7 +2,7 @@
     {{-- @dump($projects) --}}
     <div class="flex flex-wrap justify-center
     mx-2 md:mx-12 lg:-mx-36 p-4
-    rounded-xl gap-4 bg-slate-950">
+    rounded-xl gap-4 bg-gray-200 shadow-lg">
         <div class="flex gap-4">
             <div class="flex flex-col gap-4">
                 <x-project-card :project="$projects[0]"></x-project-card>
