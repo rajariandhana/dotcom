@@ -1,4 +1,5 @@
-<nav x-data="{ open: false }" @click.outside="open=false" class="flex px-6 py-3 justify-between items-center w-full">
+<nav x-data="{ open: false }" @click.outside="open=false"
+class="fixed top-0 flex px-6 py-3 justify-between items-center w-full">
     <a href="{{route('home')}}" class=" text-2xl">
         ralfazza.com
     </a>
@@ -9,7 +10,7 @@
         </svg>
     </button>
     <div :class="{ 'translate-x-0': open, 'translate-x-full': !open }"
-        class="z-10 fixed top-0 right-0 w-80 h-full bg-gray-900 shadow-lg transform transition-transform duration-300 ease-in-out translate-x-full
+        class="z-20 fixed top-0 right-0 w-80 h-full bg-gray-900 shadow-lg transform transition-transform duration-300 ease-in-out translate-x-full
         px-6 py-3 flex flex-col justify-between rounded-tl-xl rounded-bl-xl">
         <div class="">
             <div class="flex justify-between items-center mb-4">
@@ -24,7 +25,7 @@
             </div>
             <ul class="text-white text-lg ml-4">
                 <li>
-                    <a href="">Projects</a>
+                    <a href="{{route('projects')}}">Projects</a>
                 </li>
                 <li>
                     <a href="">Merch</a>
@@ -39,7 +40,7 @@
         </div>
         <div class="text-white flex flex-col gap-1">
             <label class="cursor-pointer">
-                <input type="radio" class="peer sr-only" name="HERE" value="HERE" />
+                <input type="radio" class="peer sr-only" name="HERE" value="HERE" selected />
                 <div
                     class="flex justify-start items-center rounded-lg px-2 py-2 transition-all
             peer-checked:bg-gray-800">

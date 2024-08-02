@@ -7,11 +7,7 @@
             <img src="/ProfilePicture.jpg" alt=""
                 class="size-32 rounded-full object-cover
             bg-gradient-to-r from-indigo-500 to-rose-500 p-1 mb-12">
-            <div class="rotate-6 -ml-10 mt-8">
-                <div class="px-4 py-2 bg-gray-200 shadow-lg rounded-xl">
-                    watashi ga kita!
-                </div>
-            </div>
+            <x-qotd></x-qotd>
             {{-- <div class="ml-4">
                 <span class="ml-4 text-xs">quotes of the day</span>
                 <div class="mt-2 max-w-52 px-2 py-2 text-xs bg-gray-300 rounded-xl shadow-lg">

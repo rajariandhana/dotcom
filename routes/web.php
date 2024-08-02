@@ -1,11 +1,21 @@
 <?php
 
 use App\Http\Controllers\CVController;
+use App\Http\Controllers\ProjectController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('home');
 })->name('home');
+Route::get('/cv', [CVController::class,'index'])->name('cv');
+Route::get('/download-cv', function () {
+    $filePath = public_path('/CV/CV_RalfazzaRajariandhana.pdf');
+    $fileName = 'CV_RalfazzaRajariandhana.pdf';
+    return response()->download($filePath, $fileName);
+});
+
+Route::get('/projects',[ProjectController::class,'index'])->name('projects');
+
 Route::get('/test', function () {
     $generalfile=[
         "c-original","cplusplus-original","csharp-original",
@@ -18,8 +28,7 @@ Route::get('/test', function () {
         'h'=>"12",
         'mx'=>"2",
         'bg'=>'gray-200',
-        'time'=>'5',
-        'dir'=>'RL',
+        'timeDir'=>'5-LR',
         'files'=>$generalfile
     ];
     $webfile=[
@@ -34,8 +43,7 @@ Route::get('/test', function () {
         'h'=>"12",
         'mx'=>"2",
         'bg'=>'gray-200',
-        'time'=>'10',
-        'dir'=>'LR',
+        'timeDir'=>'10-LR',
         'files'=>$webfile
     ];
     $toolsfile=[
@@ -49,8 +57,7 @@ Route::get('/test', function () {
         'h'=>"12",
         'mx'=>"2",
         'bg'=>'gray-200',
-        'time'=>'5',
-        'dir'=>'RL',
+        'timeDir'=>'5-LR',
         'files'=>$toolsfile
     ];
 
@@ -60,9 +67,4 @@ Route::get('/test', function () {
         'tools'=>$tools,
     ]);
 });
-Route::get('/cv', [CVController::class,'index'])->name('cv');
-Route::get('/download-cv', function () {
-    $filePath = public_path('/CV/CV_RalfazzaRajariandhana.pdf');
-    $fileName = 'CV_RalfazzaRajariandhana.pdf';
-    return response()->download($filePath, $fileName);
-});
+
