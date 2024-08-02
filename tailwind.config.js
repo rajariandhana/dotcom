@@ -18,6 +18,8 @@ export default {
             'infinite-scroll-5-RL': 'infinite-scroll-RL 5s linear infinite',
             'infinite-scroll-10-LR': 'infinite-scroll-LR 10s linear infinite',
             'infinite-scroll-10-RL': 'infinite-scroll-RL 10s linear infinite',
+            marquee: 'marquee 10s linear infinite',
+            marquee2: 'marquee2 10s linear infinite',
           },
         keyframes: {
             'infinite-scroll-LR': {
@@ -27,6 +29,14 @@ export default {
             'infinite-scroll-RL': {
                 from: { transform: 'translateX(-100%)' },
                 to: { transform: 'translateX(0)' },
+            },
+            marquee: {
+                '0%': { transform: 'translateX(0%)' },
+                '100%': { transform: 'translateX(-100%)' },
+              },
+            marquee2: {
+            '0%': { transform: 'translateX(0%)' },
+            '100%': { transform: 'translateX(-100%)' },
             },
         },
       },

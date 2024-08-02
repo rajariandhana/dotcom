@@ -31,7 +31,9 @@
 <body class="bg-gray-100 font-poppins">
     <x-navbar></x-navbar>
     <main>
-        <div class="flex flex-col justify-center px-6 py-6 mx-auto max-w-3xl sm:px-6 lg:px-8">
+        <div class="flex flex-col justify-center pt-24 px-6 py-6 mx-auto max-w-3xl sm:px-6 lg:px-8
+         {{-- bg-red-200 md:bg-green-200 lg:bg-blue-200 --}}
+         ">
             {{ $slot }}
         </div>
     </main>
