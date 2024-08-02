@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->timestamps();
             $table->string('name')->nullable();
+            $table->string('slug')->unique();
             $table->string('techs')->nullable();
             $table->text('desc')->nullable();
             $table->unsignedTinyInteger('numPhoto')->default(0);

@@ -17,7 +17,7 @@
         </ul>
     </div>
 </div> --}}
-{{-- <div class="bg-red-50 relative flex overflow-x-hidden gap-8">
+<div class="bg-red-50 relative flex overflow-x-hidden gap-8">
     <div class="py-6 flex animate-marquee whitespace-nowrap gap-8">
         @foreach ($data['files'] as $file)
                 <img src="{{ $data['path'] }}{{ $file }}{{ $data['extension']}}"
@@ -33,4 +33,4 @@
         @endforeach
 
     </div>
-</div> --}}
+</div>
