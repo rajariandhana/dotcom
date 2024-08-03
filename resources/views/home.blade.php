@@ -51,7 +51,7 @@
     </div> --}}
 
     <div class="mb-12">
-        <h2 class="text-xl text-center font-montserrat mb-4">Confident in most, not so confident in others</h2>
+        <h2 class="text-sm lg:text-xl text-center font-montserrat mb-4">Confident in most, not so confident in others</h2>
         <x-tech></x-tech>
     </div>
 
