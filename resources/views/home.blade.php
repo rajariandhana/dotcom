@@ -33,11 +33,11 @@
     </div>
 
     <div class="mb-12">
-        <h2 class="text-xl font-semibold mb-4">My 📷 I 💜</h2>
+        <h2 class="text-xl font-montserrat mb-4">My 📷 I 💜</h2>
         <x-best-shots></x-best-shots>
     </div>
 
-    <div class="mb-12">
+    {{-- <div class="mb-12">
         <h2 class="text-xl font-semibold mb-4">Best works</h2>
         <div class="flex gap-2">
             <div class="flex flex-col gap-2">
@@ -48,12 +48,17 @@
                 <div class="size-40 bg-yellow-400 rounded-xl flex justify-center items-center text-white">3</div>
             </div>
         </div>
-    </div>
+    </div> --}}
 
     <div class="mb-12">
+        <h2 class="text-xl text-center font-montserrat mb-4">Confident in most, not so confident in others</h2>
+        <x-tech></x-tech>
+    </div>
+
+    {{-- <div class="mb-12">
         <h2 class="text-xl font-semibold mb-4 text-center">Developer Journey</h2>
 
-    </div>
+    </div> --}}
     {{-- <div>
         <script src="https://cdn.rawgit.com/IonicaBizau/github-calendar/gh-pages/dist/github-calendar.min.js"></script>
 
@@ -68,7 +73,7 @@
         </script>
     </div> --}}
     <div class="mb-8">
-        <p class="text-center w-auto mb-10 px-4 py-2 text-sm text-gray-500 rounded-md">This website is made with these 👇</span></p>
+        <p class="text-center w-auto mb-12 text-sm text-gray-500 rounded-md">This website is made with these 👇</p>
         <x-tall></x-tall>
     </div>
 </x-layout>

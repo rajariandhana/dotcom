@@ -46,7 +46,6 @@ class PositionSeeder extends Seeder
             // 'mulai'=>'August 2023',
             // 'selesai'=>'December 2023',
         ]);
-
         Position::create([
             'name'=>'Expert Game Developer',
             // 'slug'=>'Expert_Game_Developer',
