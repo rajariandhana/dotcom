@@ -28,14 +28,14 @@ class="fixed top-0 flex px-6 py-3 justify-between items-center w-full shadow-md 
                     <a class=" hover:text-gray-300" href="{{route('projects')}}">Projects</a>
                 </li>
                 <li>
-                    <a class=" hover:text-gray-300" href="">Merch</a>
+                    <a class=" hover:text-gray-300" href="{{route('experience')}}">Work Experience</a>
                 </li>
                 <li>
-                    <a class=" hover:text-gray-300" href="{{route('experience')}}">Experience</a>
+                    <a class=" hover:text-gray-300" href="">Merchandise</a>
                 </li>
-                <li>
+                {{-- <li>
                     <a class=" hover:text-gray-300" href="/test">test</a>
-                </li>
+                </li> --}}
             </ul>
         </div>
         <div class="text-white flex flex-col gap-1">

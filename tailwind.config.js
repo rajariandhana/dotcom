@@ -18,6 +18,8 @@ export default {
             'infinite-scroll-5-RL': 'infinite-scroll-RL 5s linear infinite',
             'infinite-scroll-10-LR': 'infinite-scroll-LR 10s linear infinite',
             'infinite-scroll-10-RL': 'infinite-scroll-RL 10s linear infinite',
+            'infinite-scroll-20-LR': 'infinite-scroll-LR 20s linear infinite',
+            'infinite-scroll-20-RL': 'infinite-scroll-RL 20s linear infinite',
             marquee: 'marquee 10s linear infinite',
             marquee2: 'marquee2 10s linear infinite',
           },
