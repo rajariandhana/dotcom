@@ -1,5 +1,5 @@
 <div class="w-full items-center flex flex-col gap-4">
-    <div class="p-4 bg-gray-200 shadow-md rounded-3xl w-3/4">
+    <div class="p-4 bg-gray-200 shadow-md rounded-3xl w-full lg:w-3/4">
         <div x-data="{}" x-init="$nextTick(() => {
             let ul = $refs.logos;
             ul.insertAdjacentHTML('afterend', ul.outerHTML);
@@ -7,7 +7,7 @@
         })"
             class="w-full inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_64px,_black_calc(100%-64px),transparent_100%)]">
             <ul x-ref="logos"
-                class="flex items-center justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll-10-RL">
+                class="flex items-center justify-center md:justify-start [&_li]:mx-4 lg:[&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll-10-RL">
                 <li>
                     <img src="/tech-logo/c-original.svg" alt="" class="h-12" />
                 </li>
@@ -27,7 +27,7 @@
             </ul>
         </div>
     </div>
-    <div class="p-4 bg-gray-200 shadow-md rounded-3xl w-3/4">
+    <div class="p-4 bg-gray-200 shadow-md rounded-3xl w-full lg:w-3/4">
         <div x-data="{}" x-init="$nextTick(() => {
             let ul = $refs.logos;
             ul.insertAdjacentHTML('afterend', ul.outerHTML);
@@ -35,7 +35,7 @@
         })"
             class="w-full inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_64px,_black_calc(100%-64px),transparent_100%)]">
             <ul x-ref="logos"
-                class="flex items-center justify-center md:justify-start [&_li]:mx-4 [&_img]:max-w-none animate-infinite-scroll-20-LR">
+                class="flex items-center justify-center md:justify-start [&_li]:mx-2 lg:[&_li]:mx-4 [&_img]:max-w-none animate-infinite-scroll-20-LR">
                 <li>
                     <img src="/tech-logo/html5-original.svg" alt="" class="h-12" />
                 </li>
@@ -68,7 +68,7 @@
             </ul>
         </div>
     </div>
-    <div class="p-4 bg-gray-200 shadow-md rounded-3xl w-3/4">
+    <div class="p-4 bg-gray-200 shadow-md rounded-3xl w-full lg:w-3/4">
         <div x-data="{}" x-init="$nextTick(() => {
             let ul = $refs.logos;
             ul.insertAdjacentHTML('afterend', ul.outerHTML);
@@ -76,7 +76,7 @@
         })"
             class="w-full inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_64px,_black_calc(100%-64px),transparent_100%)]">
             <ul x-ref="logos"
-                class="flex items-center justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll-10-RL">
+                class="flex items-center justify-center md:justify-start [&_li]:mx-4 lg:[&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll-10-RL">
                 <li>
                     <img src="/tech-logo/vscode-original.svg" alt="" class="h-12" />
                 </li>
