@@ -1,7 +1,7 @@
 <x-layout>
     {{-- <div class="bg-white rounded-lg shadow"> --}}
 
-    <div class="w-full mb-8">
+    <div class="w-full mb-12">
         {{-- <span class="font-mono text-lg font-semibold text-indigo-500">Hello, world!</span> --}}
         <div class="flex">
             <img src="/ProfilePicture.jpg" alt=""
@@ -32,8 +32,12 @@
         <span class="text-sm text-gray-600">Feel free to hit me up in any of my social media</span>
     </div>
 
+    <div class="mb-12">
+        <h2 class="text-xl font-semibold mb-4">My 📷 I 💜</h2>
+        <x-best-shots></x-best-shots>
+    </div>
 
-    <div>
+    <div class="mb-12">
         <h2 class="text-xl font-semibold mb-4">Best works</h2>
         <div class="flex gap-2">
             <div class="flex flex-col gap-2">
@@ -45,7 +49,8 @@
             </div>
         </div>
     </div>
-    <div>
+
+    <div class="mb-12">
         <h2 class="text-xl font-semibold mb-4 text-center">Developer Journey</h2>
 
     </div>

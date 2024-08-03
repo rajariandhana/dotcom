@@ -1,5 +1,5 @@
 <nav x-data="{ open: false }" @click.outside="open=false"
-class="fixed top-0 flex px-6 py-3 justify-between items-center w-full">
+class="fixed top-0 flex px-6 py-3 justify-between items-center w-full shadow-md bg-gray-100 z-20">
     <a href="{{route('home')}}" class=" text-2xl">
         ralfazza.com
     </a>
@@ -31,7 +31,7 @@ class="fixed top-0 flex px-6 py-3 justify-between items-center w-full">
                     <a href="">Merch</a>
                 </li>
                 <li>
-                    <a href="{{route('cv')}}">CV</a>
+                    <a href="{{route('experience')}}">Experience</a>
                 </li>
                 <li>
                     <a href="/test">test</a>

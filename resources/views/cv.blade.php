@@ -14,12 +14,18 @@
     <div class="">
         @foreach ($employers as $employer)
             <div class="mb-8">
-                <a href="{{ $employer->link }}" target="_blank">
-                    <div class="flex gap-2 items-center bg-gray-200 p-4 rounded-xl shadow-md mb-4">
+                <div class=" bg-gray-200 p-4 rounded-xl shadow-md mb-4">
+                    <a href="{{ $employer->link }}" target="_blank" class="flex gap-2 items-center justify-start w-fit">
                         <img src="/CV/{{ $employer->slug }}.png" alt="" class="h-8">
                         <h2 class="text-lg font-montserrat">{{ $employer->name }}</h2>
-                    </div>
-                </a>
+                        <svg class="w-6 h-6 text-indigo-950 " aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                            width="24" height="24" fill="none" viewBox="0 0 24 24">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M18 14v4.833A1.166 1.166 0 0 1 16.833 20H5.167A1.167 1.167 0 0 1 4 18.833V7.167A1.166 1.166 0 0 1 5.167 6h4.618m4.447-2H20v5.768m-7.889 2.121 7.778-7.778" />
+                        </svg>
+                    </a>
+
+                </div>
 
                 <ol class="ml-6 relative border-s border-indigo-900 ">
                     @foreach ($employer->positions as $position)
@@ -27,12 +33,14 @@
                             <div
                                 class="absolute w-3 h-3 bg-indigo-900 rounded-full mt-1.5 -start-1.5 border border-indigo-900 ">
                             </div>
-                            <time class="mb-1 text-xs font-normal leading-none text-gray-500 ">{{ $position->date }}</time>
-                            <h3 class="text-md font-semibold text-gray-900 ">{{ $position->name }}</h3>
+                            <time
+                                class="mb-1 text-xs font-normal leading-none text-gray-500 ">{{ $position->date }}</time>
+                            <h3 class="text-md font-semibold text-gray-900 font-montserrat">{{ $position->name }}</h3>
                             <p class="text-sm font-normal text-gray-500 mr-12 mb-2">{{ $position->description }}</p>
                             <div class="flex gap-1 flex-wrap">
-                                @foreach (explode('|',$position->skills) as $skill)
-                                    <span class="text-xs px-4 py-2 bg-indigo-950 rounded-lg text-white">{{$skill}}</span>
+                                @foreach (explode('|', $position->skills) as $skill)
+                                    <span
+                                        class="text-xs px-4 py-2 bg-indigo-950 rounded-lg text-white">{{ $skill }}</span>
                                 @endforeach
                             </div>
                         </li>

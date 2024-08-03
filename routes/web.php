@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('home');
 })->name('home');
-Route::get('/cv', [CVController::class,'index'])->name('cv');
+Route::get('/experience', [CVController::class,'index'])->name('experience');
 Route::get('/download-cv', function () {
     $filePath = public_path('/CV/CV_RalfazzaRajariandhana.pdf');
     $fileName = 'CV_RalfazzaRajariandhana.pdf';
