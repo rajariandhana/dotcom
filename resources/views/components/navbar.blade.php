@@ -14,27 +14,27 @@ class="fixed top-0 flex px-6 py-3 justify-between items-center w-full shadow-md 
         px-6 py-3 flex flex-col justify-between rounded-tl-xl rounded-bl-xl">
         <div class="">
             <div class="flex justify-between items-center mb-4">
-                <a href="/" class="text-xl font-bold text-white">Home</a>
+                <a href="/" class="text-xl font-bold text-white hover:text-gray-300">Home</a>
                 <button @click="open = !open">
-                    <svg class="w-10 h-10 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                    <svg class="w-10 h-10 text-white hover:text-gray-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
                         width="24" height="24" fill="none" viewBox="0 0 24 24">
                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                             d="M6 18 17.94 6M18 18 6.06 6" />
                     </svg>
                 </button>
             </div>
-            <ul class="text-white text-lg ml-4">
+            <ul class="text-white text-lg ml-4 flex flex-col gap-y-1">
                 <li>
-                    <a href="{{route('projects')}}">Projects</a>
+                    <a class=" hover:text-gray-300" href="{{route('projects')}}">Projects</a>
                 </li>
                 <li>
-                    <a href="">Merch</a>
+                    <a class=" hover:text-gray-300" href="">Merch</a>
                 </li>
                 <li>
-                    <a href="{{route('experience')}}">Experience</a>
+                    <a class=" hover:text-gray-300" href="{{route('experience')}}">Experience</a>
                 </li>
                 <li>
-                    <a href="/test">test</a>
+                    <a class=" hover:text-gray-300" href="/test">test</a>
                 </li>
             </ul>
         </div>
@@ -46,7 +46,7 @@ class="fixed top-0 flex px-6 py-3 justify-between items-center w-full shadow-md 
                 <input type="radio" class="peer sr-only" name="HERE" value="HERE" @checked($currentLanguage == 'en')/>
                 <div
                     class="flex justify-start items-center rounded-lg px-2 py-2 transition-all
-            peer-checked:bg-gray-800">
+            peer-checked:bg-gray-800 hover:bg-gray-800">
                     <svg aria-hidden="true" class="h-6 w-6 rounded-full me-2" xmlns="http://www.w3.org/2000/svg"
                         id="flag-icon-css-us" viewBox="0 0 512 512">
                         <g fill-rule="evenodd">
@@ -71,7 +71,7 @@ class="fixed top-0 flex px-6 py-3 justify-between items-center w-full shadow-md 
                 <input type="radio" class="peer sr-only" name="HERE" value="HERE" @checked($currentLanguage == 'id')/>
                 <div
                     class="flex justify-start items-center rounded-lg px-2 py-2 transition-all
-            peer-checked:bg-gray-800">
+            peer-checked:bg-gray-800 hover:bg-gray-800">
                     <svg aria-hidden="true" class="h-6 w-6 rounded-full me-2" xmlns="http://www.w3.org/2000/svg"
                         id="flag-icon-css-id" viewBox="0 0 512 512">
                         <g fill-rule="evenodd" stroke-width="1pt">
@@ -86,7 +86,7 @@ class="fixed top-0 flex px-6 py-3 justify-between items-center w-full shadow-md 
                 <input type="radio" class="peer sr-only" name="HERE" value="HERE" @checked($currentLanguage == 'jp')/>
                 <div
                     class="flex justify-start items-center rounded-lg px-2 py-2 transition-all
-            peer-checked:bg-gray-800">
+            peer-checked:bg-gray-800 hover:bg-gray-800">
                     <svg aria-hidden="true" class="h-6 w-6 rounded-full me-2" xmlns="http://www.w3.org/2000/svg"
                         id="flag-icon-css-jp" viewBox="0 0 512 512">
                         <g fill-rule="evenodd" stroke-width="1pt">

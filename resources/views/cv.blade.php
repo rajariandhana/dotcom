@@ -15,10 +15,10 @@
         @foreach ($employers as $employer)
             <div class="mb-8">
                 <div class=" bg-gray-200 p-4 rounded-xl shadow-md mb-4">
-                    <a href="{{ $employer->link }}" target="_blank" class="flex gap-2 items-center justify-start w-fit">
-                        <img src="/CV/{{ $employer->slug }}.png" alt="" class="h-8">
+                    <a href="{{ $employer->link }}" target="_blank" class="flex gap-2 items-center justify-start w-fit text-indigo-950 hover:text-indigo-800">
+                        <img src="/CV/{{ $employer->slug }}.png" alt="" class="h-8 ">
                         <h2 class="text-lg font-montserrat">{{ $employer->name }}</h2>
-                        <svg class="w-6 h-6 text-indigo-950 " aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                        <svg class="w-6 h-6 " aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
                             width="24" height="24" fill="none" viewBox="0 0 24 24">
                             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="M18 14v4.833A1.166 1.166 0 0 1 16.833 20H5.167A1.167 1.167 0 0 1 4 18.833V7.167A1.166 1.166 0 0 1 5.167 6h4.618m4.447-2H20v5.768m-7.889 2.121 7.778-7.778" />

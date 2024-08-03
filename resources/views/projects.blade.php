@@ -35,6 +35,16 @@
                 <x-project-card :project="$projects[6]"></x-project-card>
                 <x-project-card :project="$projects[7]"></x-project-card>
             </div>
+            <div class="hidden md:flex gap-4">
+                <div
+                    class="flex rounded-lg justify-center items-center
+                    w-[272px] h-44 lg:w-[464px] lg:h-[304px]
+                    bg-indigo-100 text-slate-950 text-xl font-bold
+
+                    ">
+                    UNDER MAINTANTENCE
+                </div>
+            </div>
         </div>
     </div>
 </x-layout>

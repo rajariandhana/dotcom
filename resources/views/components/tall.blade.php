@@ -1,5 +1,5 @@
 <div class="w-full flex max-w-xl mx-auto">
-    <div class="w-full grid grid-cols-2 gap-y-10 sm:gap-y-0 sm:grid-cols-4">
+    <div class="w-full flex">
         <a href="https://tailwindcss.com" target="_blank" class="w-full h-16 relative hover:-rotate-3 group hover:scale-105 transition-all ease-out duration-300 text-center flex flex-col font-bold items-center justify-center">
             <div class="h-12 w-full mb-2 flex items-center justify-center">
                 <svg class="h-full w-auto" viewBox="0 0 200 120" fill="none" xmlns="http://www.w3.org/2000/svg">

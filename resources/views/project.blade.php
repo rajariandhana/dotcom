@@ -1,6 +1,6 @@
 @php
-    $imageWidth = match ($project->size) {
-        'TALL' => 'w-40 lg:w-80',
+    $imageSize = match ($project->size) {
+        'TALL' => 'w-40 h-full lg:h-full rounded-xl',
         default => 'w-80',
     };
     $cardWidth = match ($project->size) {
@@ -12,7 +12,7 @@
         default => 'flex-col',
     };
     $imageFlex = match ($project->size) {
-        'TALL' => 'flex flex-row w-full h-52 lg:h-[500px]',
+        'TALL' => 'flex flex-row w-full h-full lg:h-full',
         default => '',
     };
 @endphp
@@ -30,12 +30,12 @@
             Back to projects
         </a>
         <div class="flex {{ $cardFlex }} gap-4 p-4 bg-gray-200 rounded-xl {{ $cardWidth }}">
-            <div class="rounded-lg block overflow-hidden justify-center items-center  {{ $imageWidth }}">
+            <div class="rounded-lg block overflow-hidden justify-center items-center  {{ $imageFlex }}">
                 <img src="/Projects/{{ $project->name }}/1.{{ $project->extension }}" alt=""
-                    class="object-cover object-top {{ $imageWidth }}">
+                    class="object-cover object-top {{ $imageSize }}">
                 {{-- @if ($project->size=='TALL')
                 <img src="/Projects/{{ $project->name }}/2.{{ $project->extension }}" alt=""
-                class="object-cover object-top {{ $imageWidth }}">
+                class="object-cover object-top {{ $imageSize }}">
                 @endif --}}
             </div>
             <div class="flex flex-col gap-2">
