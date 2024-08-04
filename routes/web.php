@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\CVController;
 use App\Http\Controllers\ProjectController;
+use App\Models\Photo;
 use App\Models\Project;
 use Illuminate\Support\Facades\Route;
 
@@ -14,6 +15,11 @@ Route::get('/download-cv', function () {
     $fileName = 'CV_RalfazzaRajariandhana.pdf';
     return response()->download($filePath, $fileName);
 });
+Route::get('/gallery', function () {
+    return view('gallery',[
+        'photos'=>Photo::all()
+    ]);
+})->name('gallery');
 
 Route::get('/projects',[ProjectController::class,'index'])->name('projects');
 Route::get('projects/{slug}', [ProjectController::class, 'show'])->name('project.show');

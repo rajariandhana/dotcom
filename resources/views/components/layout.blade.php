@@ -38,8 +38,9 @@
         </div>
     </main>
     <x-footer></x-footer>
-    @livewireScripts
     <script src="../path/to/flowbite/dist/flowbite.min.js"></script>
+    @livewireScripts
+
 </body>
 
 </html>
