@@ -29,7 +29,7 @@
             @endforeach
         </ul>
     </div>
-    <div class="flex flex-wrap justify-center gap-4 mt-8 lg:mt-12">
+    <div class="flex flex-wrap justify-center gap-4 mt-8 lg:mt-12 lg:-mx-48">
         @foreach ($photos as $photo)
             <img class="w-24 h-24 md:w-32 md:h-32 lg:w-40 lg:h-40  rounded-md object-cover
             hover:scale-110 transition ease-in-out"
