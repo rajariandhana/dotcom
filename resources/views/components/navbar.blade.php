@@ -31,7 +31,10 @@ class="fixed top-0 flex px-6 py-3 justify-between items-center w-full shadow-md 
                     <a class=" hover:text-gray-300" href="{{route('experience')}}">Work Experience</a>
                 </li>
                 <li>
-                    <a class=" hover:text-gray-300" href="">Merchandise</a>
+                    <a class=" hover:text-gray-300" href="{{route('gallery')}}">Gallery</a>
+                </li>
+                <li>
+                    <a class=" hover:text-gray-300" href="{{route('merch')}}">Merchandise</a>
                 </li>
                 {{-- <li>
                     <a class=" hover:text-gray-300" href="/test">test</a>
