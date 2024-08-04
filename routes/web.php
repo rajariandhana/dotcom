@@ -23,6 +23,9 @@ Route::get('/gallery', function () {
 Route::get('/merchandise', function () {
     return view('merch');
 })->name('merch');
+Route::get('/socials', function () {
+    return view('socials');
+})->name('socials');
 Route::get('/projects',[ProjectController::class,'index'])->name('projects');
 Route::get('projects/{slug}', [ProjectController::class, 'show'])->name('project.show');
 
