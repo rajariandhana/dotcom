@@ -1,5 +1,5 @@
 <div>
-    <div class="flex mb-4">
+    <div class="flex mb-4 justify-center">
         <ul class="flex flex-row justify-center items-center gap-2">
             @foreach ($cities as $city)
                 <li>
@@ -7,14 +7,14 @@
                         wire:model="selectedCities" value="{{ $city }}">
                     <label for="{{ $city }}"
                         class="text-sm px-6 py-1 rounded-lg cursor-pointer
-                        bg-indigo-200 border-2 border-indigo-500 peer-checked:text-white peer-checked:bg-indigo-500">
+                        bg-indigo-100 border-2 border-indigo-300 peer-checked:text-white peer-checked:bg-indigo-500">
                         {{ $city }}
                     </label>
                 </li>
             @endforeach
         </ul>
     </div>
-    <div class="flex mb-4">
+    <div class="flex mb-4 justify-center">
         <ul class="flex flex-row justify-center items-center gap-2">
             @foreach ($years as $year)
                 <li>
@@ -22,19 +22,19 @@
                         wire:model="selectedYears" value="{{ $year }}">
                     <label for="{{ $year }}"
                         class="text-sm px-6 py-1 rounded-lg cursor-pointer
-                        bg-indigo-200 border-2 border-indigo-500 peer-checked:text-white peer-checked:bg-indigo-500">
+                        bg-indigo-100 border-2 border-indigo-300 peer-checked:text-white peer-checked:bg-indigo-500">
                         {{ $year }}
                     </label>
                 </li>
             @endforeach
         </ul>
     </div>
-    <div class="">
+    <div class="flex flex-wrap justify-center gap-4 mt-8 lg:mt-12">
         @foreach ($photos as $photo)
-            <div class="photo-item">
-                <img src="{{ $photo->filePath }}" alt="Photo">
-                <p>/{{ $photo->year }}_{{ $photo->city }}/{{ $photo->file }} , </p>
-            </div>
+            <img class="w-24 h-24 md:w-32 md:h-32 lg:w-40 lg:h-40  rounded-md object-cover
+            hover:scale-110 transition ease-in-out"
+            src="{{ asset('/Gallery/' . $photo->year . '_' . $photo->city . '/' . $photo->file) }}"
+            alt="/Gallery/' . $photo->year . '_' . $photo->city . '/' . $photo->file) }}">
         @endforeach
     </div>
 </div>

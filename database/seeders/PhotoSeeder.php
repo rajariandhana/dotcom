@@ -20,13 +20,13 @@ class PhotoSeeder extends Seeder
             'orientation' => 'P',
         ]);
         Photo::create([
-            'file' => 'IMG_1001.JPG',
+            'file' => 'IMG_1002.JPG',
             'year' => 2020,
             'city' => 'Jakarta',
             'orientation' => 'P',
         ]);
         Photo::create([
-            'file' => 'IMG_1001.JPG',
+            'file' => 'IMG_1029.JPG',
             'year' => 2020,
             'city' => 'Jakarta',
             'orientation' => 'P',
@@ -59,7 +59,7 @@ class PhotoSeeder extends Seeder
             'orientation' => 'S',
         ]);
         Photo::create([
-            'file' => 'DSC02335.JPG',
+            'file' => 'DSC02435.JPG',
             'year' => 2022,
             'city' => 'Bali',
             'orientation' => 'P',
@@ -91,6 +91,7 @@ class PhotoSeeder extends Seeder
             'city' => 'Jakarta',
             'orientation' => 'P',
         ]);
+
 
 
         Photo::create([

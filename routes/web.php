@@ -20,7 +20,9 @@ Route::get('/gallery', function () {
         'photos'=>Photo::all()
     ]);
 })->name('gallery');
-
+Route::get('/merchandise', function () {
+    return view('merch');
+})->name('merch');
 Route::get('/projects',[ProjectController::class,'index'])->name('projects');
 Route::get('projects/{slug}', [ProjectController::class, 'show'])->name('project.show');
 
