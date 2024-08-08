@@ -1,10 +1,13 @@
 <?php
 
 use App\Http\Controllers\CVController;
+use App\Http\Controllers\LocaleController;
 use App\Http\Controllers\ProjectController;
 use App\Models\Photo;
 use App\Models\Project;
 use Illuminate\Support\Facades\Route;
+
+Route::get('locale/{lang}',[LocaleController::class,'setLocale']);
 
 Route::get('/', function () {
     return view('home');

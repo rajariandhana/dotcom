@@ -26,8 +26,9 @@
         </h1>
         🌎
         <p class="text-justify">
-            You'll find several of my best works such as my projects as a developer, my interest in photography, clothes
-            that I design and sell, as well as other surprises.
+            {{-- You'll find several of my best works such as my projects as a developer, my interest in photography, clothes
+            that I design and sell, as well as other surprises. --}}
+            @lang('messages.profDesc')
         </p>
         <span class="text-sm text-gray-600">Feel free to hit me up in any of my social media</span>
     </div>

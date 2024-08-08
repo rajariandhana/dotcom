@@ -50,7 +50,7 @@ class="fixed top-0 flex px-6 py-3 justify-between items-center w-full shadow-md 
             @endphp
             <label class="cursor-pointer">
                 <input type="radio" class="peer sr-only" name="HERE" value="HERE" @checked($currentLanguage == 'en')/>
-                <div
+                <a href="locale/en"
                     class="flex justify-start items-center rounded-lg px-2 py-2 transition-all
             peer-checked:bg-gray-800 hover:bg-gray-800">
                     <svg aria-hidden="true" class="h-6 w-6 rounded-full me-2" xmlns="http://www.w3.org/2000/svg"
@@ -71,11 +71,11 @@ class="fixed top-0 flex px-6 py-3 justify-between items-center w-full shadow-md 
                         </g>
                     </svg>
                     English
-                </div>
+                </a>
             </label>
             <label class="cursor-pointer">
                 <input type="radio" class="peer sr-only" name="HERE" value="HERE" @checked($currentLanguage == 'id')/>
-                <div
+                <a href="locale/id"
                     class="flex justify-start items-center rounded-lg px-2 py-2 transition-all
             peer-checked:bg-gray-800 hover:bg-gray-800">
                     <svg aria-hidden="true" class="h-6 w-6 rounded-full me-2" xmlns="http://www.w3.org/2000/svg"
@@ -86,11 +86,11 @@ class="fixed top-0 flex px-6 py-3 justify-between items-center w-full shadow-md 
                         </g>
                     </svg>
                     Bahasa Indonesia
-                </div>
+                </a>
             </label>
             <label class="cursor-pointer">
                 <input type="radio" class="peer sr-only" name="HERE" value="HERE" @checked($currentLanguage == 'jp')/>
-                <div
+                <a href="locale/jp"
                     class="flex justify-start items-center rounded-lg px-2 py-2 transition-all
             peer-checked:bg-gray-800 hover:bg-gray-800">
                     <svg aria-hidden="true" class="h-6 w-6 rounded-full me-2" xmlns="http://www.w3.org/2000/svg"
@@ -101,7 +101,7 @@ class="fixed top-0 flex px-6 py-3 justify-between items-center w-full shadow-md 
                         </g>
                     </svg>
                     日本語
-                </div>
+                </a>
             </label>
 
         </div>
