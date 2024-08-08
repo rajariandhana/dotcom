@@ -13,15 +13,13 @@
 //     'This website is made with these 👇'
 //     =>'Laman ini dibuat menggunakan ini 👇',
 // ];
-dd("here");
+// dd("here");
 
-return[
+return [
     //home
-    'profDesc' => 'Kalian dapat menemukan beberapa karya terbaik saya seperti proyek saya sebagai developer, ketertarikan saya pada fotografi, pakaian yang saya desain dan jual, serta kejutan-kejutan lainnya.',
+    'profdesc' => 'Kalian dapat menemukan beberapa karya terbaik saya seperti proyek saya sebagai developer, ketertarikan saya pada fotografi, pakaian yang saya desain dan jual, serta kejutan-kejutan lainnya.',
     'profSubDesc' => 'Feel free to hit me up in any of my social media',
     'shotsTitle' => 'My 📷 I 💜',
     'techsTitle' => 'Confident in most, not so confident in others',
     'tall' => 'This website is made with these 👇',
 ];
-
-?>

@@ -1,5 +1,9 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" class="h-full bg-gray-100">
+<html
+{{-- lang="en" --}}
+lang="{{session('locale') }}"
+    {{-- class="h-full bg-gray-100" --}}
+    >
 
 <head>
     <meta charset="UTF-8">
@@ -34,6 +38,7 @@
         <div class="flex flex-col justify-center pt-24 px-6 py-6 mx-auto max-w-3xl sm:px-6 lg:px-8 lg:mt-12
          {{-- bg-red-200 md:bg-green-200 lg:bg-blue-200 --}}
          ">
+            {{-- {{session('locale')}} --}}
             {{ $slot }}
         </div>
     </main>
