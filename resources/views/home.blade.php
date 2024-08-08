@@ -34,7 +34,8 @@
 
     <div class="mb-12">
         <h2 class="text-xl font-montserrat mb-4">My 📷 I 💜</h2>
-        <x-best-shots></x-best-shots>
+        {{-- <x-best-shots></x-best-shots> --}}
+        @livewire('best-shots')
     </div>
 
     {{-- <div class="mb-12">
