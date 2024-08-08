@@ -9,6 +9,10 @@ class PhotoFilter extends Component
 {
     public $selectedCities=[];
     public $selectedYears=[];
+    public $bigPhoto;
+    public function view($path){
+        $this->bigPhoto = $path;
+    }
     public function filtering(){
         $this->render();
     }
