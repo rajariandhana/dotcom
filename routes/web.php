@@ -1,10 +1,15 @@
 <?php
 
 use App\Http\Controllers\CVController;
+use App\Http\Controllers\LocaleController;
 use App\Http\Controllers\ProjectController;
 use App\Models\Photo;
 use App\Models\Project;
+// use Illuminate\Contracts\Session\Session;
+use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Route;
+
 
 Route::get('/', function () {
     return view('home');
@@ -81,3 +86,13 @@ Route::get('/test', function () {
     ]);
 });
 
+// Route::get('locale/{lang}',[LocaleController::class,'setLocale']);
+Route::get('locale/{locale}',function(string $locale){
+    if(! in_array($locale, ['en','id','jp'])){
+        abort(400);
+    }
+    // App::setLocale($locale);
+    // session()->put('locale',$locale);
+    Session::put('locale',$locale);
+    return redirect()->back();
+});
