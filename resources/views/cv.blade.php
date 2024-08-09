@@ -1,4 +1,4 @@
-<x-layout>
+<x-layout  title="Experience">
     <div class="flex justify-end mb-4">
         <a href="/download-cv" download
             class="flex gap-3 justify-center items-center px-4 py-2 rounded-xl shadow-md bg-gradient-to-r from-indigo-500 to-rose-500 text-white font-semibold">

@@ -1,4 +1,4 @@
-<x-layout>
+<x-layout title="Home">
     {{-- <div class="bg-white rounded-lg shadow"> --}}
 
     <div class="w-full mb-12">
@@ -22,43 +22,29 @@
         <h1
             class="bg-gradient-to-r from-indigo-500 to-rose-500 inline-block text-transparent bg-clip-text
         text-xl font-mono font-bold">
-            Hello, world!
+            @lang('f.helloWorld')
         </h1>
         🌎
         <p class="text-justify">
-            {{-- You'll find several of my best works such as my projects as a developer, my interest in photography, clothes
-            that I design and sell, as well as other surprises. --}}
-            {{ __('messages.profdesc') }}
-            @lang('messages.profdesc')
-            {{ __('messages.profdesc') }}
+            @lang('f.profDesc')
         </p>
-        <span class="text-sm text-gray-600">Feel free to hit me up in any of my social media</span>
+        <span class="text-sm text-gray-600">@lang('f.profSubDesc')</span>
     </div>
 
     <div class="mb-12">
-        <h2 class="text-xl font-montserrat mb-4">My 📷 I 💜</h2>
-        {{-- <x-best-shots></x-best-shots> --}}
+        <h2 class="text-xl font-montserrat mb-4">📷 💜</h2>
         @livewire('best-shots')
     </div>
 
-    {{-- <div class="mb-12">
-        <h2 class="text-xl font-semibold mb-4">Best works</h2>
-        <div class="flex gap-2">
-            <div class="flex flex-col gap-2">
-                <div class="size-20 bg-red-400 rounded-xl flex justify-center items-center text-white">1</div>
-                <div class="size-20 bg-orange-400 rounded-xl flex justify-center items-center text-white">2</div>
-            </div>
-            <div class="flex flex-col">
-                <div class="size-40 bg-yellow-400 rounded-xl flex justify-center items-center text-white">3</div>
-            </div>
-        </div>
-    </div> --}}
-
     <div class="mb-12">
-        <h2 class="text-sm lg:text-xl text-center font-montserrat mb-4">Confident in most, not so confident in others</h2>
+        <h2 class="text-sm lg:text-xl text-center font-montserrat mb-4">@lang('f.techsTitle')</h2>
         <x-tech></x-tech>
     </div>
 
+    <div class="mb-8">
+        <p class="text-center w-auto mb-12 text-sm text-gray-500 rounded-md">@lang('f.tall') 👇</p>
+        <x-tall></x-tall>
+    </div>
     {{-- <div class="mb-12">
         <h2 class="text-xl font-semibold mb-4 text-center">Developer Journey</h2>
 
@@ -76,8 +62,5 @@
             new GitHubCalendar(".calendar", "rajariandhana");
         </script>
     </div> --}}
-    <div class="mb-8">
-        <p class="text-center w-auto mb-12 text-sm text-gray-500 rounded-md">This website is made with these 👇</p>
-        <x-tall></x-tall>
-    </div>
+
 </x-layout>

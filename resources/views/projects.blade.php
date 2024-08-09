@@ -1,4 +1,4 @@
-<x-layout>
+<x-layout title="Projects">
     {{-- @dump($projects) --}}
 
     <div class="flex flex-col justify-center items-center">
@@ -11,7 +11,7 @@
                     <button class="px-2 py-1 bg-slate-900 text-sm text-white rounded-md">Game</button>
                 </li>
             </ul> --}}
-        <p class="text-center w-auto mb-0 lg:mb-4 text-sm text-gray-500 rounded-md">Click the image for detail 👇</p>
+        <p class="text-center w-auto mb-0 lg:mb-4 text-sm text-gray-500 rounded-md">@lang('f.click') 👇</p>
 
         </div>
         <div
@@ -47,7 +47,7 @@
                     bg-indigo-100 text-slate-950 text-xl font-bold
 
                     ">
-                    UNDER MAINTENANCE
+                    @lang('f.underMain')
                 </div>
             </div>
         </div>

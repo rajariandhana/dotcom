@@ -12,7 +12,9 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/', function () {
-    return view('home');
+    return view('home',[
+        // 'title'=>'Home'
+    ]);
 })->name('home');
 Route::get('/experience', [CVController::class,'index'])->name('experience');
 Route::get('/download-cv', function () {
@@ -86,13 +88,15 @@ Route::get('/test', function () {
     ]);
 });
 
-// Route::get('locale/{lang}',[LocaleController::class,'setLocale']);
 Route::get('locale/{locale}',function(string $locale){
+    abort(400);
+    return;
     if(! in_array($locale, ['en','id','jp'])){
         abort(400);
     }
-    // App::setLocale($locale);
     // session()->put('locale',$locale);
     Session::put('locale',$locale);
+    // App::setLocale($locale);
+    // dump(App::currentLocale());
     return redirect()->back();
 });
