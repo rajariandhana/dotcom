@@ -54,7 +54,7 @@ class ProjectSeeder extends Seeder
             'techs' => 'Unity|C#|Figma',
             'desc' => 'Used for Schematics ITS 2023, the game is inspired from the infamous "Keep Talking and Nobody Explodes"',
             'numPhoto' => 4,
-            'extension' => 'jpg',
+            'extension' => 'JPG',
             'repo' => '',
             'size'=>'WIDE',
         ]);
@@ -64,7 +64,7 @@ class ProjectSeeder extends Seeder
             'techs' => 'Unity|C#|Figma',
             'desc' => 'Online game played by over 1000 people that is used for Schematics ITS 2023. Players must gather clues and solve logic puzzles to find the treasure.',
             'numPhoto' => 3,
-            'extension' => 'jpg',
+            'extension' => 'JPG',
             'repo' => '',
             'size'=>'WIDE',
         ]);
@@ -87,7 +87,7 @@ class ProjectSeeder extends Seeder
             'techs' => 'HTML|CSS|JavaScript|PHP|MySQL',
             'desc' => 'Created a "post it" themed social media for Web Programming class that utilizes relational database.',
             'numPhoto' => 3,
-            'extension' => 'jpg',
+            'extension' => 'JPG',
             'repo' => '',
             'demo' => 'postitivity.000webhostapp.com/',
             'size'=>'BOX-LG',
@@ -99,7 +99,7 @@ class ProjectSeeder extends Seeder
             'techs' => 'Software Development|Figma',
             'desc' => 'Created a prototype for a home service provider for Concept of Software Development class.',
             'numPhoto' => 4,
-            'extension' => 'jpg',
+            'extension' => 'JPG',
             'demo' => 'www.figma.com/proto/TQB7eNQb8QwwgKid9RwAT0/ServiceHub?node-id=1-3&starting-point-node-id=1%3A3&mode=design&t=EcjVJJ0KtK4EcMot-1',
             'size'=>'TALL',
         ]);

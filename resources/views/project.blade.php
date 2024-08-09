@@ -17,7 +17,7 @@
     };
 @endphp
 
-<x-layout>
+<x-layout title="{{$project->name}}">
     {{-- @dump(($project)) --}}
 
     <div class="flex flex-col items-center justify-center w-full">
@@ -27,7 +27,7 @@
                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                     d="m17 16-4-4 4-4m-6 8-4-4 4-4" />
             </svg>
-            Back to projects
+            @lang('backToProjects')
         </a>
         <div class="flex {{ $cardFlex }} gap-4 p-4 bg-gray-200 rounded-xl {{ $cardWidth }}">
             <div class="rounded-lg block overflow-hidden justify-center items-center  {{ $imageFlex }}">

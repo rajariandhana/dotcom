@@ -24,5 +24,5 @@
             </a>
         </li>
     </ul>
-    <span class="">@2024</span>
+    <span class="">2024</span>
 </div>

@@ -49,7 +49,7 @@ class="fixed top-0 flex px-6 py-3 justify-between items-center w-full shadow-md 
                 session('locale') = session('language', 'en');
             @endphp --}}
             <label class="cursor-pointer">
-                <input type="radio" class="peer sr-only" name="HERE" value="HERE" @checked(session('locale') == 'en')/>
+                <input type="radio" class="peer sr-only" name="HERE" value="HERE" @checked(session('locale','en') == 'en')/>
                 <a href="locale/en"
                     class="flex justify-start items-center rounded-lg px-2 py-2 transition-all
             peer-checked:bg-gray-800 hover:bg-gray-800">
@@ -73,7 +73,7 @@ class="fixed top-0 flex px-6 py-3 justify-between items-center w-full shadow-md 
                     English
                 </a>
             </label>
-            <label class="cursor-pointer">
+            {{-- <label class="cursor-pointer">
                 <input type="radio" class="peer sr-only" name="HERE" value="HERE" @checked(session('locale') == 'id')/>
                 <a href="locale/id"
                     class="flex justify-start items-center rounded-lg px-2 py-2 transition-all
@@ -102,7 +102,7 @@ class="fixed top-0 flex px-6 py-3 justify-between items-center w-full shadow-md 
                     </svg>
                     日本語
                 </a>
-            </label>
+            </label> --}}
 
         </div>
     </div>

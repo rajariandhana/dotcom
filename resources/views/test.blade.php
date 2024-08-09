@@ -1,4 +1,4 @@
-<x-layout>
+<x-layout  title="Testing Page">
     {{-- <x-infinite-scroll :data="$general">
 
     </x-infinite-scroll>

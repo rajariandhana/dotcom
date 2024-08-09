@@ -14,7 +14,7 @@
     <a href="/projects/{{ $project->slug }}" class="relative block">
         <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-60 transition duration-150 flex items-center justify-center">
             <span class="bg-indigo-500 text-white px-4 py-2 rounded-lg text-md opacity-0 group-hover:opacity-100 transition duration-150 z-20">
-                VIEW
+                @lang('f.view')
             </span>
         </div>
 
