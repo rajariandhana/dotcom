@@ -28,8 +28,8 @@ class PhotoFilter extends Component
         $this->filter();
     }
     public function filter(){
-        // dump($this->selectedYears);
-        // dump($this->selectedCities);
+       // dump($this->selectedYears);
+       // dump($this->selectedCities);
         $folders = [
             '2024_Prigen',
             '2023_Tokyo',
@@ -49,14 +49,16 @@ class PhotoFilter extends Component
                 continue;
             }
 
-            $path = public_path($folder);
+	    $path = public_path($folder);
+	    //dump($folder);
             if (File::exists($path) && File::isDirectory($path)) {
                 $files = File::files($path);
                 foreach ($files as $file) {
                     $extension = $file->getExtension();
                     if (in_array($extension, ['jpeg', 'jpg', 'png','JPEG','JPG','PNG'])) {
-                        $this->images[$folder][] = asset($folder . '/' . $file->getFilename());
-                    }
+                        $this->images[$folder][] = $folder . '/' . $file->getFilename();
+		   //dump(asset($folder . '/' . $file->getFilename()));
+		    }
                 }
             }
         }
