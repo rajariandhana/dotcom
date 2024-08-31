@@ -1,6 +1,6 @@
 <x-layout  title="Experience">
     <div class="flex justify-end mb-4">
-        <a href="/download-cv" download
+        <a href="/cv-generate" download
             class="flex items-center justify-center gap-3 px-4 py-2 font-semibold text-white shadow-md rounded-xl bg-gradient-to-r from-indigo-500 to-rose-500">
             <svg class="w-6 h-6 " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                 fill="none" viewBox="0 0 24 24">

@@ -20,12 +20,12 @@ class CVController extends Controller
     public function GeneratePDF(){
         $employers = Employer::all();
         // dd($employers);
-        $pdf = Pdf::loadView('newcv', compact('employers'))
+        $pdf = Pdf::loadView('cv-template', compact('employers'))
             ->setPaper('a4', 'portrait');
         return $pdf->download('CV_RalfazzaRajariandhana.pdf');
     }
     public function ViewPDF(){
-        return view('newcv',[
+        return view('cv-template',[
             'employers'=>Employer::all()
         ]);
     }
