@@ -31,5 +31,11 @@ class EmployerSeeder extends Seeder
             'link'=>'https://www.its.ac.id/informatika/id/fasilitas/laboratorium/laboratorium-algoritma-dan-pemrograman/',
             'description'=>'One of many Informatics Engineering Department\'s laboratorium.',
         ]);
+        Employer::create([
+            'name'=>'Al-Izhar Pondok Labu',
+            'slug'=>'Al-Izhar',
+            'link'=>'https://instagram.com/osis_smaipl',
+            'description'=>'My beloved school',
+        ]);
     }
 }

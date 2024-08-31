@@ -22,6 +22,9 @@ Route::get('/download-cv', function () {
     $fileName = 'CV_RalfazzaRajariandhana.pdf';
     return response()->download($filePath, $fileName);
 });
+Route::get('cv-generate',[CVController::class,'GeneratePDF']);
+Route::get('cv-view',[CVController::class,'ViewPDF']);
+
 Route::get('/gallery', function () {
     return view('gallery',[
         'photos'=>Photo::all()

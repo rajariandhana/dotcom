@@ -1,7 +1,7 @@
 <x-layout  title="Experience">
     <div class="flex justify-end mb-4">
-        <a href="/download-cv" download
-            class="flex gap-3 justify-center items-center px-4 py-2 rounded-xl shadow-md bg-gradient-to-r from-indigo-500 to-rose-500 text-white font-semibold">
+        <a href="/cv-generate" download
+            class="flex items-center justify-center gap-3 px-4 py-2 font-semibold text-white shadow-md rounded-xl bg-gradient-to-r from-indigo-500 to-rose-500">
             <svg class="w-6 h-6 " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                 fill="none" viewBox="0 0 24 24">
                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -14,8 +14,8 @@
     <div class="">
         @foreach ($employers as $employer)
             <div class="mb-8">
-                <div class=" bg-gray-200 p-4 rounded-xl shadow-md mb-4">
-                    <a href="{{ $employer->link }}" target="_blank" class="flex gap-2 items-center justify-start w-fit text-indigo-950 hover:text-indigo-800">
+                <div class="p-4 mb-4 bg-gray-200 shadow-md rounded-xl">
+                    <a href="{{ $employer->link }}" target="_blank" class="flex items-center justify-start gap-2 w-fit text-indigo-950 hover:text-indigo-800">
                         <img src="/CV/{{ $employer->slug }}.png" alt="" class="h-8 ">
                         <h2 class="text-lg font-montserrat">{{ $employer->name }}</h2>
                         <svg class="w-6 h-6 " aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
@@ -27,7 +27,7 @@
 
                 </div>
 
-                <ol class="ml-6 relative border-s border-indigo-900 ">
+                <ol class="relative ml-6 border-indigo-900 border-s ">
                     @foreach ($employer->positions as $position)
                         <li class="mb-6 ms-4">
                             <div
@@ -35,12 +35,12 @@
                             </div>
                             <time
                                 class="mb-1 text-xs font-normal leading-none text-gray-500 ">{{ $position->date }}</time>
-                            <h3 class="text-md font-semibold text-gray-900 font-montserrat">{{ $position->name }}</h3>
-                            <p class="text-sm font-normal text-gray-500 mr-12 mb-2">{{ $position->description }}</p>
-                            <div class="flex gap-1 flex-wrap">
+                            <h3 class="font-semibold text-gray-900 text-md font-montserrat">{{ $position->name }}</h3>
+                            <p class="mb-2 mr-12 text-sm font-normal text-gray-500">{{ $position->description }}</p>
+                            <div class="flex flex-wrap gap-1">
                                 @foreach (explode('|', $position->skills) as $skill)
                                     <span
-                                        class="text-xs px-4 py-2 bg-indigo-950 rounded-lg text-white">{{ $skill }}</span>
+                                        class="px-4 py-2 text-xs text-white rounded-lg bg-indigo-950">{{ $skill }}</span>
                                 @endforeach
                             </div>
                         </li>
