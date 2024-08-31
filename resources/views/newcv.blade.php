@@ -1,16 +1,30 @@
-<x-layout  title="Experience">
-    <div class="flex justify-end mb-4">
-        <a href="/download-cv" download
-            class="flex items-center justify-center gap-3 px-4 py-2 font-semibold text-white shadow-md rounded-xl bg-gradient-to-r from-indigo-500 to-rose-500">
-            <svg class="w-6 h-6 " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                fill="none" viewBox="0 0 24 24">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                    d="M4 15v2a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3v-2m-8 1V4m0 12-4-4m4 4 4-4" />
-            </svg>
-            Download CV as pdf
-        </a>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    @vite(['resources/css/app.css','resources/js/app.js'])
+    <title>CV</title>
+    <style>
+        body{
+            background-size: 0 0;
+            font-family: 'Times New Roman', Times, serif
+            /* background-image: */
+            /* radial-gradient(circle, white 0px, rgba(0, 0, 0, 0) 0px); */
+        }
+    </style>
+</head>
+<body>
+    <div class="items-center mb-12 text-center">
+        <h1 class="font-bold">Ralfazza Rajariandhana</h1>
+        <p>Indonesia</p>
+        <p class="">
+            <a class="underline" href="mailto:rajariandhana@gmail.com">rajariandhana@gmail.com</a> |
+            <a class="underline" href="https://www.linkedin.com/in/rajariandhana">linkedin.com/in/rajariandhana</a> |
+            <a class="underline" href="https://www.ralfazza.com">ralfazza.com</a>
+        </p>
     </div>
-    {{-- <div class="flex flex-wrap"> --}}
     <div class="">
         @foreach ($employers as $employer)
             <div class="mb-8">
@@ -49,5 +63,5 @@
             </div>
         @endforeach
     </div>
-
-</x-layout>
+</body>
+</html>
