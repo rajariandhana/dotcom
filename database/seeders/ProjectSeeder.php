@@ -77,7 +77,7 @@ class ProjectSeeder extends Seeder
             'numPhoto' => 3,
             'extension' => 'png',
             'repo' => 'github.com/rajariandhana/kanji',
-            'demo' => 'ralfazza.com/kanji',
+            'demo' => 'studykanji.ralfazza.com',
             'size'=>'TALL',
         ]);
 
