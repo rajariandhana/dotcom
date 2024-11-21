@@ -77,7 +77,7 @@
             <h3 class="font-bold uppercase">Languages</h3>
             <ul class="ml-6 list-disc">
                 <li>Indonesian (Native speaker)</li>
-                <li>English (Proficient, TOEFL ITP score of 683)</li>
+                <li>English (Proficient, IELTS 7.0)</li>
             </ul>
         </div>
     </div>

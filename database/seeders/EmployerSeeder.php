@@ -20,6 +20,12 @@ class EmployerSeeder extends Seeder
             'description'=>'This is my campus, got here in 2022 to study Informatics Engineering. It\'s like one of the best educational institute in the country.',
         ]);
         Employer::create([
+            'name'=>'PT Rajawali Global Asia',
+            'slug'=>'PT-Rajawali-Global-Asia',
+            'link'=>'https://www.rajawaliholdings.com',
+            'description'=>'Internship here',
+        ]);
+        Employer::create([
             'name'=>'Schematics ITS',
             'slug'=>'Schematics-ITS',
             'link'=>'https://schematics-its.com',
@@ -37,5 +43,6 @@ class EmployerSeeder extends Seeder
             'link'=>'https://instagram.com/osis_smaipl',
             'description'=>'My beloved school',
         ]);
+        
     }
 }
