@@ -29,16 +29,27 @@
 
             </div>
             <div class="flex gap-4">
+                <x-project-card :project="$projects[3]"></x-project-card>
+                <x-project-card :project="$projects[4]"></x-project-card>
+            </div>
+            <div class="flex gap-4">
                 <div class="flex flex-col gap-4">
-                    <x-project-card :project="$projects[3]"></x-project-card>
-                    <x-project-card :project="$projects[4]"></x-project-card>
+                    <x-project-card :project="$projects[5]"></x-project-card>
+                    <x-project-card :project="$projects[6]"></x-project-card>
                 </div>
-                <x-project-card :project="$projects[5]"></x-project-card>
+                <x-project-card :project="$projects[7]"></x-project-card>
 
             </div>
             <div class="flex gap-4">
-                <x-project-card :project="$projects[6]"></x-project-card>
-                <x-project-card :project="$projects[7]"></x-project-card>
+                <div class="flex flex-col gap-4">
+                    <x-project-card :project="$projects[8]"></x-project-card>
+                    <x-project-card :project="$projects[9]"></x-project-card>
+                </div>
+                <x-project-card :project="$projects[10]"></x-project-card>
+            </div>
+            <div class="flex gap-4">
+                <x-project-card :project="$projects[11]"></x-project-card>
+                <x-project-card :project="$projects[12]"></x-project-card>
             </div>
             <div class="hidden md:flex gap-4">
                 <div

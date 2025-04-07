@@ -18,7 +18,7 @@
             </span>
         </div>
 
-        <img src="Projects/{{ $project->name }}/1.{{ $project->extension }}" alt=""
+        <img src="Projects/{{ $project->slug }}/1.{{ $project->extension }}" alt=""
             class="
              w-20 h-20 object-cover object-top {{ $boxClass }}">
     </a>

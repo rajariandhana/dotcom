@@ -31,7 +31,7 @@
         </a>
         <div class="flex {{ $cardFlex }} gap-4 p-4 bg-gray-200 rounded-xl {{ $cardWidth }}">
             <div class="rounded-lg block overflow-hidden justify-center items-center  {{ $imageFlex }}">
-                <img src="/Projects/{{ $project->name }}/1.{{ $project->extension }}" alt=""
+                <img src="/Projects/{{ $project->slug }}/1.{{ $project->extension }}" alt=""
                     class="object-cover object-top {{ $imageSize }}">
                 {{-- @if ($project->size=='TALL')
                 <img src="/Projects/{{ $project->name }}/2.{{ $project->extension }}" alt=""

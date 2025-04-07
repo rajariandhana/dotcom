@@ -13,6 +13,89 @@ class ProjectSeeder extends Seeder
      */
     public function run(): void
     {
+        // Project::create([
+        //     'name' => '',
+        //     'slug' => '',
+        //     'techs' => '||',
+        //     'desc' => '',
+        //     'numPhoto' => 1,
+        //     'extension' => 'png',
+        //     'repo' => 'github.com/rajariandhana/',
+        //     'demo' => '.ralfazza.com',
+        //     'size'=>'BOX-SM',
+        // ]);
+        /*
+            escape cube 2024
+        */
+        Project::create([
+            'name' => 'SIMPENAN | Sistem Informasi Media Penting dan Aman',
+            'slug' => 'simpenan',
+            'techs' => 'Tailwindcss|Alpine.js|Laravel|Livewire',
+            'desc' => 'For my Information Security course, we are required to implement a symmetric and asymmetric encryption for users to store files and send encrypted files',
+            'numPhoto' => 1,
+            'extension' => 'png',
+            'repo' => 'github.com/NETICS-Laboratory/symmetric-data-encryption-application-simpenan',
+            'demo' => 'simpenan.ralfazza.com',
+            'size'=>'WIDE',
+        ]);
+        Project::create([
+            'name' => 'Alpro x Three.js',
+            'slug' => 'alpro-x-three',
+            'techs' => 'JavaScript|Three.js|',
+            'desc' => 'For Computer Graphics course final project, we created a 3d render of the Algorithms and Programming Laboratory using Three.js.',
+            'numPhoto' => 1,
+            'extension' => 'png',
+            'repo' => 'github.com/rajariandhana/ComputerGraphicsFP',
+            // 'demo' => '.ralfazza.com',
+            'size'=>'WIDE',
+        ]);
+        Project::create([
+            'name' => 'GOOFYAH | Goal Organizer For You At Hand',
+            'slug' => 'goofyah',
+            'techs' => 'GO|Gin|Tailwindcss|Alpine.js',
+            'desc' => 'Canon event to do app. For my Framework Based Programming course that uses gin gonic framework.',
+            'numPhoto' => 2,
+            'extension' => 'png',
+            'repo' => 'github.com/rajariandhana/goofyah',
+            // 'demo' => '.ralfazza.com',
+            'size'=>'TALL',
+        ]);
+
+        Project::create([
+            'name' => 'SIKMA | Sistem Informasi Kesehatan Mahasiswa',
+            'slug' => 'sikma',
+            'techs' => 'Tailwindcss|Alpine.js|Laravel|Livewire',
+            'desc' => 'For my Framework Based Programming course that uses laravel framework.',
+            'numPhoto' => 2,
+            'extension' => 'png',
+            'repo' => 'github.com/rajariandhana/sikma',
+            'demo' => 'sikma.ralfazza.com',
+            'size'=>'TALL',
+        ]);
+        Project::create([
+            'name' => 'Boombatag',
+            'slug' => 'boombatag-2024',
+            'techs' => 'Unity|C#|Figma',
+            'desc' => 'Used for Schematics ITS 2024, the game is inspired from the infamous "Keep Talking and Nobody Explodes"',
+            'numPhoto' => 1,
+            'extension' => 'png',
+            // 'repo' => 'github.com/rajariandhana/',
+            // 'demo' => '.ralfazza.com',
+            'size'=>'BOX-LG',
+        ]);
+        // Project::create([
+        //     'name' => '',
+        //     'slug' => '',
+        //     'techs' => '||',
+        //     'desc' => '',
+        //     'numPhoto' => 1,
+        //     'extension' => 'png',
+        //     'repo' => 'github.com/rajariandhana/',
+        //     'demo' => '.ralfazza.com',
+        //     'size'=>'',
+        // ]);
+
+
         Project::create([
             'name' => 'Minesweeper',
             'slug' => 'minesweeper',
@@ -50,7 +133,7 @@ class ProjectSeeder extends Seeder
 
         Project::create([
             'name' => 'Boombatag',
-            'slug' => 'boombatag',
+            'slug' => 'boombatag-2023',
             'techs' => 'Unity|C#|Figma',
             'desc' => 'Used for Schematics ITS 2023, the game is inspired from the infamous "Keep Talking and Nobody Explodes"',
             'numPhoto' => 4,
