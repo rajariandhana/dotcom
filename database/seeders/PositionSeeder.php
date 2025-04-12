@@ -28,7 +28,7 @@ class PositionSeeder extends Seeder
             'name'=>'Fundamental Programming Teaching Assistant',
             // 'slug'=>'Basic_Programming_Teaching_Assistant',
             'employer_id'=>1,
-            'description'=>'Teaches international students basic programming using C programming language up until simple sorting and searching algorithms. Creates programming problems for quizzes and lab works. Assist the lecturer in grading students.',
+            'description'=>'Teaches international students fundamental programming using C programming language up until simple sorting and searching algorithms. Creates programming problems for quizzes and lab works. Assist the lecturer in grading students.',
             'skills'=>'Teaching|Programming|C/C++',
             'date'=>'August 2024 - Present',
             'currentlyWorking'=>true,
@@ -51,7 +51,7 @@ class PositionSeeder extends Seeder
             // 'slug'=>'Research_Assistant',
             'employer_id'=>1,
             'description'=>'Aide the lecturer\'s research by creating python scripts to analyze data.',
-            'skills'=>'Python|Matplotlib|Pandas|ScikitLearn',
+            'skills'=>'Python|Matplotlib|Pandas',
             'date'=>'December 2023 - May 2024',
             'currentlyWorking'=>false,
             // 'mulai'=>'December 2023',
@@ -61,7 +61,7 @@ class PositionSeeder extends Seeder
             'name'=>'Fundamental Programming Teaching Assistant',
             // 'slug'=>'Basic_Programming_Teaching_Assistant',
             'employer_id'=>1,
-            'description'=>'Teaches international students basic programming using C programming language up until simple sorting and searching algorithms. Creates programming problems for quizzes and lab works. Assist the lecturer in grading students.',
+            'description'=>'Teaches international students fundamental programming using C programming language up until simple sorting and searching algorithms. Creates programming problems for quizzes and lab works. Assist the lecturer in grading students.',
             'skills'=>'Teaching|Programming|C/C++',
             'date'=>'August 2023 - December 2023',
             'currentlyWorking'=>false,
@@ -69,12 +69,14 @@ class PositionSeeder extends Seeder
             // 'selesai'=>'December 2023',
         ]);
 
+
+
         Position::create([
             'name'=>'Frontend Web Developer',
             // 'slug'=>'Basic_Programming_Teaching_Assistant',
             'employer_id'=>2,
-            'description'=>'Design and create responsive frontend of a company profile. TailwindCSS and Alpinejs were used.',
-            'skills'=>'Web|Programming',
+            'description'=>'Developed and designed the responsive frontend for the company\'s profile website, ensuring a seamless user experience across all devices.',
+            'skills'=>'Web|Tailwind CSS| Alpine.js',
             'date'=>'July 2024 - August 2024',
             'currentlyWorking'=>false,
             // 'mulai'=>'August 2023',
@@ -87,7 +89,7 @@ class PositionSeeder extends Seeder
             'name'=>'Expert Game Developer',
             // 'slug'=>'Expert_Game_Developer',
             'employer_id'=>3,
-            'description'=>'Design and develop games from ground up using C# with Unity Engine to be used in the Schematics 2024.',
+            'description'=>'Design and develop games from scratch using C# with Unity Engine to be used in the Schematics 2024 reaching over 1000 players online. Focused on creating the core inventory system and item pick-up mechanism for the first game and led development on user interfaces for second game.',
             'skills'=>'Unity|C#|Figma|Game Design|OOP',
             'date'=>'January 2024 - November 2024',
             'currentlyWorking'=>false,
@@ -97,7 +99,7 @@ class PositionSeeder extends Seeder
         Position::create([
             'name'=>'Guest Speaker',
             'employer_id'=>3,
-            'description'=>'Speaker for "Road To NPC" by Schematics NPC 2024. Teaches fundamental programming towards participants using C++ to prepare them for Schematics NPC 2024.',
+            'description'=>'Speaker for "Road To NPC" by Schematics NPC 2024. Teaches fundamental programming towards participants using C++ to prepare the competition.',
             'skills'=>'Public Speaking|C++|Teaching',
             'date'=>'July 2024 - August 2024',
             'currentlyWorking'=>false,
@@ -105,7 +107,7 @@ class PositionSeeder extends Seeder
         Position::create([
             'name'=>'Liaison Officer',
             'employer_id'=>3,
-            'description'=>'Helped Schematics BST 2024 bootcamp participants by providing answers to questions regarding front-end web development in HTML, CSS, and JavaScript.',
+            'description'=>'Provided guidance and support to participants of Schematics BST 2024 bootcamp, offering answers and insights on front-end web development with HTML, CSS, and JavaScript.',
             'skills'=>'HTML|CSS|JavaScript',
             'date'=>'July 2024 - August 2024',
             'currentlyWorking'=>false,
@@ -114,7 +116,7 @@ class PositionSeeder extends Seeder
             'name'=>'Game Developer',
             // 'slug'=>'Game_Developer',
             'employer_id'=>3,
-            'description'=>'Worked in a team to develop games using C# with Unity Engine for Schematics 2023. The games were played by over 1000 participants in the elimination round.',
+            'description'=>'Collaborated in a team to develop games using C# with Unity Engine for Schematics 2023. Games were played by over 1000 participants in the elimination round.',
             'skills'=>'Unity|C#|Figma',
             'date'=>'February 2023 - November 2023',
             'currentlyWorking'=>false,
@@ -123,7 +125,7 @@ class PositionSeeder extends Seeder
         ]);
 
 
-        
+
         Position::create([
             'name'=>'Practicum Coordinator',
             'employer_id'=>4,

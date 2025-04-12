@@ -26,8 +26,27 @@
             <a class="underline" href="https://www.ralfazza.com">ralfazza.com</a>
         </p>
         <p class="text-justify">
-            Passionate to keep learning about software development. Took pride in educating students on the fundamentals of programming as well as data structures. Enjoys developing games and web applications for side projects.
+            Third year computer science student currently studying in Australia with hands-on experience in web development, game development, and teaching students.
         </p>
+    </div>
+    <div class="mb-4">
+        <h2 class="font-bold uppercase">Education</h2>
+        <hr class="h-[2px] bg-black mb-4">
+        <div class="mb-4">
+            <h3 class="font-bold uppercase">University of Queensland (UQ)</h3>
+            <span class="text-sm text-zinc-500">August 2022 - Present</span>
+            <p>Double degree student in partnership with ITS. Enrolled in Bachelor of Computer Science with Major in Cyber Security. Expected to graduate in July 2026.</p>
+        </div>
+        <div class="mb-4">
+            <h3 class="font-bold uppercase">Sepuluh Nopember Institute of Technology (ITS)</h3>
+            <span class="text-sm text-zinc-500">August 2022 - Present</span>
+            <p>Enrolled in Informatics Engineering International Undergraduate Program. 3.51 GPA on a 4 scale system for 105 credits throughout 5 semesters. Expected to graduate in July 2026.</p>
+        </div>
+        <div class="mb-4">
+            <h3 class="font-bold uppercase">Al-Izhar Pondok Labu</h3>
+            <span class="text-sm text-zinc-500">July 2019 - May 2022</span>
+            <p>Graduated from Math and Natural Science course. Member of Environmental Club (2019-2022) and Public Relations (2019-2022).</p>
+        </div>
     </div>
     <div class="mb-4">
         <h2 class="font-bold uppercase">Experience</h2>
@@ -46,31 +65,16 @@
         @endforeach
     </div>
     <div class="mb-4">
-        <h2 class="font-bold uppercase">Education</h2>
-        <hr class="h-[2px] bg-black mb-4">
-        <div class="mb-4">
-            <h3 class="font-bold uppercase">Institut Teknologi Sepuluh Nopember (ITS)</h3>
-            <span class="text-sm text-zinc-500">August 2022 - Present</span>
-            <p>Enrolled in Informatics Engineering International Undergraduate Program. 3.49 GPA for 81 credits throughout 4 semesters. Expected to graduate in 2026.</p>
-        </div>
-        <div class="mb-4">
-            <h3 class="font-bold uppercase">Al-Izhar Pondok Labu</h3>
-            <span class="text-sm text-zinc-500">July 2019 - May 2022</span>
-            <p>Graduated from Math and Natural Science course. Member of Environmental Club (2019-2022) and Public Relations (2019-2022).</p>
-        </div>
-    </div>
-    <div class="mb-4">
         <h2 class="font-bold uppercase">Skills</h2>
         <hr class="h-[2px] bg-black mb-4">
         <div class="mb-4">
             <h3 class="font-bold uppercase">Tech Stack</h3>
             <ul class="ml-6 list-disc">
                 <li>Data structures and algorithms using C/C++</li>
-                <li>Data analyzing using Python with pandas, matplotlib, numpy</li>
+                <li>Web frameworks such as Laravel and Gin with help of Tailwind CSS, Alpine.js, Livewire</li>
                 <li>Game development and object-oriented Programming using C# with Unity Engine</li>
-                <li>Web development using HTML, CSS, JavaScript</li>
-                <li>Web development using Laravel framework with the help of Tailwind CSS, Alpine JS, and Laravel Livewire</li>
-                <li>Database management using MySQL and PostgreSQL</li>
+                <li>Data analyzing using Python with pandas, matplotlib, numpy</li>
+                <li>Database management using MySQL, SQLite, and PostgreSQL</li>
             </ul>
         </div>
         <div class="mb-4">
