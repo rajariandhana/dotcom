@@ -19,10 +19,8 @@ class PositionSeeder extends Seeder
             'employer_id'=>1,
             'description'=>'Teaches Industrial Engineering students fundamental programming using C programming language and later on using Python up until simple sorting and searching algorithms. Assist the lecturer in grading students.',
             'skills'=>'Teaching|Programming|C|Python',
-            'date'=>'August 2024 - Present',
-            'currentlyWorking'=>true,
-            // 'mulai'=>'August 2023',
-            // 'selesai'=>'December 2023',
+            'date'=>'August 2024 - December 2024',
+            'currentlyWorking'=>false,
         ]);
         Position::create([
             'name'=>'Fundamental Programming Teaching Assistant',
@@ -30,10 +28,8 @@ class PositionSeeder extends Seeder
             'employer_id'=>1,
             'description'=>'Teaches international students fundamental programming using C programming language up until simple sorting and searching algorithms. Creates programming problems for quizzes and lab works. Assist the lecturer in grading students.',
             'skills'=>'Teaching|Programming|C/C++',
-            'date'=>'August 2024 - Present',
-            'currentlyWorking'=>true,
-            // 'mulai'=>'August 2023',
-            // 'selesai'=>'December 2023',
+            'date'=>'August 2024 - December 2024',
+            'currentlyWorking'=>false,
         ]);
         Position::create([
             'name'=>'Data Structures Teaching Assistant',
@@ -43,8 +39,6 @@ class PositionSeeder extends Seeder
             'skills'=>'Teaching|Data Structures|Algorithms|C/C++',
             'date'=>'February 2024 - July 2024',
             'currentlyWorking'=>false,
-            // 'mulai'=>'February 2024',
-            // 'selesai'=>'Present',
         ]);
         Position::create([
             'name'=>'Research Assistant',
@@ -54,8 +48,6 @@ class PositionSeeder extends Seeder
             'skills'=>'Python|Matplotlib|Pandas',
             'date'=>'December 2023 - May 2024',
             'currentlyWorking'=>false,
-            // 'mulai'=>'December 2023',
-            // 'selesai'=>'Present',
         ]);
         Position::create([
             'name'=>'Fundamental Programming Teaching Assistant',
@@ -65,8 +57,6 @@ class PositionSeeder extends Seeder
             'skills'=>'Teaching|Programming|C/C++',
             'date'=>'August 2023 - December 2023',
             'currentlyWorking'=>false,
-            // 'mulai'=>'August 2023',
-            // 'selesai'=>'December 2023',
         ]);
 
 
@@ -79,8 +69,6 @@ class PositionSeeder extends Seeder
             'skills'=>'Web|Tailwind CSS| Alpine.js',
             'date'=>'July 2024 - August 2024',
             'currentlyWorking'=>false,
-            // 'mulai'=>'August 2023',
-            // 'selesai'=>'December 2023',
         ]);
 
 
@@ -93,8 +81,6 @@ class PositionSeeder extends Seeder
             'skills'=>'Unity|C#|Figma|Game Design|OOP',
             'date'=>'January 2024 - November 2024',
             'currentlyWorking'=>false,
-            // 'mulai'=>'January 2024',
-            // 'selesai'=>'Present',
         ]);
         Position::create([
             'name'=>'Guest Speaker',
@@ -120,8 +106,6 @@ class PositionSeeder extends Seeder
             'skills'=>'Unity|C#|Figma',
             'date'=>'February 2023 - November 2023',
             'currentlyWorking'=>false,
-            // 'mulai'=>'February 2023',
-            // 'selesai'=>'November 2023',
         ]);
 
 
@@ -131,8 +115,8 @@ class PositionSeeder extends Seeder
             'employer_id'=>4,
             'description'=>'Responsible for all teaching assistants of Fundamental Programming Course, arranged the course\'s timeline, sets up website to held programming practicum.',
             'skills'=>'Coordinator',
-            'date'=>'August 2024 - Present',
-            'currentlyWorking'=>true,
+            'date'=>'August 2024 - December 2024',
+            'currentlyWorking'=>false,
         ]);
         Position::create([
             'name'=>'Lab Administrator',
@@ -142,8 +126,6 @@ class PositionSeeder extends Seeder
             'skills'=>'Coordinator',
             'date'=>'January 2024 - Present',
             'currentlyWorking'=>true,
-            // 'mulai'=>'January 2024',
-            // 'selesai'=>'Present',
         ]);
 
 
@@ -156,8 +138,6 @@ class PositionSeeder extends Seeder
             'skills'=>'Photography|Videography|Live Streaming',
             'date'=>'October 2019 - January 2022',
             'currentlyWorking'=>false,
-            // 'mulai'=>'January 2024',
-            // 'selesai'=>'Present',
         ]);
     }
 }

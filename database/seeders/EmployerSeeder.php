@@ -14,14 +14,14 @@ class EmployerSeeder extends Seeder
     public function run(): void
     {
         Employer::create([
-            'name'=>'ITS Surabaya',
+            'name'=>'Sepuluh Nopember Institute of Technology',
             'slug'=>'ITS-Surabaya',
             'link'=>'https://www.its.ac.id',
             'description'=>'This is my campus, got here in 2022 to study Informatics Engineering. It\'s like one of the best educational institute in the country.',
         ]);
         Employer::create([
-            'name'=>'PT Rajawali Global Asia',
-            'slug'=>'PT-Rajawali-Global-Asia',
+            'name'=>'PT Rajawali Holdings Indonesia',
+            'slug'=>'PT-Rajawali-Holdings-Indonesia',
             'link'=>'https://www.rajawaliholdings.com',
             'description'=>'Internship here',
         ]);
@@ -32,7 +32,7 @@ class EmployerSeeder extends Seeder
             'description'=>'Where I learn game development. It\'s like an annual event, there is logic competition, programming competition, bootcamp and seminars, as well as the fun stuffs.',
         ]);
         Employer::create([
-            'name'=>'Alpro ITS',
+            'name'=>'Algorithms and Programming Laboratory',
             'slug'=>'Alpro-ITS',
             'link'=>'https://www.its.ac.id/informatika/id/fasilitas/laboratorium/laboratorium-algoritma-dan-pemrograman/',
             'description'=>'One of many Informatics Engineering Department\'s laboratorium.',
@@ -43,6 +43,6 @@ class EmployerSeeder extends Seeder
             'link'=>'https://instagram.com/osis_smaipl',
             'description'=>'My beloved school',
         ]);
-        
+
     }
 }

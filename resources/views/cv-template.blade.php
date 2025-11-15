@@ -34,7 +34,7 @@
         <hr class="h-[2px] bg-black mb-4">
         <div class="mb-4">
             <h3 class="font-bold uppercase">University of Queensland (UQ)</h3>
-            <span class="text-sm text-zinc-500">August 2022 - Present</span>
+            <span class="text-sm text-zinc-500">February 2025 - Present</span>
             <p>Double degree student in partnership with ITS. Enrolled in Bachelor of Computer Science with Major in Cyber Security. Expected to graduate in July 2026.</p>
         </div>
         <div class="mb-4">
