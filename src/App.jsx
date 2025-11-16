@@ -10,6 +10,11 @@ function App() {
     <Routes>
       <Route element={<Layout />}>
         <Route path="/" element={<Home />} />
+        <Route path="/projects" />
+        <Route path="/experience" />
+        <Route path="/photos" />
+        <Route path="/chatbot" />
+        <Route path="/settings" />
       </Route>
     </Routes>
   )
