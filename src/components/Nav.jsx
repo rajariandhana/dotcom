@@ -43,7 +43,7 @@ const Nav = () => {
   ];
 
   return (
-    <header>
+    <header className="sticky top-0 z-20 w-full">
       <Navbar onMenuOpenChange={setIsMenuOpen} isBordered>
         <NavbarContent>
           <NavbarBrand color="foreground">
@@ -76,7 +76,7 @@ const Nav = () => {
         </NavbarContent>
 
         <NavbarMenu>
-          <NavbarMenuItem isActive={location.pathname === "/"}>
+          <NavbarMenuItem className="lg:ml-20 xl:ml-48" isActive={location.pathname === "/"}>
             <Link to={"/"} className="nav-menu-item">
               Home
             </Link>
@@ -84,7 +84,7 @@ const Nav = () => {
           {primaryMenuItems.map((item, index) => {
             let active = location.pathname.startsWith(item.link);
             return (
-              <NavbarMenuItem key={`${item.label}-${index}`} isActive={active}>
+              <NavbarMenuItem className="lg:ml-20 xl:ml-48" key={`${item.label}-${index}`} isActive={active}>
                 <Link to={item.link} className="nav-menu-item">
                   {item.label}
                 </Link>
@@ -99,7 +99,7 @@ const Nav = () => {
                 active = false;
               }
               return (
-                <NavbarMenuItem
+                <NavbarMenuItem className="lg:ml-20 xl:ml-48"
                   key={`${item.label}-${index}`}
                   isActive={active}
                 >
