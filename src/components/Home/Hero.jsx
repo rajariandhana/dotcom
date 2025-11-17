@@ -3,7 +3,7 @@ export default function Hero() {
     <section>
       <div className="flex">
         <img
-          src="src/assets/ProfilePicture.webp"
+          src="/ProfilePicture.webp"
           alt=""
           className="object-cover p-1 mb-12 rounded-full size-32 bg-indigo-rose"
         />

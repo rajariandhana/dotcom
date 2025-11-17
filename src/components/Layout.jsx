@@ -8,7 +8,7 @@ const Layout = () => {
       className="flex flex-col items-center min-h-screen gap-6 bg-stone-100"
     >
       <Nav/>
-      <main className="flex flex-col items-center justify-center max-w-4xl gap-12 px-12">
+      <main className="flex flex-col items-center justify-center max-w-4xl gap-6 px-6 sm:gap-12 sm:px-12">
         <Outlet />
       </main>
       <Footer/>
