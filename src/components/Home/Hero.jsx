@@ -23,6 +23,9 @@ export default function Hero() {
   return (
     <section>
       <div className="flex">
+        <div className="absolute z-10 mt-4 ml-24 transition-all duration-300 ease-out cursor-pointer rotate-4 hover:rotate-6">
+          <SpeechBubble message={qotd} />
+        </div>
         <img
           src="/ProfilePicture.webp"
           alt=""
