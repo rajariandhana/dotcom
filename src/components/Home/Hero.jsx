@@ -1,4 +1,25 @@
+import { useState, useEffect } from "react";
+import SpeechBubble from "../SpeechBubble.jsx";
+
 export default function Hero() {
+  const [qotd, setQotd] = useState("...");
+
+  useEffect(() => {
+    fetch("/quotes.json")
+      .then((res) => res.json())
+      .then((data) => {
+        const randomIndex = Math.floor(Math.random() * data.length);
+        setQotd(data[randomIndex].quote);
+      })
+      .catch((error) => {
+        console.error("Error fetching projects:", error);
+        setQotd("ZZZ..zz...");
+      })
+      .finally(()=>{
+        setQotd("ZZZ..zz...");
+      });
+  }, []);
+
   return (
     <section>
       <div className="flex">
@@ -14,11 +35,9 @@ export default function Hero() {
           Hello, world!
         </span>
       </h1> */}
-      <h1 className="!font-semibold text-xl -mt-4">
-        Ralfazza here...
-      </h1>
+      <h1 className="!font-semibold text-xl -mt-4">Ralfazza here...</h1>
       <p className="text-justify">
-       You'll find several of my best works such as my projects as a developer,
+        You'll find several of my best works such as my projects as a developer,
         my interest in photography, and anything else since this is my website
         and I can do anything I want here.
       </p>
@@ -88,4 +107,4 @@ export default function Hero() {
       </ul>
     </section>
   );
-};
+}

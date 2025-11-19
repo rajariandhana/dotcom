@@ -12,10 +12,12 @@ function App() {
       <Route element={<Layout />}>
         <Route path="/" element={<Home />} />
         <Route path="/projects" element={<UnderMaintenance />} />
+        <Route path="/projects/:project_slug" element={<UnderMaintenance />} />
         <Route path="/experience" element={<UnderMaintenance />} />
-        <Route path="/photos" element={<UnderMaintenance />} />
+        <Route path="/gallery" element={<UnderMaintenance />} />
         <Route path="/chatbot" element={<UnderMaintenance />} />
         <Route path="/settings" element={<UnderMaintenance />} />
+        <Route path="/:path" element={<UnderMaintenance />} />
       </Route>
     </Routes>
   )

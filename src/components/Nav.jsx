@@ -26,19 +26,19 @@ const Nav = () => {
       link: "/experience",
     },
     {
-      label: "Photos",
-      link: "/photos",
+      label: "Gallery",
+      link: "/gallery",
     },
   ];
 
   const secondaryMenuItems = [
     {
-      label: "Try my AI Chatbot",
+      label: "My AI Chatbot",
       link: "/chatbot",
     },
     {
-      label: "Settings",
-      link: "/settings",
+      label: "Explore More",
+      link: "/explore-more",
     },
   ];
 
@@ -76,7 +76,7 @@ const Nav = () => {
         </NavbarContent>
 
         <NavbarMenu>
-          <NavbarMenuItem className="lg:ml-20 xl:ml-48" isActive={location.pathname === "/"}>
+          <NavbarMenuItem className="mb-4 lg:ml-20 xl:ml-48" isActive={location.pathname === "/"}>
             <Link to={"/"} className="nav-menu-item">
               Home
             </Link>
@@ -92,7 +92,7 @@ const Nav = () => {
             );
           })}
 
-          <div className="mt-8">
+          <div className="mt-4">
             {secondaryMenuItems.map((item, index) => {
               let active = location.pathname.startsWith(item.link);
               if (item.link === "/" && location.pathname !== "/") {
@@ -105,7 +105,7 @@ const Nav = () => {
                 >
                   <Link to={item.link} className="nav-menu-item">
                     {item.label}{" "}
-                    {item.label === "Try my AI Chatbot" ? (
+                    {item.label === "My AI Chatbot" ? (
                       <Chip color="primary" variant="flat" size="sm">
                         New!
                       </Chip>
