@@ -25,7 +25,7 @@ export default function ProjectCard({ project, loading }) {
           </Skeleton>
 
           <Skeleton isLoaded={!loading} className="rounded-md">
-            <span className="flex items-center justify-center w-full h-6 text-center truncate">
+            <span className="h-6 text-center truncate w-96 sm:w-60">
               {name}
             </span>
           </Skeleton>
@@ -38,9 +38,7 @@ export default function ProjectCard({ project, loading }) {
             className="object-cover transition-opacity duration-500 bg-white rounded-md h-52 w-96 sm:w-60 sm:h-40"
           />
 
-          <span className="flex items-center justify-center w-full h-6 text-center truncate">
-            {name}
-          </span>
+          <span className="h-6 text-center truncate w-96 sm:w-60">{name}</span>
         </>
       )}
     </Link>

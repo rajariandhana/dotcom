@@ -5,13 +5,14 @@ import { Routes, Route } from 'react-router'
 import Layout from './components/Layout'
 import Home from './pages/Home'
 import UnderMaintenance from './components/UnderMaintenance'
+import Projects from './components/Projects/Projects'
 
 function App() {
   return (
     <Routes>
       <Route element={<Layout />}>
         <Route path="/" element={<Home />} />
-        <Route path="/projects" element={<UnderMaintenance />} />
+        <Route path="/projects" element={<Projects />} />
         <Route path="/projects/:project_slug" element={<UnderMaintenance />} />
         <Route path="/experience" element={<UnderMaintenance />} />
         <Route path="/gallery" element={<UnderMaintenance />} />
