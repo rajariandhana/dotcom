@@ -13,7 +13,6 @@ export default function Projects() {
     "🌐 Web Development": [],
     "💡 Other Projects": [],
   });
-
   const [loading, setLoading] = useState(true);
 
   const fetchProjects = async () => {

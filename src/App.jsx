@@ -6,6 +6,7 @@ import Layout from './components/Layout'
 import Home from './pages/Home'
 import UnderMaintenance from './components/UnderMaintenance'
 import Projects from './components/Projects/Projects'
+import ProjectDetail from './components/Projects/ProjectDetail'
 
 function App() {
   return (
@@ -13,7 +14,7 @@ function App() {
       <Route element={<Layout />}>
         <Route path="/" element={<Home />} />
         <Route path="/projects" element={<Projects />} />
-        <Route path="/projects/:project_slug" element={<UnderMaintenance />} />
+        <Route path="/projects/:project_slug" element={<ProjectDetail />} />
         <Route path="/experience" element={<UnderMaintenance />} />
         <Route path="/gallery" element={<UnderMaintenance />} />
         <Route path="/chatbot" element={<UnderMaintenance />} />
