@@ -1,0 +1,20 @@
+[
+  {
+    "name": "University of Queensland",
+    "slug": "uq",
+    "date": "February 2025 - Present",
+    "description": "Notable courses: Computer Systems Principles & Programming, Information Security, Operating Systems Architecture, Theory of Computing, Programming in the Large.",
+    "link": "https://www.uq.edu.au",
+    "location": "Brisbane, Australia",
+    "sub_title": "Bachelor of Computer Science | Cyber Security | GPA: 4.667/7.0"
+  },
+  {
+    "name": "Institut Teknologi Sepuluh Nopember",
+    "slug": "its-surabaya",
+    "date": "August 2022 - Present",
+    "description": "Notable courses: Data Structures, Web Programming, Object Oriented Programming, Framework-Based Programming, Database Management, Software Design, Algorithms Design and Analysis.",
+    "link": "https://www.its.ac.id",
+    "location": "Surabaya, Indonesia",
+    "sub_title": "Bachelor of Informatics Engineering | GPA: 3.45/4.0"
+  }
+]
