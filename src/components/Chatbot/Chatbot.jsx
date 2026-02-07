@@ -29,7 +29,7 @@ export default function Chatbot() {
         "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo, natus consectetur ab dolorem libero sequi nihil itaque possimus iste saepe.",
     },
   ];
-  const [messages, setMessages] = useState();
+  const [messages, setMessages] = useState([]);
 
   const onSubmit = async () => {
     if (!query.trim()) return;
@@ -67,12 +67,16 @@ export default function Chatbot() {
   return (
     <div className="relative min-h-screen w-full">
       <div className="pb-24 w-full">
-        {messages ? (
-          <ChatbotMessages messages={messages} loading={loading} />
-        ) : (
+        {messages.length === 0 ? (
           <div className="flex flex-col w-full items-center justify-center">
-            <Alert color="primary" title="Cause apparently every website needs a chatbot"/>
+            <Alert
+              title="Cause apparently every website needs a chatbot"
+              color="primary"
+              variant="faded"
+            />
           </div>
+        ) : (
+          <ChatbotMessages messages={messages} loading={loading} />
         )}
         {/* chat messages go here */}
       </div>

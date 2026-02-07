@@ -1,6 +1,6 @@
-import { Textarea } from "@heroui/react";
+import { Spinner, Textarea } from "@heroui/react";
 
-export default function ChatbotMessage({ role, content }) {
+export default function ChatbotMessage({ role, content, startContent }) {
   return (
     <Textarea
       className={`md:max-w-3/4 ${
@@ -9,6 +9,7 @@ export default function ChatbotMessage({ role, content }) {
       isReadOnly
       color={role === "client" ? "primary" : "secondary"}
       value={content}
+      startContent={startContent}
       variant="flat"
       label={role === "client" ? "You" : "Chatbot"}
     />
