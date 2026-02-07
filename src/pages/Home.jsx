@@ -2,6 +2,10 @@ import { addToast, Button } from "@heroui/react";
 import instance from "../libs/axios/instance";
 import { useQuery } from "@tanstack/react-query";
 
+import Hero from "../components/Home/Hero";
+import BestProjects from "../components/Home/BestProjects";
+import BestPhotos from "../components/Home/BestPhotos";
+
 export const Home = () => {
 
   const fetchPing = async () => {
@@ -23,9 +27,13 @@ export const Home = () => {
 
   return (
     <>
-      <h1>Welcome to the Home Page</h1>
-      <p>This is the main landing page of the application.</p>
-      <Button
+      <Hero />
+      <div className="w-full p-4 bg-white border border-gray-200 rounded-md">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, necessitatibus! Amet esse cupiditate saepe tenetur possimus qui ab? Mollitia, aut.
+      </div>
+      <BestProjects />
+      <BestPhotos />
+      {/* <Button
         color="primary"
         onPress={() => {
           addToast({
@@ -37,7 +45,7 @@ export const Home = () => {
       </Button>
       <span>
         {isLoading ? "Loading..." : `Ping Response: ${JSON.stringify(pingData)}`}
-      </span>
+      </span> */}
     </>
   )
 }
