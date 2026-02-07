@@ -2,11 +2,34 @@ import { useState } from "react";
 import PromptBox from "./PromptBox";
 import instance from "../../libs/axios/instance";
 import ChatbotMessages from "./ChatbotMessages";
+import { Alert } from "@heroui/react";
 
 export default function Chatbot() {
   const [query, setQuery] = useState("");
   const [loading, setLoading] = useState(false);
-  const [messages, setMessages] = useState([]);
+  const dummy = [
+    {
+      role: "client",
+      content:
+        "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo, natus consectetur ab dolorem libero sequi nihil itaque possimus iste saepe.",
+    },
+    {
+      role: "server",
+      content:
+        "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo, natus consectetur ab dolorem libero sequi nihil itaque possimus iste saepe.",
+    },
+    {
+      role: "client",
+      content:
+        "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo, natus consectetur ab dolorem libero sequi nihil itaque possimus iste saepe.",
+    },
+    {
+      role: "server",
+      content:
+        "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo, natus consectetur ab dolorem libero sequi nihil itaque possimus iste saepe.",
+    },
+  ];
+  const [messages, setMessages] = useState();
 
   const onSubmit = async () => {
     if (!query.trim()) return;
@@ -32,22 +55,29 @@ export default function Chatbot() {
         ...prev,
         {
           role: "assistant",
-          content: "Something went wrong 😬",
+          content: "Something went wrong...",
         },
       ]);
+      console.log(error);
     } finally {
       setLoading(false);
     }
   };
 
   return (
-    <div className="relative min-h-screen bg-red-50">
-      <div className="pb-24">
-        <ChatbotMessages messages={messages} loading={loading} />
+    <div className="relative min-h-screen w-full">
+      <div className="pb-24 w-full">
+        {messages ? (
+          <ChatbotMessages messages={messages} loading={loading} />
+        ) : (
+          <div className="flex flex-col w-full items-center justify-center">
+            <Alert color="primary" title="Cause apparently every website needs a chatbot"/>
+          </div>
+        )}
         {/* chat messages go here */}
       </div>
 
-      <div className="fixed bottom-0 left-0 w-full bg-yellow-50 px-6 sm:px-12 py-4">
+      <div className="fixed bottom-0 left-0 w-full px-6 sm:px-12 py-4 bg-white">
         <PromptBox
           query={query}
           setQuery={setQuery}
