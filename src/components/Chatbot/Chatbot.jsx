@@ -2,7 +2,7 @@ import { useState } from "react";
 import PromptBox from "./PromptBox";
 import instance from "../../libs/axios/instance";
 import ChatbotMessages from "./ChatbotMessages";
-import { Alert } from "@heroui/react";
+import { Button, ScrollShadow } from "@heroui/react";
 
 export default function Chatbot() {
   const [query, setQuery] = useState("");
@@ -31,32 +31,36 @@ export default function Chatbot() {
   ];
   const [messages, setMessages] = useState([]);
 
-  const onSubmit = async () => {
-    if (!query.trim()) return;
+  const sampleQueries = [
+    "What school he went to?",
+    "What are some of his web projects?",
+    "How tall is he?",
+  ];
+
+  const onSubmit = async (overrideQuery) => {
+    const finalQuery = overrideQuery ?? query;
+    if (!finalQuery.trim()) return;
+
     const clientMessage = {
       role: "client",
-      content: query,
+      content: finalQuery,
     };
+
     setMessages((prev) => [...prev, clientMessage]);
     setQuery("");
     setLoading(true);
+
     try {
       const response = await instance.post("/rag/qa", {
-        query,
+        query: finalQuery,
       });
       const answer = response.data.data;
-      const serverMessage = {
-        role: "server",
-        content: answer,
-      };
-      setMessages((prev) => [...prev, serverMessage]);
+
+      setMessages((prev) => [...prev, { role: "server", content: answer }]);
     } catch (error) {
       setMessages((prev) => [
         ...prev,
-        {
-          role: "assistant",
-          content: "Something went wrong...",
-        },
+        { role: "server", content: "Something went wrong... The AI probably reached it's limit, try again later..." },
       ]);
       console.log(error);
     } finally {
@@ -66,20 +70,31 @@ export default function Chatbot() {
 
   return (
     <div className="relative min-h-screen w-full">
-      <div className="pb-24 w-full">
+      <ScrollShadow className="pb-24 w-full">
         {messages.length === 0 ? (
-          <div className="flex flex-col w-full items-center justify-center">
-            <Alert
-              title="Cause apparently every website needs a chatbot"
-              color="primary"
-              variant="faded"
-            />
+          <div className="flex flex-col w-full justify-center">
+            <h2 className="text-2xl">Meet My Chatbot</h2>
+            <span className="text-sm mb-8">
+              Cause apparently every website needs a chatbot
+            </span>
+            <span className="mb-1">Ask questions about me like:</span>
+            <div className="flex flex-col gap-2 w-full items-start">
+              {sampleQueries.map((q) => (
+                <Button
+                  color="primary"
+                  variant="flat"
+                  size="lg"
+                  onPress={() => onSubmit(q)}
+                >
+                  {q}
+                </Button>
+              ))}
+            </div>
           </div>
         ) : (
           <ChatbotMessages messages={messages} loading={loading} />
         )}
-        {/* chat messages go here */}
-      </div>
+      </ScrollShadow>
 
       <div className="fixed bottom-0 left-0 w-full px-6 sm:px-12 py-4 bg-white">
         <PromptBox

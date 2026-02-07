@@ -1,17 +1,16 @@
 import { Spinner, Textarea } from "@heroui/react";
 
-export default function ChatbotMessage({ role, content, startContent }) {
+export default function ChatbotMessage({ role, content, loading }) {
   return (
-    <Textarea
-      className={`md:max-w-3/4 ${
-        role === "client" ? "self-end" : "self-start"
-      }`}
-      isReadOnly
-      color={role === "client" ? "primary" : "secondary"}
-      value={content}
-      startContent={startContent}
-      variant="flat"
-      label={role === "client" ? "You" : "Chatbot"}
-    />
+    <div
+      className={`w-4/5 lg:w-3/4 rounded-xl px-3 pt-1 pb-2 border shadow-md ${role === "client" ? "self-end bg-primary-100 border-primary-100 text-primary" : "self-start bg-secondary-100 border-secondary-100 text-secondary"}`}
+    >
+      <span className="text-xs">{role === "client" ? "You" : "Chatbot"}</span>
+      {loading ? (
+        <Spinner color="secondary" variant="dots" />
+      ) : (
+        <p className="text-sm">{content}</p>
+      )}
+    </div>
   );
 }

@@ -7,12 +7,7 @@ export default function ChatbotMessages({ messages, loading }) {
       {messages.map((msg, idx) => (
         <ChatbotMessage key={idx} role={msg.role} content={msg.content} />
       ))}
-      {loading && (
-        <ChatbotMessage
-          role={"server"}
-          startContent={<Spinner color="secondary" variant="dots" />}
-        />
-      )}
+      {loading && <ChatbotMessage role={"server"} loading={true} />}
     </div>
   );
 }

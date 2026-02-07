@@ -12,7 +12,12 @@ export default function PromptBox({ query, setQuery, onSubmit, loading }) {
         size="lg"
       />
 
-      <Button onPress={onSubmit} disabled={loading} color="primary" size="lg">
+      <Button
+        onPress={() => onSubmit(query)}
+        disabled={loading}
+        color="primary"
+        size="lg"
+      >
         Enter
       </Button>
     </div>
