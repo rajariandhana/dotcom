@@ -16,6 +16,8 @@ export default function Projects() {
   const [loading, setLoading] = useState(true);
 
   const fetchProjects = async () => {
+    // simulate delay
+    // await new Promise((resolve) => setTimeout(resolve, 1000));
     try {
       const res = await fetch("/projects.json");
       const data = await res.json();
