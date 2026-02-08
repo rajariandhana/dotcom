@@ -2,7 +2,7 @@ import { useState } from "react";
 import PromptBox from "./PromptBox";
 import instance from "../../libs/axios/instance";
 import ChatbotMessages from "./ChatbotMessages";
-import { Button, ScrollShadow } from "@heroui/react";
+import { Button, Chip, ScrollShadow } from "@heroui/react";
 
 export default function Chatbot() {
   const [query, setQuery] = useState("");
@@ -70,7 +70,7 @@ export default function Chatbot() {
 
   return (
     <div className="relative min-h-screen w-full">
-      <ScrollShadow className="pb-24 w-full">
+      <div className="pb-24 w-full">
         {messages.length === 0 ? (
           <div className="flex flex-col w-full justify-center">
             <h2 className="text-2xl">Meet My Chatbot</h2>
@@ -85,6 +85,7 @@ export default function Chatbot() {
                   variant="flat"
                   size="lg"
                   onPress={() => onSubmit(q)}
+                  key={q}
                 >
                   {q}
                 </Button>
@@ -94,7 +95,7 @@ export default function Chatbot() {
         ) : (
           <ChatbotMessages messages={messages} loading={loading} />
         )}
-      </ScrollShadow>
+      </div>
 
       <div className="fixed bottom-0 left-0 w-full px-6 sm:px-12 py-4 bg-white">
         <PromptBox
