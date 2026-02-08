@@ -1,13 +1,14 @@
-import './App.css'
+import "./App.css";
 
-import { Routes, Route } from 'react-router'
+import { Routes, Route } from "react-router";
 
-import Layout from './components/Layout'
-import Home from './pages/Home'
-import UnderMaintenance from './components/UnderMaintenance'
-import Projects from './components/Projects/Projects'
-import ProjectDetail from './components/Projects/ProjectDetail'
-import Experience from './components/Experience/Experience'
+import Layout from "./components/Layout";
+import Home from "./pages/Home";
+import UnderMaintenance from "./components/UnderMaintenance";
+import Projects from "./components/Projects/Projects";
+import ProjectDetail from "./components/Projects/ProjectDetail";
+import Experience from "./components/Experience/Experience";
+import Chatbot from "./components/Chatbot/Chatbot";
 
 function App() {
   return (
@@ -18,12 +19,14 @@ function App() {
         <Route path="/projects/:project_slug" element={<ProjectDetail />} />
         <Route path="/experience" element={<Experience />} />
         <Route path="/gallery" element={<UnderMaintenance />} />
-        <Route path="/chatbot" element={<UnderMaintenance />} />
         <Route path="/settings" element={<UnderMaintenance />} />
         <Route path="/:path" element={<UnderMaintenance />} />
       </Route>
+      <Route element={<Layout footer={false}/>}>
+        <Route path="/chatbot" element={<Chatbot />} />
+      </Route>
     </Routes>
-  )
+  );
 }
 
-export default App
+export default App;

@@ -2,16 +2,14 @@ import Nav from "./Nav";
 import Footer from "./Footer";
 import { Outlet } from "react-router";
 
-const Layout = () => {
+const Layout = ({ nav, footer }) => {
   return (
-    <div
-      className="flex flex-col items-center min-h-screen gap-6 bg-stone-100"
-    >
-      <Nav/>
-      <main className="flex flex-col items-center justify-center max-w-4xl gap-6 px-6 sm:gap-12 sm:px-12">
+    <div className="flex flex-col items-center min-h-screen gap-6 bg-stone-100">
+      {nav ?? <Nav />}
+      <main className="flex flex-col items-center justify-center w-full max-w-4xl gap-6 px-6 sm:gap-12 sm:px-12">
         <Outlet />
       </main>
-      <Footer/>
+      {footer ?? <Footer />}
     </div>
   );
 };
