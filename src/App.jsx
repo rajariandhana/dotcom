@@ -1,3 +1,5 @@
+import "swiper/css";
+import "swiper/css/navigation";
 import "./App.css";
 
 import { Routes, Route } from "react-router";
@@ -9,6 +11,7 @@ import Projects from "./components/Projects/Projects";
 import ProjectDetail from "./components/Projects/ProjectDetail";
 import Experience from "./components/Experience/Experience";
 import Chatbot from "./components/Chatbot/Chatbot";
+import Gallery from "./components/Gallery/Gallery";
 
 function App() {
   return (
@@ -18,7 +21,7 @@ function App() {
         <Route path="/projects" element={<Projects />} />
         <Route path="/projects/:project_slug" element={<ProjectDetail />} />
         <Route path="/experience" element={<Experience />} />
-        <Route path="/gallery" element={<UnderMaintenance />} />
+        <Route path="/gallery" element={<Gallery />} />
         <Route path="/settings" element={<UnderMaintenance />} />
         <Route path="/:path" element={<UnderMaintenance />} />
       </Route>

@@ -5,7 +5,7 @@
 @custom-variant dark (&:is(.dark *));
 
 .funny-rotate {
-    @apply z-10 transition-all duration-300 ease-out cursor-pointer hover:-rotate-3 hover:scale-105;
+  @apply z-10 transition-all duration-300 ease-out cursor-pointer hover:-rotate-3 hover:scale-105;
 }
 
 .nav-content-item {
@@ -14,4 +14,8 @@
 
 .nav-menu-item {
   @apply flex items-center gap-2 transition-all duration-300 ease-in-out cursor-pointer hover:ml-1 hover:font-semibold;
+}
+
+.swiper {
+  background-color: white;
 }
