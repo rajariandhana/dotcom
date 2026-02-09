@@ -34,7 +34,7 @@ export default function Chatbot() {
   const sampleQueries = [
     "What school he went to?",
     "What are some of his web projects?",
-    "How tall is he?",
+    "What hobbies does he like?",
   ];
 
   const onSubmit = async (overrideQuery) => {
