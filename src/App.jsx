@@ -23,7 +23,7 @@ function App() {
         <Route path="/projects/:project_slug" element={<ProjectDetail />} />
         <Route path="/experience" element={<Experience />} />
         <Route path="/gallery" element={<Gallery />} />
-        <Route path="/gallery/:album" element={<GalleryPhotos />} />
+        <Route path="/gallery/:album_name" element={<GalleryPhotos />} />
         <Route path="/settings" element={<UnderMaintenance />} />
         <Route path="/:path" element={<UnderMaintenance />} />
       </Route>

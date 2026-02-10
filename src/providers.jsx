@@ -1,15 +1,7 @@
 import {HeroUIProvider} from '@heroui/react'
 import {ToastProvider} from "@heroui/toast";
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
-
-const queryClient = new QueryClient({
-  defaultOptions: {
-    queries: {
-      refetchOnWindowFocus: false,
-      retry: false,
-    }
-  }
-})
+import { QueryClientProvider } from '@tanstack/react-query'
+import queryClient from './libs/tanstack/tanstack';
 
 export function Providers({children}) {
   return (
