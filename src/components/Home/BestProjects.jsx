@@ -1,45 +1,30 @@
-import { useEffect, useState } from "react";
 import ProjectCard from "../Projects/ProjectCard";
+import { useProject } from "../../hooks/projects";
 
 export default function BestProjects() {
-  const [projects, setProjects] = useState([]);
-  const [loading, setLoading] = useState(true);
-
-  const slugs = ["boombatag-2024", "box-of-curiosity", "studykanji"];
-
-  const fetchProjects = async () => {
-    try {
-      const res = await fetch("/projects.json");
-      const data = await res.json();
-
-      const filtered = slugs.map(
-        (slug) => data.find((p) => p.slug === slug) || {}
-      );
-      setProjects(filtered);
-    } catch (err) {
-      console.error("Error fetching projects:", err);
-    } finally {
-      setLoading(false);
-    }
-  };
-
-  useEffect(() => {
-    fetchProjects();
-  }, []);
+  const { data: project_1, isPending: pending_1 } =
+    useProject("boombatag-2024");
+  const { data: project_2, isPending: pending_2 } =
+    useProject("box-of-curiosity");
+  const { data: project_3, isPending: pending_3 } = useProject("studykanji");
 
   return (
     <section className="w-full">
       <h2 className="mb-2 text-xl cursor-pointer">🚀 Favorite Projects</h2>
 
-      <div className="flex flex-col items-center justify-between w-full gap-2 sm:flex-row">
-        {(loading ? Array.from({ length: 3 }) : projects).map(
-          (project, index) => (
-            <ProjectCard
-              key={project?.slug || index}
-              project={project}
-              loading={loading}
-            />
-          )
+      <div className="flex flex-col items-center justify-between w-full gap-2 lg:gap-4 sm:flex-row">
+        {pending_1 || pending_2 || pending_3 ? (
+          <>
+            {Array.from({ length: 3 }).map((_, i) => (
+              <ProjectCard key={i} loading />
+            ))}
+          </>
+        ) : (
+          <>
+            <ProjectCard project={project_1} />
+            <ProjectCard project={project_2} />
+            <ProjectCard project={project_3} />
+          </>
         )}
       </div>
     </section>
