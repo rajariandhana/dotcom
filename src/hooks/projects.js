@@ -1,6 +1,5 @@
 import { useQuery, useQueryClient } from "@tanstack/react-query";
-
-const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+import { sleep } from "../utils/util";
 
 const categoryMap = {
   "🎮 Game Development": (project) => project.category === "game",
