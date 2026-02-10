@@ -1,42 +1,13 @@
 import { Button, Chip, Image } from "@heroui/react";
-import { useCallback, useEffect, useState } from "react";
 import { FaAnglesLeft } from "react-icons/fa6";
 import { Link, useParams } from "react-router";
+import { useProject } from "../../hooks/projects";
+import ProjectDetailSkeleton from "./ProjectDetailSkeleton";
 
 export default function ProjectDetail() {
-  const project_slug = useParams().project_slug;
+  const { project_slug } = useParams();
 
-  const [project, setProject] = useState(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
-
-  const fetchProjects = async () => {
-    try {
-      const res = await fetch("/projects.json");
-      const data = await res.json();
-
-      const filtered = data.filter((p) => p.slug === project_slug);
-      const proj = filtered.length > 0 ? filtered[0] : null;
-      setProject(proj);
-    } catch (err) {
-      console.error("Error fetching projects:", err);
-    } finally {
-      setLoading(false);
-    }
-  };
-
-  useEffect(() => {
-    fetchProjects();
-  }, []);
-
-  useEffect(() => {
-    if (project) {
-      console.log(
-        "DETAIL PATH:",
-        `/projects/${project?.slug}/1.${project?.extension}`,
-      );
-    }
-  }, [project]);
+  const { data: project, isPending } = useProject(project_slug);
 
   return (
     <div className="flex flex-col w-96 sm:w-[600px]">
@@ -47,7 +18,9 @@ export default function ProjectDetail() {
         <FaAnglesLeft />
         <span>Back to Projects</span>
       </Link>
-      {project && (
+      {isPending ? (
+        <ProjectDetailSkeleton />
+      ) : (
         <>
           <h1 className="mb-1 text-2xl">{project?.name}</h1>
           <div className="flex mb-8 gap-x-1">

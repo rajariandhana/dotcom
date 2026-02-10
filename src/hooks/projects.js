@@ -17,7 +17,6 @@ const fetchProjectsCategorized = async () => {
     for (const [label, fn] of Object.entries(categoryMap)) {
       categorized[label] = data.filter(fn);
     }
-    console.log(categorized);
     return categorized;
   } catch (error) {
     console.error("Error fetching projects:", error);
@@ -37,5 +36,47 @@ export function useProjectsCategorized() {
       });
       return projectsByCategory;
     },
+  });
+}
+
+const fetchProjectBySlug = async (slug) => {
+  // await sleep(1500);
+  const res = await fetch("/projects.json");
+  const data = await res.json();
+
+  const project = data.find((p) => p.slug === slug);
+
+  if (!project) {
+    throw new Error("Project not found");
+  }
+
+  return project;
+};
+
+export function useProject(project_slug) {
+  const queryClient = useQueryClient();
+
+  return useQuery({
+    queryKey: ["project", project_slug],
+
+    initialData: () => {
+      const cached = queryClient.getQueryData(["project", project_slug]);
+      if (cached) return cached;
+
+      const categorized = queryClient.getQueryData(["projectsByCategory"]);
+
+      if (!categorized) return undefined;
+
+      for (const projectList of Object.values(categorized)) {
+        const found = projectList.find((p) => p.slug === project_slug);
+        if (found) return found;
+      }
+
+      return undefined;
+    },
+
+    queryFn: () => fetchProjectBySlug(project_slug),
+
+    enabled: !!project_slug,
   });
 }
