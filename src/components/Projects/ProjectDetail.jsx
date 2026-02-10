@@ -1,5 +1,6 @@
 import { Button, Chip, Image } from "@heroui/react";
 import { useCallback, useEffect, useState } from "react";
+import { FaAnglesLeft } from "react-icons/fa6";
 import { Link, useParams } from "react-router";
 
 export default function ProjectDetail() {
@@ -32,7 +33,7 @@ export default function ProjectDetail() {
     if (project) {
       console.log(
         "DETAIL PATH:",
-        `/projects/${project?.slug}/1.${project?.extension}`
+        `/projects/${project?.slug}/1.${project?.extension}`,
       );
     }
   }, [project]);
@@ -41,26 +42,10 @@ export default function ProjectDetail() {
     <div className="flex flex-col w-96 sm:w-[600px]">
       <Link
         to={`/projects`}
-        className="flex items-center w-full gap-2 mb-4 text-left hover:underline"
+        className="flex gap-2 items-center text-sm h-6 w-fit mb-4 hover:underline"
       >
-        <svg
-          className="flex w-6 h-6"
-          aria-hidden="true"
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          fill="none"
-          viewBox="0 0 24 24"
-        >
-          <path
-            stroke="currentColor"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="m17 16-4-4 4-4m-6 8-4-4 4-4"
-          />
-        </svg>
-        <span className="text-sm">Back to Projects</span>
+        <FaAnglesLeft />
+        <span>Back to Projects</span>
       </Link>
       {project && (
         <>
@@ -78,7 +63,7 @@ export default function ProjectDetail() {
             alt={project?.name}
             className="object-cover h-52 w-96 sm:w-[600px] sm:h-[400px] mb-8"
           />
-          <p className="mb-2 text-lg">{project.description}</p>
+          <p className="mb-2 text-lg text-justify">{project.description}</p>
           <div className="flex items-center justify-between w-full">
             {project.demo ? (
               <Button
