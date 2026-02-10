@@ -10,7 +10,7 @@ import {
   Chip,
 } from "@heroui/react";
 import { Link, useLocation } from "react-router";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const Nav = () => {
   const location = useLocation();
@@ -42,9 +42,17 @@ const Nav = () => {
     },
   ];
 
+  useEffect(() => {
+    setIsMenuOpen(false);
+  }, [location.pathname]);
+
   return (
     <header className="sticky top-0 z-20 w-full">
-      <Navbar onMenuOpenChange={setIsMenuOpen} isBordered>
+      <Navbar
+        onMenuOpenChange={setIsMenuOpen}
+        isBordered
+        isMenuOpen={isMenuOpen}
+      >
         <NavbarContent>
           <NavbarBrand color="foreground">
             <Link to={"/"}>ralfazza.com</Link>
@@ -76,7 +84,10 @@ const Nav = () => {
         </NavbarContent>
 
         <NavbarMenu>
-          <NavbarMenuItem className="mb-4 lg:ml-20 xl:ml-48" isActive={location.pathname === "/"}>
+          <NavbarMenuItem
+            className="mb-4 lg:ml-20 xl:ml-48"
+            isActive={location.pathname === "/"}
+          >
             <Link to={"/"} className="nav-menu-item">
               Home
             </Link>
@@ -84,7 +95,11 @@ const Nav = () => {
           {primaryMenuItems.map((item, index) => {
             let active = location.pathname.startsWith(item.link);
             return (
-              <NavbarMenuItem className="lg:ml-20 xl:ml-48" key={`${item.label}-${index}`} isActive={active}>
+              <NavbarMenuItem
+                className="lg:ml-20 xl:ml-48"
+                key={`${item.label}-${index}`}
+                isActive={active}
+              >
                 <Link to={item.link} className="nav-menu-item">
                   {item.label}
                 </Link>
@@ -99,7 +114,8 @@ const Nav = () => {
                 active = false;
               }
               return (
-                <NavbarMenuItem className="lg:ml-20 xl:ml-48"
+                <NavbarMenuItem
+                  className="lg:ml-20 xl:ml-48"
                   key={`${item.label}-${index}`}
                   isActive={active}
                 >
