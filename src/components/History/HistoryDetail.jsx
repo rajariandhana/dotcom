@@ -9,15 +9,15 @@ import { Pagination, Navigation } from "swiper/modules";
 
 export default function HistoryDetail({ history }) {
   return (
-    <section className="flex flex-col gap-2">
-      <div className="flex mb-8 gap-x-1 -mt-4">
+    <section className="flex flex-col">
+      <div className="flex gap-x-1 -mt-4 mb-4">
         {history.techs.map((tech) => (
           <Chip key={tech} variant="flat" color="primary">
             {tech}
           </Chip>
         ))}
       </div>
-      <div className="relative">
+      <div className="relative mb-4">
         <Button
           className="custom-prev absolute left-0 top-1/2 -translate-y-1/2 z-10 ml-4"
           isIconOnly
@@ -59,7 +59,7 @@ export default function HistoryDetail({ history }) {
         </Swiper>
       </div>
 
-      <p className="text-justify">
+      <p className="text-justify mb-4">
         {history.text === ""
           ? "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab, laborum. Consectetur, veritatis. Repellat itaque facilis modi iste quaerat necessitatibus veritatis."
           : history.text}

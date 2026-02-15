@@ -3,33 +3,27 @@
     "key": "2023-v1",
     "label": "2023 Version 1",
     "techs": ["HTML", "CSS", "JavaScript"],
-    "text": ""
+    "text": "Googled \"how to create a website\", learned the holy trinity of HTML-CSS-JS. The first version was deployed for free using GitHub Pages (github.io). Followed a tutorial to create 2048 Game. Learned how to do randomizing and decided to show random cat pictures. The best part of course a \"Rick Roll\" disguised as a way to get free money (this is a reminder to be careful on the internet)."
   },
   {
     "key": "2023-v2",
     "label": "2023 Version 2",
     "techs": ["HTML", "CSS", "JavaScript"],
-    "text": ""
+    "text": "Hey now you can look at my face! I also do photography so I thought of showing that as well. I also printed my (patent-pending) T-Shirt line ups (no i did not implement a store in my website, it just links into my Tokopedia Page)."
   },
   {
     "key": "2024",
     "label": "2024",
     "techs": ["Tailwindcss", "Alpine.js", "Laravel", "Livewire"],
-    "text": ""
+    "text": "This year I learned a lot about Laravel, might say I become addicted to it. Laravel gives easy access to CRUD features and become my goto tech stack combined with Tailwindcss, Alpine.js, and Livewire. Every single data is inserted in the database, but the weird thing is all data are inserted from laravel's seed feature so I actually did not create a form for me to upload those data so... Either way I finally showcased my projects using a \"Bento Box\", mimnicking Apple. Also I finally bought my own domain."
   },
   {
     "key": "2025",
     "label": "2025",
     "techs": [
-      "MongoDB",
-      "Express.js",
-      "React",
-      "Node.js",
-      "Next.js",
-      "HeroUI",
-      "Tailwindcss",
-      "Supabase"
+      "React.js",
+      "Tailwindcss"
     ],
-    "text": ""
+    "text": "After years of hearing React.js I finally tried it and... wow I like it a lot. When I was still using vanilla JavaScript I usually create a script to create reusable components and when I tried React, \"huh it's so easy now\". In 2025 React became my goto frontend."
   }
 ]
