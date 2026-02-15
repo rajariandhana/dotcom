@@ -15,10 +15,17 @@ lazy load images
 skeletons
 tanstack
 
-history of this website
+Explore More:
+> history of this website
 
 ## Gallery
 
 divided by Albums?
 
 use tanstack
+
+find out if can transfer owned domain to vercel
+
+back up supabase photos, what happens if photos in supabase gone?
+
+add logo in sidebar, Home w/ house icon, Experience w/ skills icon, etc
