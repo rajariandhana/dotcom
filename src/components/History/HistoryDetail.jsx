@@ -43,7 +43,7 @@ export default function HistoryDetail({ history }) {
             prevEl: ".custom-prev",
           }}
           modules={[Pagination, Navigation]}
-          className="w-full h-fit"
+          className="w-full"
           spaceBetween={20}
           loop
         >
@@ -52,7 +52,7 @@ export default function HistoryDetail({ history }) {
               <Image
                 src={link}
                 alt={link}
-                className="w-full h-fit object-cover"
+                className="w-full h-auto object-cover"
               />
             </SwiperSlide>
           ))}
