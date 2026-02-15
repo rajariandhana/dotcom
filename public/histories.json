@@ -1,0 +1,26 @@
+[
+  {
+    "key": "2023-v1",
+    "label": "2023 Version 1",
+    "techs": ["html", "css", "js"],
+    "text": ""
+  },
+  {
+    "key": "2023-v2",
+    "label": "2023 Version 2",
+    "techs": ["html", "css", "js"],
+    "text": ""
+  },
+  {
+    "key": "2024",
+    "label": "2024",
+    "techs": ["laravel", "tailwindcss", "alpinejs"],
+    "text": ""
+  },
+  {
+    "key": "2025",
+    "label": "2025",
+    "techs": ["react", "tailwindcss"],
+    "text": ""
+  }
+]

@@ -13,6 +13,7 @@ import Experience from "./components/Experience/Experience";
 import Chatbot from "./components/Chatbot/Chatbot";
 import Gallery from "./components/Gallery/Gallery";
 import GalleryPhotos from "./components/Gallery/GalleryPhotos";
+import History from "./components/History/History";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route path="/experience" element={<Experience />} />
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/gallery/:album_name" element={<GalleryPhotos />} />
+        <Route path="/history" element={<History />} />
         <Route path="/settings" element={<UnderMaintenance />} />
         <Route path="/:path" element={<UnderMaintenance />} />
       </Route>

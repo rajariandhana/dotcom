@@ -37,10 +37,21 @@ const Nav = () => {
       link: "/chatbot",
     },
     {
-      label: "Explore More",
-      link: "/explore-more",
+      label: "Explore My Website's History",
+      link: "/history",
     },
   ];
+
+  // const otherMenuItems = [
+  //   {
+  //     label: "History of My Website",
+  //     link: "/history",
+  //   },
+  //   {
+  //     label: "Coming Soon",
+  //     link: "/explore-more",
+  //   },
+  // ];
 
   useEffect(() => {
     setIsMenuOpen(false);
@@ -121,9 +132,14 @@ const Nav = () => {
                 >
                   <Link to={item.link} className="nav-menu-item">
                     {item.label}{" "}
-                    {item.label === "My AI Chatbot" ? (
+                    {item.link === "/chatbot" ? (
                       <Chip color="primary" variant="flat" size="sm">
                         New!
+                      </Chip>
+                    ) : null}
+                    {item.link === "/history" ? (
+                      <Chip color="secondary" variant="flat" size="sm">
+                        Nostalgic!
                       </Chip>
                     ) : null}
                   </Link>
