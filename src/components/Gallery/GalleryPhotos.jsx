@@ -111,6 +111,7 @@ export default function GalleryPhotos() {
                 }}
                 modules={[Pagination, Navigation]}
                 className="h-full w-full"
+                loop
               >
                 {album.links.map((photo, index) => (
                   <SwiperSlide key={index}>
