@@ -1,13 +1,13 @@
-import { Image, Link, Skeleton } from "@heroui/react";
+import { Image, Link } from "@heroui/react";
 
-export default function EducationCard({ edu, loading }) {
+export default function EducationCard({ education }) {
   return (
     <>
       <div className="hidden w-full gap-4 p-4 bg-white border border-gray-200 rounded-md sm:flex">
         <div className="w-40">
           <Image
-            src={`/logo/${edu.slug}.png`}
-            alt={edu.name}
+            src={education.image_link}
+            alt={education.name}
             className="object-cover"
           />
         </div>
@@ -18,27 +18,27 @@ export default function EducationCard({ edu, loading }) {
               color="foreground"
               className="text-lg font-semibold "
               as="a"
-              href={edu.link}
+              href={education.link}
               target="_blank"
               rel="noopener noreferrer"
             >
-              {edu.name}
+              {education.name}
             </Link>
-            <span>{edu.location}</span>
+            <span>{education.location}</span>
           </div>
           <div className="flex items-center justify-between w-full mb-2 italic">
-            <span className="text-gray-500">{edu.sub_title}</span>
-            <span>{edu.date}</span>
+            <span className="text-gray-500">{education.sub_title}</span>
+            <span>{education.date}</span>
           </div>
-          <p>{edu.description}</p>
+          <p>{education.description}</p>
         </div>
       </div>
       <div className="flex flex-col w-full gap-2 p-4 bg-white border border-gray-200 rounded-md sm:hidden">
         <div className="flex justify-between w-full gap-0">
           <div className="w-20">
             <Image
-              src={`/logo/${edu.slug}.png`}
-              alt={edu.name}
+              src={education.image_link}
+              alt={education.name}
               className="object-cover"
             />
           </div>
@@ -46,21 +46,21 @@ export default function EducationCard({ edu, loading }) {
             <h3
               className="font-semibold "
               as="a"
-              href={edu.link}
+              href={education.link}
               target="_blank"
               rel="noopener noreferrer"
             >
-              {edu.name}
+              {education.name}
             </h3>
-            <span className="text-sm">{edu.location}</span>
-            <span className="text-sm italic ">{edu.date}</span>
+            <span className="text-sm">{education.location}</span>
+            <span className="text-sm italic ">{education.date}</span>
           </div>
         </div>
         <div className="flex flex-col">
           <span className="mb-1 text-sm italic text-gray-500">
-            {edu.sub_title}
+            {education.sub_title}
           </span>
-          <p className="">{edu.description}</p>
+          <p className="">{education.description}</p>
         </div>
       </div>
     </>

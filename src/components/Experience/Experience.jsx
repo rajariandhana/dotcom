@@ -1,42 +1,23 @@
-import { useEffect, useState } from "react";
 import EducationCard from "./EducationCard";
+import { useResume } from "../../hooks/resume";
+import { Spinner } from "@heroui/react";
 
 export default function Experience() {
-  const [education, setEducation] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const { data: resume, isPending } = useResume();
 
-  const fetchEducation = async () => {
-    // simulate delay
-    // await new Promise((resolve) => setTimeout(resolve, 1000));
-    try {
-      const res = await fetch("/education.json");
-      const data = await res.json();
-      setEducation(data);
-    } catch (err) {
-      console.error("Error fetching education:", err);
-    } finally {
-      setLoading(false);
-    }
-  };
-
-  useEffect(() => {
-    fetchEducation();
-  }, []);
+  if (isPending || !resume) return <Spinner />;
 
   return (
     <>
       <section className="w-full">
         <h2 className="mb-2 text-xl cursor-pointer">🎓 Where I study</h2>
         <div className="flex flex-col gap-4">
-          {(loading ? Array.from({ length: 2 }) : education).map(
-            (edu, index) => (
-              <EducationCard
-                key={edu?.slug || index}
-                edu={edu || {}}
-                loading={loading}
-              />
-            )
-          )}
+          {resume.education.map((edu) => (
+            <EducationCard
+              key={edu.key}
+              education={edu}
+            />
+          ))}
         </div>
       </section>
       <section className="w-full">
