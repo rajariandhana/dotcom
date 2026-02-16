@@ -13,7 +13,7 @@
   "education": [
     {
       "name": "University of Queensland",
-      "slug": "uq",
+      "key": "uq",
       "date": "February 2025 - Present",
       "description": "Notable courses: Computer Systems Principles & Programming, Information Security, Operating Systems Architecture, Theory of Computing, Programming in the Large.",
       "link": "https://www.uq.edu.au",
@@ -22,7 +22,7 @@
     },
     {
       "name": "Institut Teknologi Sepuluh Nopember",
-      "slug": "its-surabaya",
+      "key": "its-surabaya",
       "date": "August 2022 - Present",
       "description": "Notable courses: Data Structures, Web Programming, Object Oriented Programming, Framework-Based Programming, Database Management, Software Design, Algorithms Design and Analysis.",
       "link": "https://www.its.ac.id",
@@ -33,6 +33,7 @@
   "experience": [
     {
       "position": "Teaching Assistant",
+      "employer_key": "its-surabaya",
       "employer": "Institut Teknologi Sepuluh Nopember",
       "start": "August 2023",
       "end": "December 2024",
@@ -44,6 +45,7 @@
     },
     {
       "position": "Lab Administrator",
+      "employer_key": "alpro-its",
       "employer": "Algorithms and Programming Laboratory",
       "start": "January 2024",
       "end": "December 2024",
@@ -55,6 +57,7 @@
     },
     {
       "position": "Game Developer",
+      "employer_key": "schematics-its",
       "employer": "Schematics ITS",
       "start": "February 2023",
       "end": "November 2024",
@@ -66,6 +69,7 @@
     },
     {
       "position": "Frontend Developer Intern",
+      "employer_key": "rajawali",
       "employer": "PT Rajawali Holdings Indonesia",
       "start": "July 2024",
       "end": "August 2024",
@@ -76,6 +80,7 @@
     },
     {
       "position": "Research Assistant",
+      "employer_key": "its-surabaya",
       "employer": "Institut Teknologi Sepuluh Nopember",
       "start": "December 2023",
       "end": "May 2024",
