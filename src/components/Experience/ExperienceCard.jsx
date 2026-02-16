@@ -26,7 +26,7 @@ export default function ExperienceCard({ experience }) {
           {experience.start} - {experience.end}
         </span>
       </div>
-      <ul className="list-disc m-2 sm:m-4">
+      <ul className="list-disc m-2 sm:m-4 text-sm">
         {experience.description.map((desc) => (
           <li className="text-justify">{desc}</li>
         ))}
