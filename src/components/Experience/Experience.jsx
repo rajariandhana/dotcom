@@ -1,12 +1,24 @@
 import EducationCard from "./EducationCard";
 import { useResume } from "../../hooks/resume";
-import { Spinner } from "@heroui/react";
 import ExperienceCard from "./ExperienceCard";
+import { Skeleton } from "@heroui/react";
 
 export default function Experience() {
   const { data: resume, isPending } = useResume();
 
-  if (isPending || !resume) return <Spinner />;
+  if (isPending || !resume)
+    return (
+      <>
+        <section className="w-full">
+          <Skeleton className="w-40 h-6 rounded-lg mb-2" />
+          <div className="flex flex-col gap-4">
+            {Array.from({ length: 2 }).map((_, i) => (
+              <EducationCard key={i} loading />
+            ))}
+          </div>
+        </section>
+      </>
+    );
 
   return (
     <>

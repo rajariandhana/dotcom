@@ -1,6 +1,48 @@
-import { Image, Link } from "@heroui/react";
+import { Image, Link, Skeleton } from "@heroui/react";
 
-export default function EducationCard({ education }) {
+export default function EducationCard({ education, loading }) {
+  if (loading) {
+    return (
+      <>
+        <div className="hidden w-full gap-4 p-4 bg-white border border-gray-200 rounded-md sm:flex">
+          <Skeleton className="w-40 h-32 rounded-xl" />
+          <div className="text-sm w-full">
+            <div className="flex items-center justify-between w-full mb-2">
+              <Skeleton className="w-32 h-4 rounded-full" />
+              <Skeleton className="w-20 h-3 rounded-full" />
+            </div>
+            <div className="flex items-center justify-between w-full mb-4 italic">
+              <Skeleton className="w-40 h-3 rounded-full" />
+              <Skeleton className="w-24 h-3 rounded-full" />
+            </div>
+            <div className="flex flex-col w-full gap-2">
+              <Skeleton className="w-[90%] h-3 rounded-full" />
+              <Skeleton className="w-[80%] h-3 rounded-full" />
+            </div>
+          </div>
+        </div>
+        <div className="flex flex-col w-full gap-2 p-4 bg-white border border-gray-200 rounded-md sm:hidden">
+          <div className="flex justify-between w-full gap-0">
+            <Skeleton className="w-20 h-20 rounded-xl" />
+            <div className="flex flex-col items-end text-right gap-1">
+              <Skeleton className="w-32 h-4 rounded-full" />
+              <Skeleton className="w-32 h-3 rounded-full" />
+              <Skeleton className="w-20 h-3 rounded-full" />
+            </div>
+          </div>
+          <div className="flex flex-col">
+            <span className="mb-2 text-sm italic text-gray-500">
+              <Skeleton className="w-16 h-3 rounded-full" />
+            </span>
+            <div className="flex flex-col w-full gap-2">
+              <Skeleton className="w-[90%] h-3 rounded-full" />
+              <Skeleton className="w-[80%] h-3 rounded-full" />
+            </div>
+          </div>
+        </div>
+      </>
+    );
+  }
   return (
     <>
       <div className="hidden w-full gap-4 p-4 bg-white border border-gray-200 rounded-md sm:flex">
