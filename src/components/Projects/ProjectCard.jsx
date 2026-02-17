@@ -1,7 +1,18 @@
 import { Image, Skeleton } from "@heroui/react";
 import { Link } from "react-router";
+import { useEffect, useRef, useState } from "react";
 
 export default function ProjectCard({ project, loading }) {
+  const textRef = useRef(null);
+  const [isOverflowing, setIsOverflowing] = useState(false);
+
+  useEffect(() => {
+    if (textRef.current) {
+      const el = textRef.current;
+      setIsOverflowing(el.scrollWidth > el.clientWidth);
+    }
+  }, [project?.name]);
+
   if (loading) {
     return (
       <div className="flex flex-col gap-2 p-2 bg-white border border-gray-200 w-fit h-fit rounded-xl">
@@ -25,7 +36,12 @@ export default function ProjectCard({ project, loading }) {
         onLoad={(e) => e.target.classList.remove("opacity-0")}
       />
 
-      <span className="flex items-center justify-center w-full h-6 text-center truncate sm:w-60">
+      <span
+        ref={textRef}
+        className={`w-96 sm:w-60 h-6 truncate ${
+          isOverflowing ? "text-left" : "text-center"
+        }`}
+      >
         {name}
       </span>
     </Link>

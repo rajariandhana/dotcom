@@ -44,7 +44,7 @@ export default function Experience() {
     }
   };
 
-  if (isPending || !resume)
+  if (isPending || !resume.education)
     return (
       <>
         <section className="w-full">

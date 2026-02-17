@@ -1,5 +1,29 @@
 import { useState, useEffect } from "react";
 import SpeechBubble from "../SpeechBubble.jsx";
+import supabase from "../../libs/supabase/supabase.js";
+import { useQuery } from "@tanstack/react-query";
+import { Skeleton } from "@heroui/react";
+
+const fetchProfile = async () => {
+  try {
+    const { data, error } = supabase.storage
+      .from("misc")
+      .getPublicUrl("profile.webp");
+    if (error) {
+      throw error;
+    }
+    return data.publicUrl;
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+function useProfile() {
+  return useQuery({
+    queryKey: ["profile"],
+    queryFn: fetchProfile,
+  });
+}
 
 export default function Hero() {
   const [qotd, setQotd] = useState("...");
@@ -15,10 +39,12 @@ export default function Hero() {
         console.error("Error fetching projects:", error);
         setQotd("ZZZ..zz...");
       })
-      .finally(()=>{
+      .finally(() => {
         setQotd("ZZZ..zz...");
       });
   }, []);
+
+  const { data: profile_link, isPending: profile_pending } = useProfile();
 
   return (
     <section>
@@ -26,11 +52,15 @@ export default function Hero() {
         <div className="absolute z-10 mt-4 ml-24 transition-all duration-300 ease-out cursor-pointer rotate-4 hover:rotate-6">
           <SpeechBubble message={qotd} />
         </div>
-        <img
-          src="/ProfilePicture.webp"
-          alt=""
-          className="object-cover p-1 mb-12 rounded-full size-32 bg-indigo-rose"
-        />
+        {profile_pending ? (
+          <Skeleton className="p-1 mb-12 rounded-full size-32 z-0" />
+        ) : (
+          <img
+            src={profile_link}
+            alt=""
+            className="object-cover p-1 mb-12 rounded-full size-32 z-0"
+          />
+        )}
       </div>
       {/* <h1 className="font-mono font-bold">
         🌎{" "}

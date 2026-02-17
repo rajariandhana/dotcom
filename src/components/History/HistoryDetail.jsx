@@ -23,6 +23,7 @@ export default function HistoryDetail({ history }) {
           isIconOnly
           radius="full"
           color="primary"
+          variant="flat"
         >
           <FaAngleLeft />
         </Button>
@@ -32,6 +33,7 @@ export default function HistoryDetail({ history }) {
           isIconOnly
           radius="full"
           color="primary"
+          variant="flat"
         >
           <FaAngleRight />
         </Button>

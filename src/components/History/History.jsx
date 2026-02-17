@@ -30,7 +30,9 @@ export default function History() {
           - My Website's History
         </h2>
         {isPending || !histories ? (
-          <Spinner />
+          <div className="flex w-full justify-center">
+            <Spinner className="mt-12"  size="lg"/>
+          </div>
         ) : (
           <Accordion defaultExpandedKeys={["0"]}>
             {histories.map((history, index) => (

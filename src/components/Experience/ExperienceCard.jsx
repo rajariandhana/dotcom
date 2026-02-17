@@ -5,7 +5,7 @@ export default function ExperienceCard({ experience }) {
     <div className="w-full p-4 bg-white border border-gray-200 rounded-md flex flex-col">
       <div className="flex w-full justify-between gap-4">
         <div className="w-20 sm:w-24">
-          <Image src={experience.image_link} className="object-cover" />
+          <Image src={experience.image_link} className="object-cover funny-rotate" />
         </div>
         <div className="flex w-full text-sm">
           <div className="flex flex-col w-full">
@@ -20,7 +20,7 @@ export default function ExperienceCard({ experience }) {
           </div>
         </div>
       </div>
-      <div className="flex w-full justify-between sm:hidden text-sm">
+      <div className="flex flex-col w-full sm:hidden text-sm">
         <span>{experience.location}</span>
         <span className="italic">
           {experience.start} - {experience.end}
@@ -28,7 +28,7 @@ export default function ExperienceCard({ experience }) {
       </div>
       <ul className="list-disc m-2 sm:m-4 text-sm">
         {experience.description.map((desc) => (
-          <li className="text-justify">{desc}</li>
+          <li className="text-justify ml-2">{desc}</li>
         ))}
       </ul>
     </div>

@@ -55,7 +55,7 @@ export default function GalleryPhotos() {
               <Image
                 key={index}
                 isZoomed={true}
-                className="z-0 size-40 object-cover cursor-pointer"
+                className="z-0 size-40 object-cover cursor-pointer funny-rotate"
                 src={photo}
                 alt={photo}
                 onClick={() => openPhoto(index)}

@@ -6,7 +6,6 @@ import {
   NavbarMenuToggle,
   NavbarMenu,
   NavbarMenuItem,
-  Button,
   Chip,
 } from "@heroui/react";
 import { Link, useLocation } from "react-router";
@@ -66,7 +65,7 @@ const Nav = () => {
       >
         <NavbarContent>
           <NavbarBrand color="foreground">
-            <Link to={"/"}>ralfazza.com</Link>
+            <Link to={"/"} className="nav-content-item">ralfazza.com</Link>
           </NavbarBrand>
         </NavbarContent>
 

@@ -50,7 +50,7 @@ export default function EducationCard({ education, loading }) {
           <Image
             src={education.image_link}
             alt={education.name}
-            className="object-cover"
+            className="object-cover funny-rotate"
           />
         </div>
         <div className="text-sm w-fit">
@@ -102,7 +102,7 @@ export default function EducationCard({ education, loading }) {
           <span className="mb-1 text-sm italic text-gray-500">
             {education.sub_title}
           </span>
-          <p className="">{education.description}</p>
+          <p className="text-sm sm:text-md">{education.description}</p>
         </div>
       </div>
     </>

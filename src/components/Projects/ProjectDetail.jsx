@@ -3,6 +3,7 @@ import { FaAnglesLeft } from "react-icons/fa6";
 import { Link, useParams } from "react-router";
 import { useProject } from "../../hooks/projects";
 import ProjectDetailSkeleton from "./ProjectDetailSkeleton";
+import { LuExternalLink } from "react-icons/lu";
 
 export default function ProjectDetail() {
   const { project_slug } = useParams();
@@ -13,7 +14,7 @@ export default function ProjectDetail() {
     <div className="flex flex-col w-96 sm:w-[600px]">
       <Link
         to={`/projects`}
-        className="flex gap-2 items-center text-sm h-6 w-fit mb-4 hover:underline"
+        className="flex gap-2 items-center text-sm h-6 w-fit mb-4 hover:underline text-primary"
       >
         <FaAnglesLeft />
         <span>Back to Projects</span>
@@ -25,7 +26,7 @@ export default function ProjectDetail() {
           <h1 className="mb-1 text-2xl">{project?.name}</h1>
           <div className="flex mb-8 gap-x-1">
             {project.techs.map((tech) => (
-              <Chip key={tech} variant="flat">
+              <Chip key={tech} variant="flat" color="primary">
                 {tech}
               </Chip>
             ))}
@@ -45,6 +46,8 @@ export default function ProjectDetail() {
                 href={project.demo}
                 target="_blank"
                 rel="noopener noreferrer"
+                color="primary"
+                endContent={<LuExternalLink />}
               >
                 Try here
               </Button>

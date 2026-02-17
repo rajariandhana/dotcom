@@ -6,7 +6,7 @@ export default function BestProjects() {
     useProject("boombatag-2024");
   const { data: project_2, isPending: pending_2 } =
     useProject("box-of-curiosity");
-  const { data: project_3, isPending: pending_3 } = useProject("studykanji");
+  const { data: project_3, isPending: pending_3 } = useProject("qq-joker");
 
   return (
     <section className="w-full">

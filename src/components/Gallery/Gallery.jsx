@@ -12,11 +12,11 @@ export default function Gallery() {
       <section>
         <h2 className="mb-2 text-xl cursor-pointer bg w-full mt-6">Albums</h2>
         <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
-          {isPending ? (
-            <GallerySkeleton length={8}/>
+          {isPending || !albums ? (
+            <GallerySkeleton length={8} />
           ) : (
             albums.map((a) => (
-              <Card key={a.key} as={Link} to={`/gallery/${a.key}`}>
+              <Card key={a.key} as={Link} to={`/gallery/${a.key}`} className="funny-rotate">
                 <CardHeader className="absolute z-10 top-1 flex-col items-start!">
                   <h4 className="text-white font-medium text-large">
                     {a.label}
