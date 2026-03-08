@@ -23,6 +23,7 @@ export default function Gallery() {
                   </h4>
                 </CardHeader>
                 <Image
+                  loading="lazy"
                   isZoomed={true}
                   className="z-0 size-40 object-cover"
                   src={a.links[0]}

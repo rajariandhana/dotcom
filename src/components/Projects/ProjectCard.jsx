@@ -30,6 +30,7 @@ export default function ProjectCard({ project, loading }) {
       to={`/projects/${slug}`}
     >
       <Image
+        loading="lazy"
         src={`/projects/${slug}/1.${extension}`}
         alt={name}
         className="object-cover transition-opacity duration-500 rounded-md h-52 w-96 sm:w-60 sm:h-40 animate-fade-in opacity-0"

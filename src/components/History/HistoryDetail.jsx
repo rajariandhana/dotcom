@@ -52,9 +52,10 @@ export default function HistoryDetail({ history }) {
           {history.links.map((link, index) => (
             <SwiperSlide key={index}>
               <Image
+                loading="lazy"
                 src={link}
                 alt={link}
-                className="w-full h-auto object-cover"
+                className="w-full h-auto min-h-96 object-cover"
               />
             </SwiperSlide>
           ))}

@@ -32,6 +32,7 @@ export default function ProjectDetail() {
             ))}
           </div>
           <Image
+            loading="lazy"
             isZoomed
             src={`/projects/${project?.slug}/1.${project?.extension}`}
             alt={project?.name}

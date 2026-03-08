@@ -7,6 +7,8 @@ cp .env.example .env
 npm if
 npm run dev
 # open http://localhost:5173/
+
+npm i @heroui/react @tailwindcss/vite @tanstack/react-query axios framer-motion react-icons react-router tailwindcss
 ```
 
 Todos:

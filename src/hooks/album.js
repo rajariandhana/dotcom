@@ -46,6 +46,8 @@ export function useAlbums() {
       );
       return albums;
     },
+    // staleTime: 1000 * 60 * 10,
+    // gcTime: 1000 * 60 * 60,
   });
 }
 
@@ -84,5 +86,7 @@ export function useAlbum(album_name) {
     queryKey: ["albums", album_name],
     queryFn: () => fetchAlbum(album_name),
     enabled: !!album_name,
+    // staleTime: 1000 * 60 * 10,
+    // gcTime: 1000 * 60 * 60,
   });
 }

@@ -5,7 +5,11 @@ export default function ExperienceCard({ experience }) {
     <div className="w-full p-4 bg-white border border-gray-200 rounded-md flex flex-col">
       <div className="flex w-full justify-between gap-4">
         <div className="w-20 sm:w-24">
-          <Image src={experience.image_link} className="object-cover funny-rotate" />
+          <Image
+            loading="lazy"
+            src={experience.image_link}
+            className="object-cover funny-rotate"
+          />
         </div>
         <div className="flex w-full text-sm">
           <div className="flex flex-col w-full">

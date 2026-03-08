@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import SpeechBubble from "../SpeechBubble.jsx";
 import supabase from "../../libs/supabase/supabase.js";
 import { useQuery } from "@tanstack/react-query";
-import { Skeleton } from "@heroui/react";
+import { Image, Skeleton } from "@heroui/react";
 
 const fetchProfile = async () => {
   try {
@@ -55,11 +55,12 @@ export default function Hero() {
         {profile_pending ? (
           <Skeleton className="p-1 mb-12 rounded-full size-32 z-0" />
         ) : (
-          <img
-            src={profile_link}
-            alt=""
-            className="object-cover p-1 mb-12 rounded-full size-32 z-0"
-          />
+            <img
+              loading="lazy"
+              src={profile_link}
+              alt=""
+              className="object-cover p-1 mb-12 rounded-full size-32 z-0"
+            />
         )}
       </div>
       {/* <h1 className="font-mono font-bold">
