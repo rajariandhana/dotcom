@@ -35,3 +35,6 @@ add logo in sidebar, Home w/ house icon, Experience w/ skills icon, etc
 add experience skeleton
 
 home -> favorite projects -> swiperjs card swipe
+
+# BUG
+open website path using URL will result in 404 not found
