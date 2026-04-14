@@ -36,5 +36,11 @@ add experience skeleton
 
 home -> favorite projects -> swiperjs card swipe
 
-# BUG
+## BUG
 open website path using URL will result in 404 not found
+
+## TODO
+- gallery -> sort pictures, give id in supabase folder, parse the id to be removed in FE
+- seacat mongo db is gone, seacat link in FE
+- use more elegant font? serif fonts?
+- project tags: FREELANCE, PERSONAL, SCHOOL PROJECT

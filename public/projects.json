@@ -1,5 +1,17 @@
 
 [
+		{
+			"name" : "BaseGame",
+			"slug" : "basegame",
+			"techs" : ["Godot","GDScript"],
+			"description" : "Open-source game template focused on gameplay mechanics rather than art or narrative. Implemented systems including inventory storage, save/load system, combat mechanics, and dialogue system.", 
+			"numPhoto" : 2,
+			"extension" : "png",
+			"repo" : "https://github.com/BaseGame",
+			"demo" : "https://basegame.ralfazza.com",
+			"size" : "",
+			"category":"game"
+		},
     {
         "name" : "Mercusuram",
         "slug" : "mercusuram",

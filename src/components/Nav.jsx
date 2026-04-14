@@ -63,13 +63,15 @@ const Nav = () => {
         isBordered
         isMenuOpen={isMenuOpen}
       >
-        <NavbarContent>
+        <NavbarContent className="font-garamond">
           <NavbarBrand color="foreground">
-            <Link to={"/"} className="nav-content-item">ralfazza.com</Link>
+            <Link to={"/"} className="nav-content-item text-xl">
+              ralfazza.com
+            </Link>
           </NavbarBrand>
         </NavbarContent>
 
-        <NavbarContent justify="end">
+        <NavbarContent justify="end" className="font-garamond">
           {primaryMenuItems.map((item, index) => {
             let active = location.pathname.startsWith(item.link);
             return (
@@ -93,7 +95,7 @@ const Nav = () => {
           />
         </NavbarContent>
 
-        <NavbarMenu>
+        <NavbarMenu className="font-garamond">
           <NavbarMenuItem
             className="mb-4 lg:ml-20 xl:ml-48"
             isActive={location.pathname === "/"}
