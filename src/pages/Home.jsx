@@ -2,9 +2,9 @@ import Hero from "../components/Home/Hero";
 import BestProjects from "../components/Home/BestProjects";
 import BestPhotos from "../components/Home/BestPhotos";
 import Skills from "../components/Home/Skills";
+import Medium from "../components/Home/Medium";
 
 export const Home = () => {
-
   return (
     <>
       <Hero />
@@ -16,8 +16,9 @@ export const Home = () => {
       */}
       {/* <Skills/> */}
       <BestProjects />
+      <Medium />
       {/* <BestPhotos /> */}
     </>
-  )
-}
+  );
+};
 export default Home;
