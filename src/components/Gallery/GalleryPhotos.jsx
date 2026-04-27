@@ -53,7 +53,6 @@ export default function GalleryPhotos() {
           ) : (
             album.links.map((photo, index) => (
               <Image
-                loading="lazy"
                 key={index}
                 isZoomed={true}
                 className="z-0 size-40 object-cover cursor-pointer funny-rotate"
@@ -118,7 +117,6 @@ export default function GalleryPhotos() {
                   <SwiperSlide key={index}>
                     <div className="flex items-center justify-center h-full">
                       <Image
-                        loading="lazy"
                         src={photo}
                         alt={photo}
                         className="max-h-[90vh] max-w-full object-contain p-2 rounded-4xl"

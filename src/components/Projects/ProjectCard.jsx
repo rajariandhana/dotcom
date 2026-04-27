@@ -22,7 +22,10 @@ export default function ProjectCard({ project, loading }) {
     );
   }
 
-  const { slug, name, extension } = project;
+  const { slug, name } = project;
+
+	const imageUrl = project.images?.[0];
+	console.log(imageUrl)
 
   return (
     <Link
@@ -30,8 +33,7 @@ export default function ProjectCard({ project, loading }) {
       to={`/projects/${slug}`}
     >
       <Image
-        loading="lazy"
-        src={`/projects/${slug}/1.${extension}`}
+        src={imageUrl}
         alt={name}
         className="object-cover transition-opacity duration-500 rounded-md h-52 w-96 sm:w-60 sm:h-40 animate-fade-in opacity-0"
         onLoad={(e) => e.target.classList.remove("opacity-0")}

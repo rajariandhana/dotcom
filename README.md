@@ -44,3 +44,4 @@ open website path using URL will result in 404 not found
 - seacat mongo db is gone, seacat link in FE
 - use more elegant font? serif fonts?
 - project tags: FREELANCE, PERSONAL, SCHOOL PROJECT
+- medium blog posts

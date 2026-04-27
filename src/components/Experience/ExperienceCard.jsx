@@ -6,7 +6,6 @@ export default function ExperienceCard({ experience }) {
       <div className="flex w-full justify-between gap-4">
         <div className="w-20 sm:w-24">
           <Image
-            loading="lazy"
             src={experience.image_link}
             className="object-cover funny-rotate"
           />

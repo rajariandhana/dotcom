@@ -56,7 +56,6 @@ export default function Hero() {
           <Skeleton className="p-1 mb-12 rounded-full size-32 z-0" />
         ) : (
             <img
-              loading="lazy"
               src={profile_link}
               alt=""
               className="object-cover p-1 mb-12 rounded-full size-32 z-0"
