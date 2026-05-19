@@ -1,3 +1,5 @@
+import { Link } from "react-router";
+
 export default function Footer() {
   return (
     <footer className="flex flex-col items-center justify-center gap-2 my-12 text-sm text-gray-900">
@@ -65,6 +67,7 @@ export default function Footer() {
           </a>
         </li>
       </ul>
+			<Link to="/privacy-policy" className="text-xs">Privacy Policy</Link>
       <span id="currentYear">{new Date().getFullYear()}</span>
     </footer>
   );

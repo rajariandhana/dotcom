@@ -14,6 +14,7 @@ import Chatbot from "./components/Chatbot/Chatbot";
 import Gallery from "./components/Gallery/Gallery";
 import GalleryPhotos from "./components/Gallery/GalleryPhotos";
 import History from "./components/History/History";
+import PrivacyPolicy from "./components/PrivacyPolicy/PrivacyPolicy";
 
 function App() {
   return (
@@ -27,9 +28,10 @@ function App() {
         <Route path="/gallery/:album_name" element={<GalleryPhotos />} />
         <Route path="/history" element={<History />} />
         <Route path="/settings" element={<UnderMaintenance />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />}></Route>
         <Route path="/:path" element={<UnderMaintenance />} />
       </Route>
-      <Route element={<Layout footer={false}/>}>
+      <Route element={<Layout footer={false} />}>
         <Route path="/chatbot" element={<Chatbot />} />
       </Route>
     </Routes>

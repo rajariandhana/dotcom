@@ -41,6 +41,13 @@ const Nav = () => {
     },
   ];
 
+	const endMenuItems = [
+    {
+      label: "Privacy Policy",
+      link: "/privacy-policy",
+    },
+  ];
+
   // const otherMenuItems = [
   //   {
   //     label: "History of My Website",
@@ -143,6 +150,26 @@ const Nav = () => {
                         Nostalgic!
                       </Chip>
                     ) : null}
+                  </Link>
+                </NavbarMenuItem>
+              );
+            })}
+          </div>
+
+					<div className="mt-4">
+            {endMenuItems.map((item, index) => {
+              let active = location.pathname.startsWith(item.link);
+              if (item.link === "/" && location.pathname !== "/") {
+                active = false;
+              }
+              return (
+                <NavbarMenuItem
+                  className="lg:ml-20 xl:ml-48"
+                  key={`${item.label}-${index}`}
+                  isActive={active}
+                >
+                  <Link to={item.link} className="nav-menu-item">
+                    {item.label}{" "}
                   </Link>
                 </NavbarMenuItem>
               );
