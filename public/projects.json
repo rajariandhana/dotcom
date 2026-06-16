@@ -1,13 +1,25 @@
 
 [
 		{
+			"name" : "Ashes of Alengka",
+			"slug" : "ashes-of-alengka",
+			"techs" : ["Godot","GDScript"],
+			"description" : "Me and my friends created a fighting game revolving the Traditional Javanese Wayang. We did this under 48 hour for the UQCS Game Jam. Our game won the \"Best Story/Art\" Category.", 
+			"numPhoto" : 3,
+			"extension" : "png",
+			"repo" : "https://github.com/rajariandhana/wayang",
+			"demo" : "https://ashes-of-alengka.ralfazza.com",
+			"size" : "",
+			"category":"game"
+		},
+		{
 			"name" : "BaseGame",
 			"slug" : "basegame",
 			"techs" : ["Godot","GDScript"],
 			"description" : "Open-source game template focused on gameplay mechanics rather than art or narrative. Implemented systems including inventory storage, save/load system, combat mechanics, and dialogue system.", 
 			"numPhoto" : 2,
 			"extension" : "png",
-			"repo" : "https://github.com/BaseGame",
+			"repo" : "https://github.com/rajariandhana/BaseGame",
 			"demo" : "https://basegame.ralfazza.com",
 			"size" : "",
 			"category":"game"
@@ -19,7 +31,7 @@
         "description" : "IGI Game Jam 2025 is a game jam held by University of Indonesia with this year's theme \"Purpose in the Unknown\". My game is about a lighthouse (meaning mercusuar in Indonesia) that must shine it's light towards incoming ship preventing them from crashing into the island. The game submitted for the competition has a lot of bugs and implemented features since the it happens at the same time with GMTK's Game Jam meaning I only have 15 hours working on this game. After the jam ended I fixed the bugs and implement more features such as tutorial screen, audio, even more obstacles like sharks and tornadoes.", 
         "numPhoto" : 2,
         "extension" : "png",
-        "repo" : "https://github.com/IGI-Game-Jam-2025",
+        "repo" : "https://github.com/rajariandhana/IGI-Game-Jam-2025",
         "demo" : "https://rj-game-studio.itch.io/mercusuram",
         "size" : "",
         "category":"game"
@@ -31,7 +43,7 @@
         "description" : "GMTK Game Jam is an international annual game jam held by the youtuber Game Maker's Toolkit. With this year's theme \"Loop\" I joined a random team through the discord server and made a card game where players must loop through the deck. Players can swap cards between baord and hand, when all cards on board matches their suit, they are discarded.",
         "numPhoto" : 2,
         "extension" : "png",
-        "repo" : "https://github.com/GMTK-Game-Jam-2025",
+        "repo" : "https://github.com/rajariandhana/GMTK-Game-Jam-2025",
         "demo" : "https://loliakulka.itch.io/q-q-joker",
         "size" : "",
         "category":"game"
@@ -104,7 +116,7 @@
         "description" : "For my Information Security course, we are required to implement a symmetric and asymmetric encryption for users to store files and send encrypted files",
         "numPhoto" : 1,
         "extension" : "png",
-        "repo" : "github.com/NETICS-Laboratory/symmetric-data-encryption-application-simpenan",
+        "repo" : "https://github.com/NETICS-Laboratory/symmetric-data-encryption-application-simpenan",
         "demo" : "https://simpenan.ralfazza.com",
         "size" : "WIDE",
         "category":"web"
@@ -116,7 +128,7 @@
         "description" : "For Computer Graphics course final project, we created a 3d render of the Algorithms and Programming Laboratory using Three.js.",
         "numPhoto" : 1,
         "extension" : "png",
-        "repo" : "github.com/rajariandhana/ComputerGraphicsFP",
+        "repo" : "https://github.com/rajariandhana/ComputerGraphicsFP",
         "demo" : "",
         "size" : "WIDE",
         "category":"other"
@@ -128,7 +140,7 @@
         "description" : "Canon event to do app. For my Framework Based Programming course that uses gin gonic framework.",
         "numPhoto" : 2,
         "extension" : "png",
-        "repo" : "github.com/rajariandhana/goofyah",
+        "repo" : "https://github.com/rajariandhana/goofyah",
         "demo" : "",
         "size" : "TALL",
         "category":"web"
@@ -141,7 +153,7 @@
         "description" : "For my Framework Based Programming course that uses laravel framework.",
         "numPhoto" : 2,
         "extension" : "png",
-        "repo" : "github.com/rajariandhana/sikma",
+        "repo" : "https://github.com/rajariandhana/sikma",
         "demo" : "https://sikma.ralfazza.com",
         "size" : "TALL",
         "category":"web"
@@ -178,7 +190,7 @@
         "description" : "For my Design & Analysis of Algorithms course, I chose to create a game of minesweeper which applies the Breadth First Search algorithm when revealing cells that does not have a mine in it. Kind of proud of this one since I already know the basic and just needed a bit help from GPT for minor syntax stuffs.",
         "numPhoto" : 3,
         "extension" : "png",
-        "repo" : "github.com/rajariandhana/minesweeper",
+        "repo" : "https://github.com/rajariandhana/minesweeper",
         "demo" : "https://minesweeper.ralfazza.com",
         "size" : "BOX-SM",
         "category":"game"
@@ -190,7 +202,7 @@
         "description" : "Just a replication of a checkers game. Unfortunately it is a bit difficult to put it on the web so I am sorry about the aspect ratio",
         "numPhoto" : 2,
         "extension" : "png",
-        "repo" : "github.com/rajariandhana/dev_checkers",
+        "repo" : "https://github.com/rajariandhana/dev_checkers",
         "demo" : "https://checkers.ralfazza.com",
         "size" : "BOX-SM",
         "category":"game"
@@ -202,7 +214,7 @@
         "description" : "Simple point of Sales application for F&B business. Business owner can perform CRUD to menus, create and track order, as well as to filter order based on dates.",
         "numPhoto" : 4,
         "extension" : "png",
-        "repo" : "github.com/rajariandhana/fpcamin",
+        "repo" : "https://github.com/rajariandhana/fpcamin",
         "demo" : "https://foodgrub.ralfazza.com",
         "size" : "BOX-LG",
         "category":"web"
@@ -239,7 +251,7 @@
         "description" : "Personal project to help me and my friends learn Japanese Kanji. Not optimized for desktop",
         "numPhoto" : 3,
         "extension" : "png",
-        "repo" : "github.com/rajariandhana/kanji",
+        "repo" : "https://github.com/rajariandhana/kanji",
         "demo" : "https://studykanji.ralfazza.com",
         "size" : "TALL",
         "category":"web"

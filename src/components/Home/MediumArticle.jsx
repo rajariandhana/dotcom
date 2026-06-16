@@ -1,4 +1,4 @@
-import { Button, Link } from "@heroui/react";
+import { Button, Chip, Link } from "@heroui/react";
 import { LuExternalLink } from "react-icons/lu";
 
 export default function MediumArticle({ article }) {
@@ -12,9 +12,15 @@ export default function MediumArticle({ article }) {
       <div className="flex justify-between">
         <h3 className="font-semibold text-lg">{article.title}</h3>
         <div className="flex items-center gap-4">
-          <span className="text-sm text-neutral-500">
-            {article.published_date}
-          </span>
+          {article.published_date === "coming-soon" ? (
+            <Chip color="primary" variant="flat" size="sm">
+              Coming Soon
+            </Chip>
+          ) : (
+            <span className="text-sm text-neutral-500">
+              {article.published_date}
+            </span>
+          )}
           <Link
             variant="ghost"
             radius="full"

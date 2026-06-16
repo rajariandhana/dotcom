@@ -3,10 +3,10 @@ import { useProject } from "../../hooks/projects";
 
 export default function BestProjects() {
   const { data: project_1, isPending: pending_1 } =
-    useProject("boombatag-2024");
+    useProject("ashes-of-alengka");
   const { data: project_2, isPending: pending_2 } =
     useProject("box-of-curiosity");
-  const { data: project_3, isPending: pending_3 } = useProject("qq-joker");
+  const { data: project_3, isPending: pending_3 } = useProject("boombatag-2024");
 
   return (
     <section className="w-full">
