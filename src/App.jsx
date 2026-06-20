@@ -15,6 +15,7 @@ import Gallery from "./components/Gallery/Gallery";
 import GalleryPhotos from "./components/Gallery/GalleryPhotos";
 import History from "./components/History/History";
 import PrivacyPolicy from "./components/PrivacyPolicy/PrivacyPolicy";
+import Cipher from "./components/Chiper/Chiper";
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
       <Route element={<Layout footer={false} />}>
         <Route path="/chatbot" element={<Chatbot />} />
       </Route>
+      <Route path="/bad-cipher" element={<Cipher />}></Route>
     </Routes>
   );
 }
