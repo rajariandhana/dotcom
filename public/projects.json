@@ -1,6 +1,18 @@
 
 [
 		{
+			"name" : "The Weekly Roast",
+			"slug" : "the-weekly-roast",
+			"techs" : ["MongoDB","Express.js","React","Node.js","HeroUI","Tailwindcss"],
+			"description" : "Living far from home as a university student means there is nobody around to remind me when my eating habits become questionable. The Weekly Roast emails me an LLM generated message that critiques the meals I cooked and ordered during the week.",
+			"numPhoto" : 3,
+			"extension" : "png",
+			"repo" : "https://github.com/rajariandhana/fnb-diary",
+			"demo" : "https://the-weekly-roast.ralfazza.com",
+			"size" : "",
+			"category":"web"
+		},
+		{
 			"name" : "Ashes of Alengka",
 			"slug" : "ashes-of-alengka",
 			"techs" : ["Godot","GDScript"],

@@ -45,3 +45,4 @@ open website path using URL will result in 404 not found
 - use more elegant font? serif fonts?
 - project tags: FREELANCE, PERSONAL, SCHOOL PROJECT
 - medium blog posts
+- change heroui's primary color into MY OWN SIGNATURE COLOR
