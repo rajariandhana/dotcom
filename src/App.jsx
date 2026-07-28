@@ -16,6 +16,7 @@ import GalleryPhotos from "./components/Gallery/GalleryPhotos";
 import History from "./components/History/History";
 import PrivacyPolicy from "./components/PrivacyPolicy/PrivacyPolicy";
 import Cipher from "./components/Chiper/Chiper";
+import Luv from "./components/Luv";
 
 function App() {
   return (
@@ -36,6 +37,7 @@ function App() {
         <Route path="/chatbot" element={<Chatbot />} />
       </Route>
       <Route path="/bad-cipher" element={<Cipher />}></Route>
+			<Route path="/luv" element={<Luv />}></Route>
     </Routes>
   );
 }

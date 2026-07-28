@@ -46,3 +46,8 @@ open website path using URL will result in 404 not found
 - project tags: FREELANCE, PERSONAL, SCHOOL PROJECT
 - medium blog posts
 - change heroui's primary color into MY OWN SIGNATURE COLOR
+- let's use boxy instead of circular
+- know about me personally
+- say where I'm based at
+- work eligibility
+- 3d.ralfazza.com, made in Godot, BaseGame github releases
