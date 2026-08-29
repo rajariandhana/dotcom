@@ -3,6 +3,12 @@ import { Button, Tooltip } from "@heroui/react";
 export default function Skills() {
   const arsenal = [
     {
+      label: "TypeScript",
+      icon: (
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" />
+      ),
+    },
+    {
       label: "React.js",
       icon: (
         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" />
@@ -27,27 +33,21 @@ export default function Skills() {
       ),
     },
     {
-      label: "MongoDB",
-      icon: (
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg" />
-      ),
-    },
-    {
       label: "Supabase",
       icon: (
         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/supabase/supabase-original.svg" />
       ),
     },
     {
-      label: "GitHub",
-      icon: (
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" />
-      ),
-    },
-    {
       label: "Visual Studio Code",
       icon: (
         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg" />
+      ),
+    },
+    {
+      label: "GitHub",
+      icon: (
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" />
       ),
     },
     {
@@ -119,11 +119,9 @@ export default function Skills() {
     //     </div>
     //   ))}
     // </section>
-    <section className="w-full">
-      <h2 className="mb-2 text-xl cursor-pointer">
-        🛠️ Current <span className="italic">"Tech Arsenal"</span>
-      </h2>
-      <div className="flex flex-wrap gap-2 p-2 bg-white border border-gray-200 w-fit h-fit rounded-sm">
+    <section className="w-full items-center justify-center flex flex-col">
+      <h2 className="mb-2 text-xl cursor-pointer">Current Tech Stack</h2>
+      <div className="flex flex-wrap gap-2 p-2 bg-white border border-gray-200 w-fit h-fit rounded-sm mb-4">
         {arsenal.map((skill, index) => (
           <Tooltip key={index} content={skill.label} showArrow={true}>
             <Button isIconOnly variant="light" className="p-1 funny-rotate">
@@ -132,25 +130,21 @@ export default function Skills() {
           </Tooltip>
         ))}
       </div>
-      <div>
-        <h3>Full credit of what I've tried</h3>
-        <p className="p-2 bg-white border border-gray-200 rounded-sm text-sm text-justify">
-          {allTechs.map((category, index) => (
-            <span key={category.category}>
-              <span className="italic font-semibold">
-                {category.category}:{" "}
+      <h3 className="mb-1">Full credit of what I've tried</h3>
+      <p className="p-2 bg-white border border-gray-200 rounded-sm text-sm text-justify">
+        {allTechs.map((category, index) => (
+          <span key={category.category}>
+            <span className="font-semibold">{category.category}: </span>
+            {category.techs.map((tech, index) => (
+              <span key={tech} className="font-light">
+                {tech}
+                {index !== category.techs.length - 1 && " · "}
               </span>
-              {category.techs.map((tech, index) => (
-                <span key={tech} className="font-light">
-                  {tech}
-                  {index !== category.techs.length - 1 && " · "}
-                </span>
-              ))}
-              {index !== allTechs.length - 1 && " | "}
-            </span>
-          ))}
-        </p>
-      </div>
+            ))}
+            {index !== allTechs.length - 1 && " | "}
+          </span>
+        ))}
+      </p>
     </section>
   );
 }

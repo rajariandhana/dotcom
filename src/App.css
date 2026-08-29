@@ -29,8 +29,8 @@
   background-color: white;
 }
 
-h2 {
-  @apply font-garamond;
+* {
+  @apply font-jakarta;
 }
 
 /* section {

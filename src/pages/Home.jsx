@@ -3,8 +3,25 @@ import BestProjects from "../components/Home/BestProjects";
 import BestPhotos from "../components/Home/BestPhotos";
 import Skills from "../components/Home/Skills";
 import Medium from "../components/Home/Medium";
+import { addToast } from "@heroui/react";
+import { useEffect } from "react";
+import { sleep } from "../utils/util";
+import { Link } from "react-router";
 
 export const Home = () => {
+  const notifyBot = async () => {
+    await sleep(10000);
+    addToast({
+      title: (
+        <Link to={"/chatbot"} className="underline">
+          Check out my chat bot here
+        </Link>
+      ),
+    });
+  };
+  useEffect(() => {
+    notifyBot();
+  }, []);
   return (
     <>
       <Hero />
@@ -14,8 +31,8 @@ export const Home = () => {
       {/* 
       gini kali ya, ada tab current tech stack, sama techs i used
       */}
-      {/* <Skills/> */}
       <BestProjects />
+      <Skills />
       <Medium />
       {/* <BestPhotos /> */}
     </>

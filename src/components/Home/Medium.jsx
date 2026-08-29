@@ -18,7 +18,7 @@ export default function Medium() {
     <section className="w-full">
       <div>
         <h2 className="mb-2 text-xl cursor-pointer">
-          📚 I have a blog on{" "}
+          I have a blog on{" "}
           <a
             href="https://medium.com/@rajariandhana"
             target="_blank"

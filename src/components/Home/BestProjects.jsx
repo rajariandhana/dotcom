@@ -10,7 +10,7 @@ export default function BestProjects() {
 
   return (
     <section className="w-full">
-      <h2 className="mb-2 text-xl cursor-pointer">🚀 Favorite Projects</h2>
+      <h2 className="mb-2 text-xl cursor-pointer">Favorite Projects</h2>
 
       <div className="flex flex-col items-center justify-between w-full gap-2 lg:gap-4 sm:flex-row">
         {pending_1 || pending_2 || pending_3 ? (

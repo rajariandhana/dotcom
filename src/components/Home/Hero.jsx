@@ -55,11 +55,11 @@ export default function Hero() {
         {profile_pending ? (
           <Skeleton className="p-1 mb-12 rounded-full size-32 z-0" />
         ) : (
-            <img
-              src={profile_link}
-              alt=""
-              className="object-cover p-1 mb-12 rounded-full size-32 z-0"
-            />
+          <img
+            src={profile_link}
+            alt=""
+            className="object-cover p-1 mb-12 rounded-full size-32 z-0"
+          />
         )}
       </div>
       {/* <h1 className="font-mono font-bold">
@@ -68,15 +68,25 @@ export default function Hero() {
           Hello, world!
         </span>
       </h1> */}
-      <h1 className="!font-semibold text-xl -mt-4">Ralfazza here...</h1>
-      <p className="text-justify">
+      <h1 className="text-xl -mt-4">
+        Hey, <span className="!font-semibold">Ralfazza</span> here...
+      </h1>
+      {/* <p className="text-justify">
         You'll find several of my best works such as my projects as a developer,
         my interest in photography, and anything else since this is my website
         and I can do anything I want here.
+      </p> */}
+      <p className="text-justify mb-1">
+        I love building, breaking, and fixing apps endlessly. I am a software
+        engineer from Indonesia and is currently based in Brisbane, Australia. I
+        mainly do fullstack web development using modern JavaScript frameworks
+        and creating games on the side. Outside of being a
+        developer I have an interest in photography, playing music (piano,
+        ukulele), and anything about Pokémon.
       </p>
-      <span className="text-sm text-neutral-500">
+      {/* <span className="text-sm text-neutral-500">
         Feel free to hit me up in any of my social media
-      </span>
+      </span> */}
       <ul className="flex items-center gap-2 w-fit">
         <li>
           <a href="https://instagram.com/rajariandhana" target="_blank">

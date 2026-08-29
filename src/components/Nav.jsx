@@ -70,7 +70,7 @@ const Nav = () => {
         isBordered
         isMenuOpen={isMenuOpen}
       >
-        <NavbarContent className="font-garamond">
+        <NavbarContent>
           <NavbarBrand color="foreground">
             <Link to={"/"} className="nav-content-item text-xl">
               ralfazza.com
@@ -78,7 +78,7 @@ const Nav = () => {
           </NavbarBrand>
         </NavbarContent>
 
-        <NavbarContent justify="end" className="font-garamond">
+        <NavbarContent justify="end">
           {primaryMenuItems.map((item, index) => {
             let active = location.pathname.startsWith(item.link);
             return (
@@ -102,7 +102,7 @@ const Nav = () => {
           />
         </NavbarContent>
 
-        <NavbarMenu className="font-garamond">
+        <NavbarMenu>
           <NavbarMenuItem
             className="mb-4 lg:ml-20 xl:ml-48"
             isActive={location.pathname === "/"}
