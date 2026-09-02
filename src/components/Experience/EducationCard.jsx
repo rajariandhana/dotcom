@@ -46,14 +46,14 @@ export default function EducationCard({ education, loading }) {
   return (
     <>
       <div className="hidden w-full gap-4 p-4 bg-white border border-gray-200 rounded-md sm:flex">
-        <div className="w-40">
+        <div className="w-20">
           <Image
             src={education.image_link}
-            alt={education.name}
+            alt={education.university}
             className="object-cover funny-rotate"
           />
         </div>
-        <div className="text-sm w-fit">
+        <div className="text-sm w-full">
           <div className="flex items-center justify-between w-full">
             <Link
               underline="hover"
@@ -64,15 +64,19 @@ export default function EducationCard({ education, loading }) {
               target="_blank"
               rel="noopener noreferrer"
             >
-              {education.name}
+              {education.university}
             </Link>
-            <span>{education.location}</span>
+            <span className="text-right">{education.location}</span>
           </div>
-          <div className="flex items-center justify-between w-full mb-2 italic">
-            <span className="text-gray-500">{education.sub_title}</span>
+          <div className="flex items-start justify-between w-full mb-2 italic">
+            <div className="text-gray-500 flex flex-col">
+              <span>{education.degree}</span>
+              <span>GPA: {education.gpa}</span>
+            </div>
             <span>{education.date}</span>
           </div>
-          <p>{education.description}</p>
+					<span>Notable Coursework:</span>
+          <p>{education.coursework.join(" · ")}</p>
         </div>
       </div>
       <div className="flex flex-col w-full gap-2 p-4 bg-white border border-gray-200 rounded-md sm:hidden">
@@ -80,7 +84,7 @@ export default function EducationCard({ education, loading }) {
           <div className="w-20">
             <Image
               src={education.image_link}
-              alt={education.name}
+              alt={education.university}
               className="object-cover"
             />
           </div>
@@ -92,7 +96,7 @@ export default function EducationCard({ education, loading }) {
               target="_blank"
               rel="noopener noreferrer"
             >
-              {education.name}
+              {education.university}
             </h3>
             <span className="text-sm">{education.location}</span>
             <span className="text-sm italic ">{education.date}</span>
@@ -100,9 +104,11 @@ export default function EducationCard({ education, loading }) {
         </div>
         <div className="flex flex-col">
           <span className="mb-1 text-sm italic text-gray-500">
-            {education.sub_title}
+            {education.degree}
           </span>
-          <p className="text-sm sm:text-md">{education.description}</p>
+					<span className="mb-1 text-sm italic text-gray-500">GPA: {education.gpa}</span>
+					<span className="text-sm sm:text-md">Notable Coursework:</span>
+          <p className="text-sm sm:text-md">{education.coursework.join(" · ")}</p>
         </div>
       </div>
     </>

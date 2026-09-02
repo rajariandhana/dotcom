@@ -1,29 +1,22 @@
 import EducationCard from "./EducationCard";
 import { useResume } from "../../hooks/resume";
 import ExperienceCard from "./ExperienceCard";
-import {
-  Button,
-  Dropdown,
-  DropdownItem,
-  DropdownMenu,
-  DropdownTrigger,
-  Skeleton,
-} from "@heroui/react";
-import { FaAngleDown } from "react-icons/fa";
+import { Button, Skeleton } from "@heroui/react";
+import { BsDownload } from "react-icons/bs";
 import supabase from "../../libs/supabase/supabase";
 
 export default function Experience() {
   const { data: resume, isPending } = useResume();
 
-  const downloadCV = async (contact) => {
-    if (!["AU", "ID"].includes(contact)) {
-      return;
-    }
-    const file_name = `${contact}.pdf`;
+  const downloadCV = async () => {
+    const file_name = "resume.pdf";
+    const download_name = "Resume_Ralfazza Rajariandhana.pdf";
+
     try {
       const { data, error } = await supabase.storage
         .from("cv")
-        .download(file_name, { download: "CV_Ralfazza Rajariandhana" });
+        .download(file_name);
+
       if (error) {
         console.log(error);
         return;
@@ -33,11 +26,12 @@ export default function Experience() {
 
       const a = document.createElement("a");
       a.href = url;
-      a.download = file_name;
+      a.download = download_name;
+
       document.body.appendChild(a);
       a.click();
-
       a.remove();
+
       window.URL.revokeObjectURL(url);
     } catch (error) {
       console.log(error);
@@ -70,23 +64,17 @@ export default function Experience() {
   return (
     <>
       <section className="flex w-full justify-end -mb-8">
-        <Dropdown>
-          <DropdownTrigger>
-            <Button variant="flat" endContent={<FaAngleDown />} color="primary">
-              Download My CV
-            </Button>
-          </DropdownTrigger>
-          <DropdownMenu
-            aria-label="CV Versions"
-            onAction={(key) => downloadCV(key)}
-          >
-            <DropdownItem key="AU">With Australian contact</DropdownItem>
-            <DropdownItem key="ID">With Indonesian contact</DropdownItem>
-          </DropdownMenu>
-        </Dropdown>
+        <Button
+          variant="flat"
+          endContent={<BsDownload />}
+          color="primary"
+          onPress={downloadCV}
+        >
+          Download my resume
+        </Button>
       </section>
       <section className="w-full">
-        <h2 className="mb-2 text-xl cursor-pointer">🎓 Where I study</h2>
+        <h2 className="mb-2 text-xl cursor-pointer">Education</h2>
         <div className="flex flex-col gap-4">
           {resume.education.map((edu) => (
             <EducationCard key={edu.key} education={edu} />
@@ -94,7 +82,7 @@ export default function Experience() {
         </div>
       </section>
       <section className="w-full">
-        <h2 className="mb-2 text-xl cursor-pointer">💼 What I've done</h2>
+        <h2 className="mb-2 text-xl cursor-pointer">Experience</h2>
         <div className="flex flex-col gap-4">
           {resume.experience.map((exp, index) => (
             <ExperienceCard key={index} experience={exp} />

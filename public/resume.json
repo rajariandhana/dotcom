@@ -1,113 +1,121 @@
 {
   "profile": {
     "name": "Ralfazza Rajariandhana",
+		"website": "https://ralfazza.com",
     "email": "rajariandhana@gmail.com",
-    "location": ["Brisbane, Australia", "Jakarta, Indonesia"],
-    "phone": ["+61 450335860", "+62 8119887635"],
-    "linkedin": "linkedin.com/in/rajariandhana",
-    "github": "github.com/rajariandhana",
-    "website": "ralfazza.com"
+		"linkedin": "https://linkedin.com/in/rajariandhana",
+		"github": "https://github.com/rajariandhana"
   },
-  "summary": "Final year computer science student from Indonesia currently studying in Australia. Professional hands-on experience in web development with modern frameworks and game development with a strong ability to collaborate in teams.",
-  "skills": "Data structures and algorithms using C/C++. Modern web frameworks such as Laravel, TailwindCSS, Alpine.js, Livewire, React, TypeScript, Node.js, Express.js. Game development using Unity Engine and Godot. Version control system using Git and GitHub. Proficient in English with an IELTS score of 7.0 and native speaker in Indonesian.",
   "education": [
-    {
-      "name": "University of Queensland",
-      "key": "uq",
-      "date": "February 2025 - Present",
-      "description": "Notable courses: Computer Systems Principles & Programming, Information Security, Operating Systems Architecture, Theory of Computing, Programming in the Large.",
-      "link": "https://www.uq.edu.au",
-      "location": "Brisbane, Australia",
-      "sub_title": "Bachelor of Computer Science | Cyber Security Major | GPA: 5.0/7.0"
+		{
+			"key": "its-surabaya",
+			"link": "https://www.its.ac.id",
+      "university": "Institut Teknologi Sepuluh Nopember",
+      "location": "Surabaya, Indonesia",
+      "degree": "Bachelor of Informatics Engineering",
+      "gpa": "3.44/4.0",
+      "date": "August 2022 - October 2026",
+      "coursework": [
+        "Data Structures",
+        "Database Management",
+        "Web Programming",
+        "Framework-Based Programming"
+      ]
     },
     {
-      "name": "Institut Teknologi Sepuluh Nopember",
-      "key": "its-surabaya",
-      "date": "August 2022 - Present",
-      "description": "Notable courses: Data Structures, Web Programming, Object Oriented Programming, Framework-Based Programming, Database Management, Software Design, Algorithms Design and Analysis.",
-      "link": "https://www.its.ac.id",
-      "location": "Surabaya, Indonesia",
-      "sub_title": "Bachelor of Informatics Engineering | GPA: 3.43/4.0"
+			"key": "uq",
+			"link": "https://www.uq.edu.au",
+      "university": "The University of Queensland",
+      "location": "Brisbane, Australia",
+      "degree": "Bachelor of Computer Science, Major in Cyber Security",
+      "gpa": "5.1/7.0",
+      "date": "February 2025 - July 2026",
+      "coursework": [
+        "Computer Systems Principles & Programming",
+        "Information Security",
+        "Operating Systems Architecture",
+        "Vulnerability Assessment and Penetration Testing",
+        "Programming in the Large"
+      ]
     }
   ],
   "experience": [
     {
-      "position": "Teaching Assistant",
-      "employer_key": "its-surabaya",
-      "employer": "Institut Teknologi Sepuluh Nopember",
-      "start": "August 2023",
-      "end": "December 2024",
-      "location": "Surabaya, Indonesia",
-      "description": [
-        "Teaches international students in various courses throughout the years such as Fundamental Programming, Data Structures, and Algorithms and Computer Programming in C, C++ and Python.",
-        "Creates programming problems for quizzes and lab works, conducts tutorial sessions, assists lecturer in grading."
-      ]
-    },
-    {
+			"company_key": "alpro-its",
+			"company_site": "https://github.com/algoritma-dan-pemrograman-its",
+      "company": "Algorithms and Programming Laboratory",
       "position": "Lab Administrator",
-      "employer_key": "alpro-its",
-      "employer": "Algorithms and Programming Laboratory",
-      "start": "January 2024",
-      "end": "December 2024",
+      "date": "January 2024 - June 2026",
       "location": "Surabaya, Indonesia",
       "description": [
-        "Responsible for all teaching assistants of Fundamental Programming Course of fall 2024, arranged the course's timeline, sets up and maintains the website to hold programming practicum.",
-        "Provide help with events held by the laboratory such as community service towards locals and aid the professors."
+        "Led all teaching assistants for the Fundamental Programming course (Fall 2024), revamped the department's tutorial workflows and standardized the grading framework to ensure consistent evaluation across students.",
+        "Assist with community service programs, training workshops, and research support for professors."
       ]
     },
     {
+			"company_key": "its-surabaya",
+			"company_site": "https://its.ac.id",
+      "company": "Institut Teknologi Sepuluh Nopember",
+      "position": "Teaching Assistant",
+      "date": "August 2023 - December 2024",
+      "location": "Surabaya, Indonesia",
+      "description": [
+        "Taught international students in Fundamental Programming, Data Structures and Algorithms courses using C, C++, and Python, covering topics including functions, recursion, structs, pointers, and searching algorithms.",
+        "Designed programming problem sets for quizzes and laboratory assignments, conducted hands on tutorial sessions, and supported lecturers with grading and course delivery."
+      ]
+    },
+    {
+			"company_key": "schematics-its",
+			"company_site": "https://schematics-its.com",
+      "company": "Schematics ITS",
       "position": "Game Developer",
-      "employer_key": "schematics-its",
-      "employer": "Schematics ITS",
-      "start": "February 2023",
-      "end": "November 2024",
+      "date": "February 2023 - November 2024",
       "location": "Surabaya, Indonesia",
       "description": [
-        "Design and develop video games on Unity Engine using C# to be used in the 2023 and 2024 Schematics National Logic Competition. Over 1000 players played the game online during the elimination round. The event was later awarded with a 3 star from Puspresnas.",
-        "Created the core inventory system and item pick-up mechanism for the first game and led development on user interface for the second game (Schematics 2024). Created new levels through existing code made by predecessors (Schematics 2023)."
+        "Designed and developed video games using Unity Engine and C# for the 2023 and 2024 Schematics National Logic Competition, received a 3 star award from the National Achievement Center.",
+        "Developed core game mechanics played by over 1,000 participants and handle optimization."
       ]
     },
     {
+			"company_key": "rajawali",
+			"company_site": "https://rajawaliholdings.com",
+      "company": "PT Rajawali Holdings Indonesia",
       "position": "Frontend Developer Intern",
-      "employer_key": "rajawali",
-      "employer": "PT Rajawali Holdings Indonesia",
-      "start": "July 2024",
-      "end": "August 2024",
+      "date": "July 2024 - August 2024",
       "location": "Jakarta, Indonesia",
       "description": [
-        "Developed the company's profile website ensuring a responsive experience across all devices."
-      ]
-    },
-    {
-      "position": "Research Assistant",
-      "employer_key": "its-surabaya",
-      "employer": "Institut Teknologi Sepuluh Nopember",
-      "start": "December 2023",
-      "end": "May 2024",
-      "location": "Surabaya, Indonesia",
-      "description": [
-        "Aide the professor's research by creating python scripts to analyze data."
+        "Developed company profile website using React, delivering a responsive, accessible, and SEO friendly experience."
       ]
     }
   ],
-  "projects": [
+  "skills": [
     {
-      "name": "Box of Curiosity",
-      "tech": "Unity Engine, C#",
-      "date": "February 2024 - September 2024",
-      "description": "First game developed for Schematics NLC 2024. Focused on the making of the player's inventory system as well as item pick-up system. Unity Engine was used with C# for the project. Over 1000 players have played the game online."
+      "category": "Programming Languages",
+      "description": "C, C++, Go, Python, Java, C#, JavaScript, TypeScript"
     },
     {
-      "name": "QQ Joker",
-      "tech": "Godot, GDScript",
-      "date": "August 2025",
-      "description": "Card matching game developed for the annual GMTK Game Jam. Ranked in the top 5000 games out of over 9000 entries."
+      "category": "Web Frameworks",
+      "description": "Laravel, React, Next.js, Express.js"
     },
     {
-      "name": "SEA Catering",
-      "tech": "MongoDB, Express.js, React, Node.js, Next.js, NextUI, Tailwind CSS",
-      "date": "July 2025",
-      "description": "Catering web app inspired by Hello Fresh with dashboard for both members and admins monitoring subscriptions."
+      "category": "Game Engines",
+      "description": "Unity, Godot"
+    },
+    {
+      "category": "Databases",
+      "description": "MongoDB, Supabase, PostgreSQL, MySQL, SQLite"
+    },
+    {
+      "category": "Developer Tools",
+      "description": "Git, GitHub, Visual Studio Code, Postman, Claude Code"
+    },
+    {
+      "category": "Relevant Skillset",
+      "description": "Object-Oriented Programming (OOP), REST APIs, MVC Architecture, Agile, CI/CD"
+    },
+    {
+      "category": "Languages",
+      "description": "Indonesian (Native), English (IELTS 8.0)"
     }
   ]
 }

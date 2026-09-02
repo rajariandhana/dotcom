@@ -28,7 +28,7 @@ const fetchResume = async () => {
 
     publicResume.experience = publicResume.experience.map((exp) => ({
       ...exp,
-      image_link: imageMap[exp.employer_key] || null,
+      image_link: imageMap[exp.company_key] || null,
     }));
 
     return publicResume;
@@ -41,7 +41,7 @@ const fetchResume = async () => {
 export function useResume() {
   // const queryClient = useQueryClient();
   return useQuery({
-    queryKey: ["albums"],
+    queryKey: ["resume"],
     queryFn: fetchResume,
   });
 }
