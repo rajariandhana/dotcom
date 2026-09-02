@@ -1,5 +1,6 @@
 import ProjectCard from "../Projects/ProjectCard";
 import { useProject } from "../../hooks/projects";
+import AppearSection from "../AppearSection";
 
 export default function BestProjects() {
   const { data: project_1, isPending: pending_1 } =
@@ -9,8 +10,8 @@ export default function BestProjects() {
   const { data: project_3, isPending: pending_3 } = useProject("boombatag-2024");
 
   return (
-    <section className="w-full">
-      <h2 className="mb-2 text-xl cursor-pointer">Favorite Projects</h2>
+    <AppearSection className="w-full">
+      <h2 className="mb-2 text-xl cursor-pointer">My Proudest Projects</h2>
 
       <div className="flex flex-col items-center justify-between w-full gap-2 lg:gap-4 sm:flex-row">
         {pending_1 || pending_2 || pending_3 ? (
@@ -27,6 +28,6 @@ export default function BestProjects() {
           </>
         )}
       </div>
-    </section>
+    </AppearSection>
   );
 }

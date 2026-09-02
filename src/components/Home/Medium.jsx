@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import MediumArticle from "./MediumArticle";
+import AppearSection from "../AppearSection";
 
 export default function Medium() {
   const [articles, setArticles] = useState([]);
@@ -15,7 +16,7 @@ export default function Medium() {
   }, []);
 
   return (
-    <section className="w-full">
+    <AppearSection className="w-full">
       <div>
         <h2 className="mb-2 text-xl cursor-pointer">
           I have a blog on{" "}
@@ -33,6 +34,6 @@ export default function Medium() {
           <MediumArticle article={article} key={index} />
         ))}
       </div>
-    </section>
+    </AppearSection>
   );
 }

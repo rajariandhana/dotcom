@@ -3,6 +3,7 @@ import SpeechBubble from "../SpeechBubble.jsx";
 import supabase from "../../libs/supabase/supabase.js";
 import { useQuery } from "@tanstack/react-query";
 import { Image, Skeleton } from "@heroui/react";
+import AppearSection from "../AppearSection.jsx";
 
 const fetchProfile = async () => {
   try {
@@ -28,6 +29,9 @@ function useProfile() {
 export default function Hero() {
   const [qotd, setQotd] = useState("...");
 
+  const DEFAULT_QOTD = "ZZZ..zz...";
+  // const DEFAULT_QOTD = "I swear I did not vibe code this site"
+
   useEffect(() => {
     fetch("/quotes.json")
       .then((res) => res.json())
@@ -37,17 +41,17 @@ export default function Hero() {
       })
       .catch((error) => {
         console.error("Error fetching projects:", error);
-        setQotd("ZZZ..zz...");
+        setQotd(DEFAULT_QOTD);
       })
       .finally(() => {
-        setQotd("ZZZ..zz...");
+        setQotd(DEFAULT_QOTD);
       });
   }, []);
 
   const { data: profile_link, isPending: profile_pending } = useProfile();
 
   return (
-    <section>
+    <AppearSection>
       <div className="flex">
         <div className="absolute z-10 mt-4 ml-24 transition-all duration-300 ease-out cursor-pointer rotate-4 hover:rotate-6">
           <SpeechBubble message={qotd} />
@@ -77,12 +81,13 @@ export default function Hero() {
         and I can do anything I want here.
       </p> */}
       <p className="text-justify mb-1">
-        I love building, breaking, and fixing apps endlessly. I am a software
-        engineer from Indonesia and is currently based in Brisbane, Australia. I
-        mainly do fullstack web development using modern JavaScript frameworks
-        and creating games on the side. Outside of being a
-        developer I have an interest in photography, playing music (piano,
-        ukulele), and anything about Pokémon.
+        I love building, breaking, and fixing apps endlessly. I am a{" "}
+        <span className="font-semibold">software engineer</span> from Indonesia
+        and is currently based in{" "}
+        <span className="font-semibold">Brisbane, Australia</span>. I mainly do
+        fullstack web development using modern JavaScript frameworks and
+        creating games on the side. On my free time I have an interest in
+        photography, playing music (piano, ukulele), and anything about Pokémon.
       </p>
       {/* <span className="text-sm text-neutral-500">
         Feel free to hit me up in any of my social media
@@ -148,6 +153,6 @@ export default function Hero() {
           </a>
         </li>
       </ul>
-    </section>
+    </AppearSection>
   );
 }

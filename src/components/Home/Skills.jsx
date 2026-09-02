@@ -1,4 +1,5 @@
 import { Button, Tooltip } from "@heroui/react";
+import AppearSection from "../AppearSection";
 
 export default function Skills() {
   const arsenal = [
@@ -119,7 +120,7 @@ export default function Skills() {
     //     </div>
     //   ))}
     // </section>
-    <section className="w-full items-center justify-center flex flex-col">
+    <AppearSection className="w-full items-center justify-center flex flex-col">
       <h2 className="mb-2 text-xl cursor-pointer">Current Tech Stack</h2>
       <div className="flex flex-wrap gap-2 p-2 bg-white border border-gray-200 w-fit h-fit rounded-sm mb-4">
         {arsenal.map((skill, index) => (
@@ -130,7 +131,7 @@ export default function Skills() {
           </Tooltip>
         ))}
       </div>
-      <h3 className="mb-1">Full credit of what I've tried</h3>
+      <h3 className="mb-1">Technologies I've Used</h3>
       <p className="p-2 bg-white border border-gray-200 rounded-sm text-sm text-justify">
         {allTechs.map((category, index) => (
           <span key={category.category}>
@@ -145,6 +146,6 @@ export default function Skills() {
           </span>
         ))}
       </p>
-    </section>
+    </AppearSection>
   );
 }

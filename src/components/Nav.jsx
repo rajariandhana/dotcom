@@ -41,7 +41,7 @@ const Nav = () => {
     },
   ];
 
-	const endMenuItems = [
+  const endMenuItems = [
     {
       label: "Privacy Policy",
       link: "/privacy-policy",
@@ -64,7 +64,9 @@ const Nav = () => {
   }, [location.pathname]);
 
   return (
-    <header className="sticky top-0 z-20 w-full">
+    <header
+      className="sticky top-0 z-20 w-full"
+    >
       <Navbar
         onMenuOpenChange={setIsMenuOpen}
         isBordered
@@ -156,7 +158,7 @@ const Nav = () => {
             })}
           </div>
 
-					<div className="mt-4">
+          <div className="mt-4">
             {endMenuItems.map((item, index) => {
               let active = location.pathname.startsWith(item.link);
               if (item.link === "/" && location.pathname !== "/") {
