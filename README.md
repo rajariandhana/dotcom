@@ -51,3 +51,12 @@ open website path using URL will result in 404 not found
 - say where I'm based at
 - work eligibility
 - 3d.ralfazza.com, made in Godot, BaseGame github releases
+
+
+Card Language
+
+player will be given cards
+cards:
+- english, japanese
+- meaning, anonym
+- 

@@ -11,6 +11,22 @@
   --font-roboto: "Roboto", sans-serif;
   --font-google: "Google Sans", sans-serif;
   --font-garamond: "EB Garamond", serif;
+	--font-drawably: "Drawably Pen", sans-serif;
+	
+	/* --color-primary: #FC482E; */
+	--color-black: #0C121D;
+	--color-white: #FFFFFF;
+	--color-purple: #9777C9;
+	--color-green: #05D1A8;
+	--color-blue: #139BFA;
+	--color-red: #FC482E;
+	--color-yellow: #FEC700;
+
+	--color-bitmore-yellow: #FFFB00;
+	--color-bitmore-black: #0C0C0C;
+	--color-bitmore-white: #FAFAFA;
+	--color-bitmore-gray: #262626;
+	--color-bitmore-white-2: #EBEBEB;
 }
 
 .funny-rotate {
@@ -29,10 +45,57 @@
   background-color: white;
 }
 
+.font-drawably {
+  font-family: "Drawably Pen", Inter, sans-serif;
+}
+
 * {
   @apply font-jakarta;
+}
+
+h2 {
+	/* @apply text-red; */
 }
 
 /* section {
   @apply w-full;
 } */
+
+@font-face {
+  font-family: "Avenir";
+  src: url("/fonts/Avenir/Avenir-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Avenir";
+  src: url("/fonts/Avenir/Avenir-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Avenir";
+  src: url("/fonts/Avenir/Avenir-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Avenir";
+  src: url("/fonts/Avenir/Avenir-Heavy.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Avenir";
+  src: url("/fonts/Avenir/Avenir-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@theme {
+  --font-avenir: "Avenir", sans-serif;
+}

@@ -74,7 +74,7 @@ const Nav = () => {
       >
         <NavbarContent>
           <NavbarBrand color="foreground">
-            <Link to={"/"} className="nav-content-item text-xl">
+            <Link to={"/"} className="nav-content-item text-xl text-red font-bold hover:font-bold!">
               ralfazza.com
             </Link>
           </NavbarBrand>

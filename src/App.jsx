@@ -1,6 +1,8 @@
 import "swiper/css";
 import "swiper/css/navigation";
 import "./App.css";
+import "drawably/style.css";
+import "drawably/font.css";
 
 import { Routes, Route } from "react-router";
 
@@ -17,10 +19,14 @@ import History from "./components/History/History";
 import PrivacyPolicy from "./components/PrivacyPolicy/PrivacyPolicy";
 import Cipher from "./components/Chiper/Chiper";
 import Luv from "./components/Luv";
+import BitMore from "./components/Projects/bitmore/BitMore";
 
 function App() {
   return (
     <Routes>
+      <Route element={<Layout fullwidth={true} />}>
+        <Route path="/projects/bitmore" element={<BitMore />} />
+      </Route>
       <Route element={<Layout />}>
         <Route path="/" element={<Home />} />
         <Route path="/projects" element={<Projects />} />
@@ -37,7 +43,7 @@ function App() {
         <Route path="/chatbot" element={<Chatbot />} />
       </Route>
       <Route path="/bad-cipher" element={<Cipher />}></Route>
-			<Route path="/luv" element={<Luv />}></Route>
+      <Route path="/luv" element={<Luv />}></Route>
     </Routes>
   );
 }

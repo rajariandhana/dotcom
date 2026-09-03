@@ -18,6 +18,20 @@ export default function Medium() {
   return (
     <AppearSection className="w-full">
       <div>
+				{/* <H2Drawably
+          label={
+            <span>
+              I have a blog on{" "}
+              <a
+                href="https://medium.com/@rajariandhana"
+                target="_blank"
+                className="underline"
+              >
+                Medium
+              </a>
+            </span>
+          }
+        /> */}
         <h2 className="mb-2 text-xl cursor-pointer">
           I have a blog on{" "}
           <a
