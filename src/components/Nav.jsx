@@ -64,17 +64,23 @@ const Nav = () => {
   }, [location.pathname]);
 
   return (
-    <header
-      className="sticky top-0 z-20 w-full"
-    >
+    <header className="sticky top-0 z-20 w-full">
       <Navbar
         onMenuOpenChange={setIsMenuOpen}
         isBordered
         isMenuOpen={isMenuOpen}
+        isBlurred={
+          location.pathname.startsWith("/projects/bitmore") === false
+            ? true
+            : false
+        }
       >
         <NavbarContent>
           <NavbarBrand color="foreground">
-            <Link to={"/"} className="nav-content-item text-xl text-red font-bold hover:font-bold!">
+            <Link
+              to={"/"}
+              className="nav-content-item text-xl text-red font-bold hover:font-bold!"
+            >
               ralfazza.com
             </Link>
           </NavbarBrand>
