@@ -39,7 +39,7 @@ export default function Hero() {
   const [qotd, setQotd] = useState("...");
 
   const DEFAULT_QOTD = "ZZZ..zz...";
-	// const DEFAULT_QOTD = "This website is not vibe coded";
+  // const DEFAULT_QOTD = "This website is not vibe coded";
   // const DEFAULT_QOTD = "I swear I did not vibe code this site"
 
   useEffect(() => {
@@ -96,7 +96,7 @@ export default function Hero() {
         </span>
       </h1> */}
       <h1 className="text-xl -mt-4">
-        Hello, <span className="font-semibold! font-drawably! text-red">Ralfazza</span> here...
+        Hello, <span className="font-semibold!">Ralfazza</span> here...
       </h1>
       {/* <p className="text-justify">
         You'll find several of my best works such as my projects as a developer,
@@ -105,25 +105,24 @@ export default function Hero() {
       </p> */}
       <p className="text-justify mb-1">
         I love building, breaking, and fixing apps endlessly. I am a{" "}
-        <DrawablyHighlight
+        {/* <DrawablyHighlight
           style={{
             "--drawably-fill": "var(--color-yellow)",
           }}
-        >
-          software engineer
-        </DrawablyHighlight>{" "}
+        > */}
+        <span className="font-semibold">software engineer</span>{" "}
+        {/* </DrawablyHighlight>{" "} */}
         from Indonesia and is currently based in{" "}
-        <DrawablyHighlight
+        {/* <DrawablyHighlight
           style={{
             "--drawably-fill": "var(--color-purple)",
           }}
-        >
-          Brisbane, Australia
-        </DrawablyHighlight>
-        . I mainly do fullstack web development using modern JavaScript
-        frameworks and creating games on the side. On my free time I have an
-        interest in photography, playing music (piano, ukulele), and anything
-        about Pokémon.
+        > */}
+        <span className="font-semibold">Brisbane, Australia</span>
+        {/* </DrawablyHighlight> */}. I mainly do fullstack web development
+        using modern JavaScript frameworks and creating games on the side. On my
+        free time I have an interest in photography, playing music (piano,
+        ukulele), and basically anything about Pokémon.
       </p>
       {/* <span className="text-sm text-neutral-500">
         Feel free to hit me up in any of my social media

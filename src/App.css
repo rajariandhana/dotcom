@@ -34,7 +34,7 @@
 }
 
 .nav-content-item {
-  @apply transition-all duration-300 ease-in-out cursor-pointer hover:font-semibold;
+  @apply transition-all duration-300 ease-in-out cursor-pointer hover:font-semibold w-20 text-center;
 }
 
 .nav-menu-item {

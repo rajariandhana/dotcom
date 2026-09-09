@@ -79,7 +79,7 @@ const Nav = () => {
           <NavbarBrand color="foreground">
             <Link
               to={"/"}
-              className="nav-content-item text-xl text-red font-bold hover:font-bold!"
+              className="nav-content-item text-xl font-bold hover:font-bold!"
             >
               ralfazza.com
             </Link>
@@ -110,78 +110,77 @@ const Nav = () => {
           />
         </NavbarContent>
 
-        <NavbarMenu>
-          <NavbarMenuItem
-            className="mb-4 lg:ml-20 xl:ml-48"
-            isActive={location.pathname === "/"}
-          >
-            <Link to={"/"} className="nav-menu-item">
-              Home
-            </Link>
-          </NavbarMenuItem>
-          {primaryMenuItems.map((item, index) => {
-            let active = location.pathname.startsWith(item.link);
-            return (
-              <NavbarMenuItem
-                className="lg:ml-20 xl:ml-48"
-                key={`${item.label}-${index}`}
-                isActive={active}
-              >
-                <Link to={item.link} className="nav-menu-item">
-                  {item.label}
-                </Link>
-              </NavbarMenuItem>
-            );
-          })}
-
-          <div className="mt-4">
-            {secondaryMenuItems.map((item, index) => {
+        <NavbarMenu className="flex items-center">
+          <div className="w-full lg:w-244">
+            <NavbarMenuItem
+              className="mb-4"
+              isActive={location.pathname === "/"}
+            >
+              <Link to={"/"} className="nav-menu-item">
+                Home
+              </Link>
+            </NavbarMenuItem>
+            {primaryMenuItems.map((item, index) => {
               let active = location.pathname.startsWith(item.link);
-              if (item.link === "/" && location.pathname !== "/") {
-                active = false;
-              }
               return (
                 <NavbarMenuItem
-                  className="lg:ml-20 xl:ml-48"
                   key={`${item.label}-${index}`}
                   isActive={active}
                 >
                   <Link to={item.link} className="nav-menu-item">
-                    {item.label}{" "}
-                    {item.link === "/chatbot" ? (
-                      <Chip color="primary" variant="flat" size="sm">
-                        New!
-                      </Chip>
-                    ) : null}
-                    {item.link === "/history" ? (
-                      <Chip color="secondary" variant="flat" size="sm">
-                        Nostalgic!
-                      </Chip>
-                    ) : null}
+                    {item.label}
                   </Link>
                 </NavbarMenuItem>
               );
             })}
-          </div>
 
-          <div className="mt-4">
-            {endMenuItems.map((item, index) => {
-              let active = location.pathname.startsWith(item.link);
-              if (item.link === "/" && location.pathname !== "/") {
-                active = false;
-              }
-              return (
-                <NavbarMenuItem
-                  className="lg:ml-20 xl:ml-48"
-                  key={`${item.label}-${index}`}
-                  isActive={active}
-                >
-                  <Link to={item.link} className="nav-menu-item">
-                    {item.label}{" "}
-                  </Link>
-                </NavbarMenuItem>
-              );
-            })}
+            <div className="mt-4">
+              {secondaryMenuItems.map((item, index) => {
+                let active = location.pathname.startsWith(item.link);
+                if (item.link === "/" && location.pathname !== "/") {
+                  active = false;
+                }
+                return (
+                  <NavbarMenuItem
+                    key={`${item.label}-${index}`}
+                    isActive={active}
+                  >
+                    <Link to={item.link} className="nav-menu-item">
+                      {item.label}{" "}
+                      {item.link === "/chatbot" ? (
+                        <Chip color="primary" variant="flat" size="sm">
+                          New!
+                        </Chip>
+                      ) : null}
+                      {item.link === "/history" ? (
+                        <Chip color="secondary" variant="flat" size="sm">
+                          Nostalgic!
+                        </Chip>
+                      ) : null}
+                    </Link>
+                  </NavbarMenuItem>
+                );
+              })}
+            </div>
+
+            <div className="mt-4">
+              {endMenuItems.map((item, index) => {
+                let active = location.pathname.startsWith(item.link);
+                if (item.link === "/" && location.pathname !== "/") {
+                  active = false;
+                }
+                return (
+                  <NavbarMenuItem
+                    key={`${item.label}-${index}`}
+                    isActive={active}
+                  >
+                    <Link to={item.link} className="nav-menu-item">
+                      {item.label}{" "}
+                    </Link>
+                  </NavbarMenuItem>
+                );
+              })}
+            </div>
           </div>
         </NavbarMenu>
       </Navbar>
