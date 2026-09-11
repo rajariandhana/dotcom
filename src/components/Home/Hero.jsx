@@ -121,7 +121,7 @@ export default function Hero() {
         <span className="font-semibold">Brisbane, Australia</span>
         {/* </DrawablyHighlight> */}. I mainly do fullstack web development
         using modern JavaScript frameworks and creating games on the side. On my
-        free time I have an interest in photography, playing music (piano,
+        free time I have an interest in cooking, playing music (piano,
         ukulele), and basically anything about Pokémon.
       </p>
       {/* <span className="text-sm text-neutral-500">

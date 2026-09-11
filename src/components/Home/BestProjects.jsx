@@ -6,11 +6,11 @@ import H2Drawably from "../H2Drawably";
 
 export default function BestProjects() {
   const { data: project_1, isPending: pending_1 } =
-    useProject("ashes-of-alengka");
+    useProject("tomo");
   const { data: project_2, isPending: pending_2 } =
     useProject("bitmore");
   const { data: project_3, isPending: pending_3 } =
-    useProject("box-of-curiosity");
+    useProject("ashes-of-alengka");
 
   return (
     <AppearSection className="w-full">

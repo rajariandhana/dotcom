@@ -20,6 +20,7 @@ import PrivacyPolicy from "./components/PrivacyPolicy/PrivacyPolicy";
 import Cipher from "./components/Chiper/Chiper";
 import Luv from "./components/Luv";
 import BitMore from "./components/Projects/bitmore/BitMore";
+import AshesOfAlengka from "./components/Projects/ashes-of-alengka/AshesOfAlengka";
 import Tomo from "./components/Projects/tomo/Tomo";
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
     <Routes>
       <Route element={<Layout fullwidth={true} />}>
         <Route path="/projects/bitmore" element={<BitMore />} />
+        <Route path="/projects/ashes-of-alengka" element={<AshesOfAlengka />} />
         <Route path="/projects/tomo" element={<Tomo />} />
       </Route>
       <Route element={<Layout />}>
