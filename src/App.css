@@ -38,6 +38,16 @@
 	--color-tomo-slate: #64748B;
 	--color-tomo-paper: #F8FAFC;
 	--color-tomo-line: #E2E8F0;
+
+	--color-alengka-night: #0A0705;
+	--color-alengka-ink: #17100A;
+	--color-alengka-ember: #2A160C;
+	--color-alengka-flame: #FF8A1F;
+	--color-alengka-amber: #F0A93C;
+	--color-alengka-gold: #E6C877;
+	--color-alengka-blood: #8E1B22;
+	--color-alengka-cream: #F5E9D6;
+	--color-alengka-kelir: #C9BFA6;
 }
 
 .funny-rotate {
@@ -113,6 +123,49 @@ h2 {
 
 .hover-border{
 	@apply border-2 border-white/30 transition-all hover:scale-105 hover:border-white;
+}
+
+/* ── Ashes of Alengka project page ─────────────────────────────────── */
+
+.alengka-heading {
+  @apply font-garamond! text-2xl font-bold tracking-wide text-alengka-cream sm:text-3xl lg:text-4xl;
+}
+
+.alengka-eyebrow {
+  @apply text-xs font-semibold uppercase tracking-[0.3em] text-alengka-amber/70;
+}
+
+.alengka-mono {
+  font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, monospace;
+}
+
+.alengka-panel {
+  @apply rounded-xl border border-alengka-gold/20 bg-alengka-ink/70 backdrop-blur-sm;
+}
+
+.alengka-shot {
+  @apply overflow-hidden rounded-lg border border-alengka-gold/25 transition-all duration-500 ease-out hover:border-alengka-gold/70 hover:shadow-[0_20px_60px_-20px_rgba(255,138,31,0.55)];
+}
+
+/* the lamp-lit screen the puppets are pressed against */
+.alengka-kelir {
+  background:
+    radial-gradient(ellipse 60% 70% at 50% 45%, rgba(245, 233, 214, 0.16), transparent 70%),
+    radial-gradient(ellipse 90% 90% at 50% 60%, rgba(255, 138, 31, 0.1), transparent 75%),
+    #17100a;
+}
+
+@keyframes alengka-flicker {
+  0%, 100% { opacity: 0.86; }
+  18% { opacity: 1; }
+  33% { opacity: 0.74; }
+  47% { opacity: 0.96; }
+  62% { opacity: 0.8; }
+  79% { opacity: 1; }
+}
+
+.alengka-flicker {
+  animation: alengka-flicker 4.2s ease-in-out infinite;
 }
 
 /* ── Tomo project page ─────────────────────────────────────────────── */

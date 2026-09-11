@@ -65,8 +65,9 @@
     "description": "Me and my friends created a fighting game revolving the Traditional Javanese Wayang. We did this under 48 hour for the UQCS Game Jam. Our game won the \"Best Story/Art\" Category.",
     "numPhoto": 3,
     "extension": "png",
-    "repo": "https://github.com/rajariandhana/wayang",
+    "repo": "https://github.com/rajariandhana/Wayang",
     "demo": "https://ashes-of-alengka.ralfazza.com",
+    "cover": "/projects/ashes-of-alengka/shot-arena.jpg",
     "size": "",
     "category": "game"
   },
