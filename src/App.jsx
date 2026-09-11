@@ -20,12 +20,14 @@ import PrivacyPolicy from "./components/PrivacyPolicy/PrivacyPolicy";
 import Cipher from "./components/Chiper/Chiper";
 import Luv from "./components/Luv";
 import BitMore from "./components/Projects/bitmore/BitMore";
+import Tomo from "./components/Projects/tomo/Tomo";
 
 function App() {
   return (
     <Routes>
       <Route element={<Layout fullwidth={true} />}>
         <Route path="/projects/bitmore" element={<BitMore />} />
+        <Route path="/projects/tomo" element={<Tomo />} />
       </Route>
       <Route element={<Layout />}>
         <Route path="/" element={<Home />} />

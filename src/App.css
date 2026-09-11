@@ -27,6 +27,17 @@
 	--color-bitmore-white: #FAFAFA;
 	--color-bitmore-gray: #262626;
 	--color-bitmore-white-2: #EBEBEB;
+
+	--color-tomo-blue: #2563EB;
+	--color-tomo-blue-deep: #1D4ED8;
+	--color-tomo-blue-100: #DBEAFE;
+	--color-tomo-blue-50: #EFF6FF;
+	--color-tomo-orange: #F97316;
+	--color-tomo-orange-50: #FFF7ED;
+	--color-tomo-ink: #0F172A;
+	--color-tomo-slate: #64748B;
+	--color-tomo-paper: #F8FAFC;
+	--color-tomo-line: #E2E8F0;
 }
 
 .funny-rotate {
@@ -102,4 +113,22 @@ h2 {
 
 .hover-border{
 	@apply border-2 border-white/30 transition-all hover:scale-105 hover:border-white;
+}
+
+/* ── Tomo project page ─────────────────────────────────────────────── */
+
+.tomo-card {
+  @apply rounded-2xl border border-tomo-line bg-white p-5 transition-all duration-300 ease-out;
+}
+
+.tomo-card-hover {
+  @apply hover:-translate-y-1 hover:border-tomo-blue-100 hover:shadow-[0_18px_40px_-18px_rgba(37,99,235,0.35)];
+}
+
+.tomo-pill {
+  @apply rounded-full border px-3.5 py-1.5 text-xs font-semibold transition-all duration-200 cursor-pointer;
+}
+
+.tomo-mono {
+  font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, monospace;
 }

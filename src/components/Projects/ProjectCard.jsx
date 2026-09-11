@@ -24,8 +24,9 @@ export default function ProjectCard({ project, loading }) {
 
   const { slug, name } = project;
 
-	const imageUrl = project.images?.[0];
-	console.log(imageUrl)
+	// Supabase storage is the usual source; `cover` lets a project ship a
+	// local fallback image instead of needing an upload.
+	const imageUrl = project.images?.[0] ?? project.cover;
 
   return (
     <Link
