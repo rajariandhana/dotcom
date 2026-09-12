@@ -23,6 +23,7 @@ import RotatorDiagram from "./RotatorDiagram.jsx";
 import StreamDemo from "./StreamDemo.jsx";
 import KeyboardDemo from "./KeyboardDemo.jsx";
 import AgentIcons from "./AgentIcons.jsx";
+import Palette from "./Palette.jsx";
 import VibeCodedDemo from "./VibeCodedDemo.jsx";
 import InitialPrompt from "./InitialPrompt.jsx";
 import { LIVE_URL, REPO_URL, GEMINI_PROGRAM_URL } from "./links.js";
@@ -39,12 +40,6 @@ const ALLOWED_LIBS = [
   { name: "Framer Motion", Icon: SiFramer },
   { name: "Go", Icon: SiGo },
   { name: "Bun", Icon: SiBun },
-];
-
-const PALETTE = [
-  { name: "Background", hex: "#FFFFFF", swatch: "bg-white border-tomo-line" },
-  { name: "Tomo", hex: "#2563EB", swatch: "bg-tomo-blue border-tomo-blue" },
-  { name: "You", hex: "#F97316", swatch: "bg-tomo-orange border-tomo-orange" },
 ];
 
 function SectionTitle({ children, ja }) {
@@ -245,11 +240,7 @@ export default function Tomo() {
           </div>
 
           <div className="grid gap-4 sm:grid-cols-2">
-            <motion.div
-              whileHover={{ y: -5 }}
-              transition={{ type: "spring", stiffness: 300, damping: 24 }}
-              className="tomo-card tomo-card-hover flex flex-col gap-3"
-            >
+            <div className="tomo-card flex flex-col gap-3">
               <span className="text-xs font-semibold tracking-[0.2em] text-tomo-blue">
                 技術
               </span>
@@ -271,36 +262,21 @@ export default function Tomo() {
                   </span>
                 ))}
               </div>
-            </motion.div>
+            </div>
 
-            <motion.div
-              whileHover={{ y: -5 }}
-              transition={{ type: "spring", stiffness: 300, damping: 24 }}
-              className="tomo-card tomo-card-hover flex flex-col gap-3"
-            >
+            <div className="tomo-card flex flex-col gap-3">
               <span className="text-xs font-semibold tracking-[0.2em] text-tomo-blue">
                 配色
               </span>
               <h3 className="text-base font-bold">Design</h3>
               <p className="text-[13px] leading-relaxed text-tomo-slate">
-                I only want to use 2-3 colors with white for clean background.
-                Two or three colours and no more, with white doing the
-                background. I also named what to avoid like gradients and emoji.
+                I only want to use 2-3 colors with white for a clean
+                background. I also named what to avoid, like gradients and
+                emoji.
               </p>
 
-              <div className="mt-1 flex flex-col gap-2">
-                {PALETTE.map(({ name, hex, swatch }) => (
-                  <div key={hex} className="flex items-center gap-2.5">
-                    <span
-                      className={`size-6 shrink-0 rounded-lg border ${swatch}`}
-                    />
-                    <span className="tomo-mono text-[11px] font-semibold text-tomo-ink">
-                      {hex}
-                    </span>
-                  </div>
-                ))}
-              </div>
-            </motion.div>
+              <Palette />
+            </div>
           </div>
 
           <VibeCodedDemo />
