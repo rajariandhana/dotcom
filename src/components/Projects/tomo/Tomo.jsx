@@ -1,12 +1,18 @@
 import { Link } from "react-router";
 import { motion } from "motion/react";
 import { FaAnglesLeft } from "react-icons/fa6";
+import { LuArrowRight, LuExternalLink, LuGithub } from "react-icons/lu";
 import {
-  LuArrowRight,
-  LuChevronDown,
-  LuExternalLink,
-  LuGithub,
-} from "react-icons/lu";
+  SiAxios,
+  SiBun,
+  SiFramer,
+  SiGo,
+  SiReact,
+  SiReactquery,
+  SiReactrouter,
+  SiTailwindcss,
+  SiTypescript,
+} from "react-icons/si";
 
 import AppearSection from "../../AppearSection.jsx";
 import PhoneFrame from "./PhoneFrame.jsx";
@@ -16,7 +22,30 @@ import ScreenShowcase from "./ScreenShowcase.jsx";
 import RotatorDiagram from "./RotatorDiagram.jsx";
 import StreamDemo from "./StreamDemo.jsx";
 import KeyboardDemo from "./KeyboardDemo.jsx";
+import AgentIcons from "./AgentIcons.jsx";
+import VibeCodedDemo from "./VibeCodedDemo.jsx";
+import InitialPrompt from "./InitialPrompt.jsx";
 import { LIVE_URL, REPO_URL, GEMINI_PROGRAM_URL } from "./links.js";
+
+const CLAUDE_CODE_URL = "https://claude.com/claude-code";
+
+const ALLOWED_LIBS = [
+  { name: "React", Icon: SiReact },
+  { name: "TypeScript", Icon: SiTypescript },
+  { name: "Tailwind", Icon: SiTailwindcss },
+  { name: "React Router", Icon: SiReactrouter },
+  { name: "TanStack Query", Icon: SiReactquery },
+  { name: "axios", Icon: SiAxios },
+  { name: "Framer Motion", Icon: SiFramer },
+  { name: "Go", Icon: SiGo },
+  { name: "Bun", Icon: SiBun },
+];
+
+const PALETTE = [
+  { name: "Background", hex: "#FFFFFF", swatch: "bg-white border-tomo-line" },
+  { name: "Tomo", hex: "#2563EB", swatch: "bg-tomo-blue border-tomo-blue" },
+  { name: "You", hex: "#F97316", swatch: "bg-tomo-orange border-tomo-orange" },
+];
 
 function SectionTitle({ children, ja }) {
   return (
@@ -166,71 +195,117 @@ export default function Tomo() {
         </AppearSection>
       </section>
 
-      {/* ── Design decisions ──────────────────────────────────────────── */}
+      {/* ── First time with an agent ──────────────────────────────────── */}
       <section className="flex w-full justify-center bg-white py-20 sm:py-28">
-        <AppearSection className="flex w-full max-w-5xl flex-col gap-10 px-6 sm:px-10">
-          <div className="flex max-w-2xl flex-col gap-4">
-            <SectionTitle ja="デザイン">
-              Rules I gave myself before writing any CSS
+        <AppearSection className="flex w-full max-w-3xl flex-col gap-6 px-6 sm:px-10">
+          <SectionTitle ja="初めて">
+            My first time using an{" "}
+            <span className="text-tomo-blue">AI agent</span>
+          </SectionTitle>
+
+          <p className="text-justify leading-relaxed text-tomo-slate">
+            I was sceptical of agentic AI tools for a long time. The worry was
+            that leaning on one would make me lazier and, eventually, worse at
+            the job.
+          </p>
+
+          <p className="text-justify leading-relaxed text-tomo-slate">
+            Then one day I felt genuine FOMO watching friends work in Claude,
+            Codex and Cursor while I was still copying and pasting out of
+            ChatGPT like a Neanderthal. So I decided to try the thing before
+            judging it, and subscribed to{" "}
+            <Link
+              to={CLAUDE_CODE_URL}
+              target="_blank"
+              className="inline-flex items-center gap-1 font-semibold text-tomo-blue hover:underline hover:underline-offset-2"
+            >
+              Claude Code
+              <LuExternalLink className="inline" />
+            </Link>
+            .
+          </p>
+
+          <AgentIcons />
+        </AppearSection>
+      </section>
+
+      {/* ── Not another vibe coded app ────────────────────────────────── */}
+      <section className="flex w-full justify-center bg-white pb-20 sm:pb-28">
+        <AppearSection className="flex w-full max-w-4xl flex-col gap-8 px-6 sm:px-10">
+          <div className="flex max-w-2xl flex-col gap-5">
+            <SectionTitle ja="指示">
+              I didn't want another{" "}
+              <span className="text-tomo-blue">vibe coded</span> app
             </SectionTitle>
+
             <p className="text-justify leading-relaxed text-tomo-slate">
-              Language apps tend to look like toys, all mascots and confetti. I
-              wanted Tomo to feel like a calm room with one friend in it, so I
-              wrote the constraints down first and held to them.
+              Having worked as a full stack developer, I know I could make it
+              not be another vibe coded app by giving it specific prompts.
             </p>
           </div>
 
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {[
-              {
-                ja: "二色",
-                title: "Two colours, no gradients",
-                body: "Blue for Tomo, orange for you, white for everything else. No gradients and no emoji anywhere in the interface. With only two colours available, blue came to mean the AI and orange came to mean your turn, without a legend.",
-              },
-              {
-                ja: "札",
-                title: "Topics as playing cards",
-                body: "The first build showed topics as wide rows. They read as a settings menu. Reshaping them to a 3:4 portrait card made the same list feel like a hand you draw from, which is the mood the app wanted.",
-              },
-              {
-                ja: "翻訳",
-                title: "Translation behind a tap",
-                body: "Showing the English next to the Japanese means nobody reads the Japanese. Hiding it behind Show translation makes the effort the default and the shortcut a choice.",
-              },
-              {
-                ja: "五回",
-                title: "A session that ends",
-                body: "Five user turns and the conversation closes deliberately. A free session that trails off into a rate-limit error feels broken. One that ends on Thanks for trying out Tomo feels finished.",
-              },
-              {
-                ja: "待機",
-                title: "A wait worth keeping",
-                body: "The four opening lines are prebuilt, so they could appear instantly. They do not. A short typing indicator plays first, because a reply that lands before you can look up reads as canned.",
-              },
-              {
-                ja: "正直",
-                title: "An honest paywall",
-                body: "The Plus tab lists what a paid tier would unlock and labels the button coming soon. Shipping a real-looking checkout that cannot take money would be the only dishonest screen in the app.",
-              },
-            ].map((card) => (
-              <motion.div
-                key={card.title}
-                whileHover={{ y: -6 }}
-                transition={{ type: "spring", stiffness: 300, damping: 24 }}
-                className="tomo-card tomo-card-hover flex flex-col gap-2"
-              >
-                <span className="text-xs font-semibold tracking-[0.2em] text-tomo-blue">
-                  {card.ja}
-                </span>
-                <h3 className="text-base font-bold leading-snug">
-                  {card.title}
-                </h3>
-                <p className="text-[13px] leading-relaxed text-tomo-slate">
-                  {card.body}
-                </p>
-              </motion.div>
-            ))}
+          <div className="grid gap-4 sm:grid-cols-2">
+            <motion.div
+              whileHover={{ y: -5 }}
+              transition={{ type: "spring", stiffness: 300, damping: 24 }}
+              className="tomo-card tomo-card-hover flex flex-col gap-3"
+            >
+              <span className="text-xs font-semibold tracking-[0.2em] text-tomo-blue">
+                技術
+              </span>
+              <h3 className="text-base font-bold">Tech stack</h3>
+              <p className="text-[13px] leading-relaxed text-tomo-slate">
+                I restricted what it was allowed to install, listing only
+                libraries I had already used and understood, and I set the
+                directory structure myself.
+              </p>
+
+              <div className="mt-1 flex flex-wrap gap-1.5">
+                {ALLOWED_LIBS.map(({ name, Icon }) => (
+                  <span
+                    key={name}
+                    className="flex items-center gap-1.5 rounded-full border border-tomo-line px-2.5 py-1 text-[11px] font-semibold text-tomo-slate transition-all duration-200 hover:-translate-y-0.5 hover:border-tomo-blue hover:text-tomo-blue"
+                  >
+                    <Icon className="text-sm" />
+                    {name}
+                  </span>
+                ))}
+              </div>
+            </motion.div>
+
+            <motion.div
+              whileHover={{ y: -5 }}
+              transition={{ type: "spring", stiffness: 300, damping: 24 }}
+              className="tomo-card tomo-card-hover flex flex-col gap-3"
+            >
+              <span className="text-xs font-semibold tracking-[0.2em] text-tomo-blue">
+                配色
+              </span>
+              <h3 className="text-base font-bold">Design</h3>
+              <p className="text-[13px] leading-relaxed text-tomo-slate">
+                I only want to use 2-3 colors with white for clean background.
+                Two or three colours and no more, with white doing the
+                background. I also named what to avoid like gradients and emoji.
+              </p>
+
+              <div className="mt-1 flex flex-col gap-2">
+                {PALETTE.map(({ name, hex, swatch }) => (
+                  <div key={hex} className="flex items-center gap-2.5">
+                    <span
+                      className={`size-6 shrink-0 rounded-lg border ${swatch}`}
+                    />
+                    <span className="tomo-mono text-[11px] font-semibold text-tomo-ink">
+                      {hex}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            </motion.div>
           </div>
+
+          <VibeCodedDemo />
+
+          <InitialPrompt />
         </AppearSection>
       </section>
 
