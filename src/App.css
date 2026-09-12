@@ -178,10 +178,6 @@ h2 {
   @apply hover:-translate-y-1 hover:border-tomo-blue-100 hover:shadow-[0_18px_40px_-18px_rgba(37,99,235,0.35)];
 }
 
-.tomo-pill {
-  @apply rounded-full border px-3.5 py-1.5 text-xs font-semibold transition-all duration-200 cursor-pointer;
-}
-
 .tomo-mono {
   font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, monospace;
 }
