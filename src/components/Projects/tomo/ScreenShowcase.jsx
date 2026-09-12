@@ -11,77 +11,63 @@ const SCREENS = [
     label: "Home",
     ja: "ホーム",
     src: `${BASE}/home.png`,
-    note: "One kanji, one verb. The whole landing screen is a logo and a button, because the only thing a first-time visitor should have to decide is whether to start talking.",
+    note: "One kanji, one verb, one button sitting under your thumb. The only thing a first-time visitor has to decide is whether to start talking.",
   },
   {
     id: "topics",
     label: "Topics",
     ja: "トピック",
     src: `${BASE}/topics.png`,
-    note: "Topics are shaped like playing cards on purpose. A 3:4 card reads as something you pick up, not a menu row you scan past.",
-  },
-  {
-    id: "waiting",
-    label: "Waiting",
-    ja: "考え中",
-    src: `${BASE}/conversation-streaming.png`,
-    note: "Three dots in an empty bubble. The turn counter in the corner already says 1/5, so you know what the session costs before you spend it.",
+    note: "Before talking with Tomo, choose a topic that you're comfortable with.",
   },
   {
     id: "conversation",
-    label: "Conversation",
+    label: "Chat",
     ja: "会話",
     src: `${BASE}/conversation-translation.png`,
-    note: "Japanese first, English only when asked for. The translation hides behind a tap so the reflex is to read the Japanese, not skip to the answer.",
-  },
-  {
-    id: "ended",
-    label: "Session end",
-    ja: "終了",
-    src: `${BASE}/conversation-ended.png`,
-    note: "Five turns and the session closes on its own. Ending on a clean note beats letting a free conversation trail off into a rate-limit error.",
+    note: "Chat normally like with a real person. Forgot some words? don't worry, Tomo can still understands if you speak in English.",
   },
   {
     id: "history",
-    label: "Transcript",
-    ja: "記録",
+    label: "Review",
+    ja: "復習",
     src: `${BASE}/conversation-history.png`,
-    note: "The finished conversation comes back as a modal, with the audio it already generated. Replaying a line never costs a second API call.",
+    note: "Look back at your conversation history, check for yourself or use our AI feedback feature by unlocking Tomo plus",
   },
   {
     id: "kanji",
-    label: "Kanji",
+    label: "Don't forget Kanjis!",
     ja: "漢字",
     src: `${BASE}/kanji-modes.png`,
-    note: "Conversation is the hard sell, so kanji drills give the app something to do on a two-minute break.",
-  },
-  {
-    id: "levels",
-    label: "Levels",
-    ja: "レベル",
-    src: `${BASE}/kanji-levels.png`,
-    note: "Levels run vertically, N5 down to N1, and the screen says outright which end is easiest. JLPT numbering is backwards to anyone who has not met it before.",
+    note: "We don't want you to forgot your kanjis (trust me). So we have two modes, matching and flashcards for a quick lesson.",
   },
   {
     id: "matching",
     label: "Matching",
     ja: "組み合わせ",
     src: `${BASE}/kanji-matching.png`,
-    note: "Five kanji, five meanings, five rounds. Pairs resolve in place instead of navigating, which keeps the whole round on one screen.",
+    note: "Five kanji, five meanings, five rounds.",
   },
   {
-    id: "guide",
-    label: "Guide",
-    ja: "ガイド",
-    src: `${BASE}/guide.png`,
-    note: "A four-step explainer, written because the first testers all asked the same question: am I supposed to type in Japanese?",
+    id: "flashcards",
+    label: "Flashcards",
+    ja: "単語カード",
+    src: `${BASE}/kanji-flashcards.png`,
+    note: "See a Kanji, remember it, say it, check it, check other meanings.",
+  },
+	{
+    id: "levels",
+    label: "Levels",
+    ja: "レベル",
+    src: `${BASE}/kanji-levels.png`,
+    note: "Choose a level you are comfortable with. Tomo has everything you need.",
   },
   {
-    id: "pro",
-    label: "Pro",
-    ja: "プロ",
-    src: `${BASE}/pro.png`,
-    note: "A deliberately honest paywall. It lists what Pro would unlock and labels the button coming soon, rather than pretending a checkout exists.",
+    id: "plus",
+    label: "Plus",
+    ja: "プラス",
+    src: `${BASE}/plus.png`,
+    note: "Like Tomo and wanted more? Upgrade to Plus and unlock all features. Yes Tomo is your friend, but a friend still needs money to live :)."
   },
 ];
 
@@ -111,33 +97,6 @@ export default function ScreenShowcase() {
 
   return (
     <div className="flex w-full flex-col items-center gap-8">
-      {/* tabs */}
-      <div className="flex w-full max-w-3xl flex-wrap justify-center gap-2">
-        {SCREENS.map((s, i) => {
-          const active = i === index;
-          return (
-            <button
-              key={s.id}
-              onClick={() => go(i)}
-              className={`tomo-pill relative ${
-                active
-                  ? "border-tomo-blue text-white"
-                  : "border-tomo-line bg-white text-tomo-slate hover:border-tomo-blue-100 hover:text-tomo-blue"
-              }`}
-            >
-              {active && (
-                <motion.span
-                  layoutId="tomo-tab"
-                  className="absolute inset-0 z-0 rounded-full bg-tomo-blue"
-                  transition={{ type: "spring", stiffness: 380, damping: 32 }}
-                />
-              )}
-              <span className="relative z-10">{s.label}</span>
-            </button>
-          );
-        })}
-      </div>
-
       <div className="flex w-full flex-col items-center gap-8 lg:flex-row lg:items-center lg:justify-center lg:gap-16">
         {/* phone */}
         <div className="relative flex shrink-0 items-center gap-3 sm:gap-5">
@@ -208,26 +167,6 @@ export default function ScreenShowcase() {
               </p>
             </motion.div>
           </AnimatePresence>
-
-          {/* progress dots */}
-          <div className="mt-1 flex flex-wrap gap-1.5">
-            {SCREENS.map((s, i) => (
-              <button
-                key={s.id}
-                onClick={() => go(i)}
-                aria-label={s.label}
-                className={`h-1.5 rounded-full transition-all duration-300 ${
-                  i === index
-                    ? "w-7 bg-tomo-blue"
-                    : "w-1.5 bg-tomo-line hover:bg-tomo-blue/40"
-                }`}
-              />
-            ))}
-          </div>
-
-          <span className="text-xs text-tomo-slate/70">
-            Drag the phone, or use the arrows. Screens captured at 390 × 844.
-          </span>
         </div>
       </div>
     </div>

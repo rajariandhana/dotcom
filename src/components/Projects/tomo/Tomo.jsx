@@ -1,33 +1,22 @@
-import { useRef } from "react";
 import { Link } from "react-router";
-import { motion, useScroll, useTransform } from "motion/react";
+import { motion } from "motion/react";
 import { FaAnglesLeft } from "react-icons/fa6";
-import { LuExternalLink, LuGithub } from "react-icons/lu";
+import {
+  LuArrowRight,
+  LuChevronDown,
+  LuExternalLink,
+  LuGithub,
+} from "react-icons/lu";
 
 import AppearSection from "../../AppearSection.jsx";
 import PhoneFrame from "./PhoneFrame.jsx";
+import Hero from "./Hero.jsx";
+import NameStatement from "./NameStatement.jsx";
 import ScreenShowcase from "./ScreenShowcase.jsx";
 import RotatorDiagram from "./RotatorDiagram.jsx";
 import StreamDemo from "./StreamDemo.jsx";
 import KeyboardDemo from "./KeyboardDemo.jsx";
-
-const LIVE_URL = "https://tomo.ralfazza.com";
-const REPO_URL = "https://github.com/rajariandhana/tomo";
-// TODO: the Google program the free Gemini API access came from.
-// While this is empty the sentence renders as plain text instead of a dead link.
-const GEMINI_PROGRAM_URL = "";
-
-const STACK = [
-  "React 19",
-  "TypeScript",
-  "Vite",
-  "Tailwind 4",
-  "TanStack Query",
-  "Framer Motion",
-  "Go",
-  "Gemini",
-  "Vercel",
-];
+import { LIVE_URL, REPO_URL, GEMINI_PROGRAM_URL } from "./links.js";
 
 function SectionTitle({ children, ja }) {
   return (
@@ -62,196 +51,118 @@ function Stat({ value, label }) {
 }
 
 export default function Tomo() {
-  const hero_ref = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: hero_ref,
-    offset: ["start start", "end start"],
-  });
-
-  const phone_y = useTransform(scrollYProgress, [0, 1], [0, -90]);
-  const kanji_y = useTransform(scrollYProgress, [0, 1], [0, 160]);
-  const kanji_opacity = useTransform(scrollYProgress, [0, 0.8], [1, 0]);
-
   return (
     <main className="flex w-full flex-col bg-white font-jakarta text-[15px] text-tomo-ink lg:text-base">
       {/* ── Hero ───────────────────────────────────────────────────────── */}
-      <section
-        ref={hero_ref}
-        className="relative flex w-full justify-center overflow-hidden bg-tomo-paper"
-      >
-        {/* 友 watermark */}
-        <motion.span
-          style={{ y: kanji_y, opacity: kanji_opacity }}
-          className="pointer-events-none absolute -right-8 top-8 select-none text-[18rem] font-black leading-none text-tomo-blue/[0.055] sm:text-[26rem] lg:-right-16 lg:text-[34rem]"
-          aria-hidden="true"
-        >
-          友
-        </motion.span>
+      <Hero />
 
-        <div className="relative flex w-full max-w-6xl flex-col items-center gap-12 px-6 pb-20 pt-20 sm:px-10 lg:flex-row lg:justify-between lg:gap-16 lg:pb-28 lg:pt-24">
-          <Link
-            to="/projects"
-            className="absolute left-6 top-6 z-10 flex items-center gap-2 text-xs text-tomo-slate transition-colors hover:text-tomo-blue sm:left-10"
-          >
-            <FaAnglesLeft className="text-[10px]" />
-            <span>Back to Projects</span>
-          </Link>
-
-          {/* copy */}
-          <div className="flex w-full flex-col items-start gap-5 lg:w-1/2">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, ease: "easeOut" }}
-              className="flex items-center gap-3"
-            >
-              <img
-                src="/projects/tomo/tomo-logo.png"
-                alt="Tomo"
-                className="h-12 w-auto object-contain transition-transform duration-300 hover:rotate-3 hover:scale-110 sm:h-14"
-              />
-              <div className="flex flex-col">
-                <span className="text-3xl font-black leading-none text-tomo-blue sm:text-4xl">
-                  Tomo
-                </span>
-                <span className="text-xs text-tomo-slate">友 · friend</span>
-              </div>
-            </motion.div>
-
-            <motion.h1
-              initial={{ opacity: 0, y: 24 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, delay: 0.1, ease: "easeOut" }}
-              className="text-3xl font-black leading-[1.1] tracking-tight sm:text-4xl lg:text-5xl"
-            >
-              Learn Japanese by
-              <br />
-              <span className="text-tomo-blue">actually talking</span> to
-              <br />
-              someone.
-            </motion.h1>
-
-            <motion.p
-              initial={{ opacity: 0, y: 24 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, delay: 0.2, ease: "easeOut" }}
-              className="max-w-lg text-justify leading-relaxed text-tomo-slate"
-            >
-              Tomo is a mobile-first web app that drops you into a five-turn
-              Japanese conversation with an AI tutor. Pick a topic, it opens the
-              conversation, and you reply however you can. The English
-              translation stays hidden until you ask for it.
-            </motion.p>
-
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.7, delay: 0.35 }}
-              className="flex flex-wrap gap-1.5"
-            >
-              {STACK.map((tech) => (
-                <span
-                  key={tech}
-                  className="rounded-full border border-tomo-line bg-white px-2.5 py-1 text-[11px] font-semibold text-tomo-slate transition-all duration-200 hover:-translate-y-0.5 hover:border-tomo-blue hover:text-tomo-blue"
-                >
-                  {tech}
-                </span>
-              ))}
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 16 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, delay: 0.45 }}
-              className="mt-2 flex flex-wrap gap-3"
-            >
-              <Link
-                to={LIVE_URL}
-                target="_blank"
-                className="flex items-center gap-2 rounded-full bg-tomo-blue px-5 py-2.5 text-sm font-bold text-white shadow-[0_14px_30px_-12px_rgba(37,99,235,0.85)] transition-all hover:-translate-y-0.5 hover:bg-tomo-blue-deep"
-              >
-                Try it live <LuExternalLink />
-              </Link>
-              <Link
-                to={REPO_URL}
-                target="_blank"
-                className="flex items-center gap-2 rounded-full border border-tomo-line bg-white px-5 py-2.5 text-sm font-bold text-tomo-ink transition-all hover:-translate-y-0.5 hover:border-tomo-blue hover:text-tomo-blue"
-              >
-                <LuGithub /> Source
-              </Link>
-            </motion.div>
-          </div>
-
-          {/* hero phone */}
-          <motion.div
-            style={{ y: phone_y }}
-            initial={{ opacity: 0, y: 60, rotate: -4 }}
-            animate={{ opacity: 1, y: 0, rotate: -3 }}
-            transition={{ duration: 0.9, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
-            className="relative w-52 shrink-0 sm:w-60 lg:w-64"
-          >
-            <div className="pointer-events-none absolute left-1/2 top-1/2 -z-10 h-[75%] w-[140%] -translate-x-1/2 -translate-y-1/2 rounded-[50%] bg-tomo-blue/25 blur-[80px]" />
-            <motion.div
-              animate={{ y: [-6, 6, -6] }}
-              transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-              whileHover={{ rotate: 0, scale: 1.03 }}
-            >
-              <PhoneFrame
-                src="/projects/tomo/screens/conversation-translation.png"
-                alt="A Tomo conversation in Japanese"
-              />
-            </motion.div>
-          </motion.div>
-        </div>
-      </section>
+      {/* ── Name ───────────────────────────────────────────────────────── */}
+      <NameStatement />
 
       {/* ── Why ────────────────────────────────────────────────────────── */}
       <section className="flex w-full justify-center bg-white py-20 sm:py-28">
         <AppearSection className="flex w-full max-w-3xl flex-col gap-6 px-6 sm:px-10">
-          <SectionTitle ja="はじまり">
-            Every app I tried taught me <span className="text-tomo-blue">words</span>,
-            not conversation
+          <SectionTitle ja="問題">
+            The <span className="text-tomo-blue">problem</span> I have
           </SectionTitle>
 
           <p className="text-justify leading-relaxed text-tomo-slate">
-            I had been learning Japanese the way most people do, by grinding
-            vocabulary in an app that rewards streaks. It works right up until
-            someone actually speaks to you. Recognising 友 on a flashcard and
-            producing a sentence under time pressure are different skills, and
-            only one of them was being trained.
+            I love Japan's culture, I have been learning Japanese for a while
+            now, I even hit a year streak at Duolingo during the pandemic.
+          </p>
+
+          {/* the work was getting done — that is what makes the freeze sting */}
+          <div className="mt-2 flex flex-col items-center gap-5 sm:flex-row sm:items-stretch">
+            <div className="flex w-40 shrink-0 flex-col items-center gap-2 sm:w-48">
+              <motion.img
+                src="/projects/tomo/duolingo-score.png"
+                alt="A 365 day Duolingo streak"
+                className="w-full rounded-2xl border border-tomo-line object-contain"
+                initial={{ rotate: -3 }}
+                whileHover={{ rotate: 0, scale: 1.05 }}
+                transition={{ type: "spring", stiffness: 300, damping: 22 }}
+              />
+              <span className="text-center text-[11px] leading-snug text-tomo-slate/70">
+                A year without missing a day
+              </span>
+            </div>
+
+            <Link
+              to="/projects/studykanji"
+              className="tomo-card tomo-card-hover group flex flex-1 flex-col justify-center gap-2"
+              target="_blank"
+            >
+              <span className="text-xs font-semibold tracking-[0.2em] text-tomo-blue">
+                前作
+              </span>
+              <h3 className="text-base font-bold leading-snug">StudyKanji</h3>
+              <p className="text-[13px] leading-relaxed text-tomo-slate">
+                Before Tomo I built a kanji learning site for myself and my
+                friends. The website was simple and it fullfilled it's purpose
+                to make me quicker at recognising characters.
+              </p>
+              <span className="font-light text-tomo-slate text-xs">
+                (it's an old project, very broken, back then I only know HTML
+                CSS JS)
+              </span>
+              <span className="mt-1 inline-flex items-center gap-1.5 text-xs font-semibold text-tomo-blue">
+                See the project
+                <LuArrowRight className="transition-transform duration-300 group-hover:translate-x-1" />
+              </span>
+            </Link>
+          </div>
+
+          <p className="text-justify leading-relaxed text-tomo-slate">
+            Earlier this year I went to Japan with a couple of my friends. I was
+            ordering at a katsu place, the staff asked me what to order... yet I
+            froze. I knew what the staff meant but I just couldn't put an answer
+            together. It was quite embarrassing, I end up just pointing through
+            the menu.
           </p>
 
           <p className="text-justify leading-relaxed text-tomo-slate">
-            So Tomo has no streaks, no lesson tree, and no vocabulary lists on
-            the way in. You choose a topic and the AI says the first thing.
-            From that point the only way forward is to reply. That single
-            constraint drove almost every decision that follows.
+            Knowing the words and producing a sentence under time pressure are
+            different skills, and I have only been training one of them. The
+            main purpose Tomo was built is to have a chatting partner for me and
+            anyone to practice their Japanese by having natural conversations.
           </p>
-
-          <div className="mt-2 flex flex-col gap-3 sm:flex-row">
-            <Stat value="5" label="turns per session" />
-            <Stat value="24" label="model slots" />
-            <Stat value="2" label="colours, no gradients" />
-            <Stat value="1" label="Go codebase, two targets" />
-          </div>
         </AppearSection>
       </section>
 
       {/* ── Screen showcase ───────────────────────────────────────────── */}
       <section className="flex w-full justify-center bg-tomo-paper py-20 sm:py-28">
         <AppearSection className="flex w-full max-w-6xl flex-col items-center gap-10 px-6 sm:px-10">
-          <div className="flex max-w-3xl flex-col items-center gap-4 text-center">
-            <SectionTitle ja="画面">
-              Eleven screens, one thumb
-            </SectionTitle>
-            <p className="text-justify leading-relaxed text-tomo-slate sm:text-center">
-              Tomo was designed at 390 by 844 and never at a desktop width.
-              Every screenshot below is the real deployed app, captured at that
-              exact viewport.
-            </p>
+          <div className="flex max-w-3xl flex-col items-center text-center">
+            <SectionTitle ja="機能">Features</SectionTitle>
           </div>
 
           <ScreenShowcase />
+        </AppearSection>
+      </section>
+
+      {/* ── Chapter break: product above, engineering below ───────────── */}
+      <section className="flex w-full justify-center bg-tomo-ink py-20 sm:py-24">
+        <AppearSection className="flex w-full max-w-3xl flex-col items-center gap-5 px-6 text-center sm:px-10">
+          <span className="text-[11px] font-semibold tracking-[0.35em] text-tomo-blue">
+            技術
+          </span>
+
+          <h2 className="text-3xl font-black leading-tight text-white sm:text-4xl lg:text-5xl">
+            Technical Aspects
+          </h2>
+
+          <motion.div
+            initial={{ scaleX: 0 }}
+            whileInView={{ scaleX: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.9, delay: 0.2, ease: "easeOut" }}
+            className="h-px w-16 origin-center bg-white/25 sm:w-24"
+          />
+
+          <p className="max-w-xl leading-relaxed text-white/60">
+            Following sections go behind the scenes: the design choices, the
+            backend architecture, and the story of how it got built.
+          </p>
         </AppearSection>
       </section>
 
@@ -299,7 +210,7 @@ export default function Tomo() {
               {
                 ja: "正直",
                 title: "An honest paywall",
-                body: "The Pro tab lists what a paid tier would unlock and labels the button coming soon. Shipping a real-looking checkout that cannot take money would be the only dishonest screen in the app.",
+                body: "The Plus tab lists what a paid tier would unlock and labels the button coming soon. Shipping a real-looking checkout that cannot take money would be the only dishonest screen in the app.",
               },
             ].map((card) => (
               <motion.div
@@ -633,7 +544,9 @@ export default function Tomo() {
               Levels run from N5 down to N1 in a single column, and the screen
               states plainly which end is easiest. JLPT numbering counts
               backwards, and a learner meeting it for the first time should not
-              have to guess. A flashcard mode is still in progress.
+              have to guess. Flashcard mode shipped alongside it: the card shows
+              a kanji, you say the meaning out loud, and only then do you tap to
+              check yourself.
             </p>
           </div>
 
@@ -646,7 +559,11 @@ export default function Tomo() {
           >
             <motion.div
               animate={{ y: [4, -6, 4], rotate: [-2.5, -1, -2.5] }}
-              transition={{ duration: 6.4, repeat: Infinity, ease: "easeInOut" }}
+              transition={{
+                duration: 6.4,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
               whileHover={{ rotate: 0, scale: 1.04 }}
             >
               <PhoneFrame
@@ -672,8 +589,7 @@ export default function Tomo() {
 
           <p className="text-justify leading-relaxed text-tomo-slate sm:text-center">
             Next is voice input, so a conversation can be spoken rather than
-            typed, and finishing the flashcard mode. I still use it to practise,
-            which is the only review I trust.
+            typed. I still use it to practise, which is the only review I trust.
           </p>
 
           <div className="mt-2 flex flex-wrap justify-center gap-3">

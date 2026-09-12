@@ -8,7 +8,7 @@ export default function PhoneFrame({
   alt = "",
   children,
   className = "",
-  island = true,
+  notch = false,
   indicator = true,
 }) {
   return (
@@ -36,9 +36,16 @@ export default function PhoneFrame({
               children
             )}
 
-            {island && (
-              <div className="pointer-events-none absolute left-1/2 top-[1.4%] h-[3.1%] w-[30%] -translate-x-1/2 rounded-full bg-black">
-                <div className="absolute right-[14%] top-1/2 size-[22%] -translate-y-1/2 rounded-full bg-[#0d1117]" />
+            {notch && (
+              // A notch, not a Dynamic Island: it hangs off the top edge with
+              // only its bottom corners rounded. Shallower than a real 32pt
+              // notch on purpose — the screenshots are captured at 390 x 844
+              // with no safe-area inset, so the conversation header sits
+              // higher than it would on a notched device and a full-depth
+              // notch would cover it.
+              <div className="pointer-events-none absolute left-1/2 top-0 flex h-[1.9%] w-[41.5%] -translate-x-1/2 items-center justify-center gap-[6%] rounded-b-[0.4rem] bg-black sm:rounded-b-[0.55rem]">
+                <div className="h-[1.6px] w-[26%] rounded-full bg-white/10" />
+                <div className="size-[2.4px] rounded-full bg-white/15" />
               </div>
             )}
 
