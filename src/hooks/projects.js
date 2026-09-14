@@ -1,6 +1,5 @@
 import { useQuery, useQueryClient } from "@tanstack/react-query";
 import { sleep } from "../utils/util";
-import supabase from "../libs/supabase/supabase";
 
 const categoryMap = {
   "🎮 Game Development": (project) => project.category === "game",
@@ -16,20 +15,10 @@ const fetchProjectsCategorized = async () => {
   const categorized = {};
 
   for (const [label, fn] of Object.entries(categoryMap)) {
-    const filtered = data.filter(fn);
-
-    const enrichedProjects = await Promise.all(
-      filtered.map(async (project) => {
-        const images = await getProjectImages(project.slug);
-
-        return {
-          ...project,
-          images,
-        };
-      })
-    );
-
-    categorized[label] = enrichedProjects;
+    categorized[label] = data.filter(fn).map((project) => ({
+      ...project,
+      images: project.images ?? [],
+    }));
   }
 
   return categorized;
@@ -62,11 +51,9 @@ const fetchProjectBySlug = async (slug) => {
 
   if (!project) throw new Error("Project not found");
 
-  const images = await getProjectImages(slug);
-
   return {
     ...project,
-    images,
+    images: project.images ?? [],
   };
 };
 
@@ -93,26 +80,3 @@ export function useProject(project_slug) {
     },
   });
 }
-export const getProjectImages = async (slug) => {
-  const { data, error } = await supabase.storage
-    .from("projects")
-    .list(slug, {
-      limit: 100,
-      sortBy: { column: "name", order: "asc" },
-    });
-
-  if (error) {
-    console.error("Error fetching images:", error);
-    return [];
-  }
-
-  return data
-    .filter((file) => !file.name.startsWith("."))
-    .map((file) => {
-      const { data: urlData } = supabase.storage
-        .from("projects")
-        .getPublicUrl(`${slug}/${file.name}`);
-
-      return urlData.publicUrl;
-    });
-};
