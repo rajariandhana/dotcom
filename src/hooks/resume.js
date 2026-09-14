@@ -1,34 +1,19 @@
 import { useQuery } from "@tanstack/react-query";
-import supabase from "../libs/supabase/supabase";
 
-const BUCKET = "companies";
+const logoPath = (key) => (key ? `/experience/${key}.webp` : null);
 
 const fetchResume = async () => {
   try {
     const publicResume = await (await fetch("/resume.json")).json();
 
-    const { data: files, error } = await supabase.storage.from(BUCKET).list();
-
-    if (error) throw error;
-
-    const imageMap = {};
-
-    files.forEach((file) => {
-      const key = file.name.split(".")[0];
-
-      const { data } = supabase.storage.from(BUCKET).getPublicUrl(file.name);
-
-      imageMap[key] = data.publicUrl;
-    });
-
     publicResume.education = publicResume.education.map((edu) => ({
       ...edu,
-      image_link: imageMap[edu.key] || null,
+      image_link: logoPath(edu.key),
     }));
 
     publicResume.experience = publicResume.experience.map((exp) => ({
       ...exp,
-      image_link: imageMap[exp.company_key] || null,
+      image_link: logoPath(exp.company_key),
     }));
 
     return publicResume;
