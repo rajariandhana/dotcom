@@ -51,7 +51,8 @@ open website path using URL will result in 404 not found
 - say where I'm based at
 - work eligibility
 - 3d.ralfazza.com, made in Godot, BaseGame github releases
-
+- Languages (not programming) I'm using: Indonesia, IELTS 8.0, Duolingo Japanese
+- move photos into the repo instead of fetching from supabase
 
 Card Language
 
@@ -60,3 +61,23 @@ cards:
 - english, japanese
 - meaning, anonym
 - 
+
+# Convertor
+input: youtube video link
+output: mp3, mp4
+
+jpg/png/webp/svg converter
+change file name, directory
+
+## Tomo notes
+future features:
+- plus:
+	- speech to text, real time talking
+	- voice customization
+
+### Tomo Copywriting
+
+
+## Random
+- is it possible for Claude to crawl through Threads Posts, then create a post that would have lots of engagement.
+- Develop a RAG system where the document comes from JSON. Use Python, Google Gemini API, and FastAPI for the server. Make it so if I call an HTTP request it could answer a question I provide.

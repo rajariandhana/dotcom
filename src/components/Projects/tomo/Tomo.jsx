@@ -377,35 +377,6 @@ export default function Tomo() {
           </div>
 
           <RotatorDiagram />
-
-          <div className="grid gap-4 sm:grid-cols-3">
-            {[
-              {
-                title: "Retriable, not all errors",
-                body: "Only 503, 429, UNAVAILABLE, RESOURCE_EXHAUSTED and INTERNAL advance the rotation. A malformed request would otherwise burn all 24 slots to reach the same failure.",
-              },
-              {
-                title: "Thinking budget zero",
-                body: "Reasoning tokens cost latency Tomo has no use for. Two of the six models reject the thinking config outright, so each slot records whether it accepts one.",
-              },
-              {
-                title: "Retry before the first byte",
-                body: "The streaming route pulls the first chunk manually and inspects it before writing any SSE bytes, so a dead model can still be swapped out mid-request.",
-              },
-            ].map((c) => (
-              <motion.div
-                key={c.title}
-                whileHover={{ y: -5 }}
-                transition={{ type: "spring", stiffness: 300, damping: 24 }}
-                className="tomo-card tomo-card-hover flex flex-col gap-2"
-              >
-                <h3 className="text-sm font-bold">{c.title}</h3>
-                <p className="text-[13px] leading-relaxed text-tomo-slate">
-                  {c.body}
-                </p>
-              </motion.div>
-            ))}
-          </div>
         </AppearSection>
       </section>
 

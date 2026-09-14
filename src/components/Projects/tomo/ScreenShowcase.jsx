@@ -11,7 +11,7 @@ const SCREENS = [
     label: "Home",
     ja: "ホーム",
     src: `${BASE}/home.png`,
-    note: "One kanji, one verb, one button sitting under your thumb. The only thing a first-time visitor has to decide is whether to start talking.",
+    note: "Start chatting or learn the words.",
   },
   {
     id: "topics",
