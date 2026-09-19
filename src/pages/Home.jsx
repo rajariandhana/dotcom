@@ -2,6 +2,7 @@ import Hero from "../components/Home/Hero";
 import BestProjects from "../components/Home/BestProjects";
 import BestPhotos from "../components/Home/BestPhotos";
 import Skills from "../components/Home/Skills";
+import Languages from "../components/Home/Languages";
 import Medium from "../components/Home/Medium";
 import { addToast } from "@heroui/react";
 import { useEffect } from "react";
@@ -34,6 +35,7 @@ export const Home = () => {
       <BestProjects />
       <Skills />
       <Medium />
+      <Languages />
       {/* <BestPhotos /> */}
     </>
   );
