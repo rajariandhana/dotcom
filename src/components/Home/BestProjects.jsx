@@ -17,7 +17,7 @@ export default function BestProjects() {
 		{/* <H2Drawably label={"My Proudest Projects"} /> */}
       <h2 className="mb-2 text-xl cursor-pointer">My Proudest Projects</h2>
 
-      <div className="flex flex-col items-center justify-between w-full gap-2 lg:gap-4 sm:flex-row">
+      <div className="grid w-full grid-cols-1 gap-2 sm:grid-cols-3 lg:gap-4">
         {pending_1 || pending_2 || pending_3 ? (
           <>
             {Array.from({ length: 3 }).map((_, i) => (

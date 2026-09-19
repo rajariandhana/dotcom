@@ -12,7 +12,7 @@ export default function Projects() {
           <Skeleton className="h-7 w-48 mb-4 rounded-md" />
           <Skeleton className="size-6 rounded-full" />
         </div>
-        <ul className="grid grid-cols-1 gap-2 w-fit sm:grid-cols-2 md:grid-cols-3 lg:gap-4">
+        <ul className="grid grid-cols-1 gap-2 w-full sm:grid-cols-2 md:grid-cols-3 lg:gap-4">
           {Array.from({ length: 6 }).map((_, i) => (
             <ProjectCard key={i} loading />
           ))}
@@ -31,7 +31,7 @@ export default function Projects() {
             aria-label={category}
             className="w-full"
           >
-            <ul className="grid grid-cols-1 gap-2 w-fit sm:grid-cols-2 md:grid-cols-3 lg:gap-4 -mt-4">
+            <ul className="grid grid-cols-1 gap-2 w-full sm:grid-cols-2 md:grid-cols-3 lg:gap-4 -mt-4">
               {projectList.map((project) => (
                 <ProjectCard key={project.slug} project={project} />
               ))}

@@ -15,8 +15,8 @@ export default function ProjectCard({ project, loading }) {
 
   if (loading) {
     return (
-      <div className="flex flex-col gap-2 p-2 bg-white border border-gray-200 w-fit h-fit rounded-xl">
-        <Skeleton className="rounded-md h-52 w-96 sm:w-60 sm:h-40" />
+      <div className="flex flex-col gap-2 p-2 bg-white border border-gray-200 w-full h-fit rounded-xl">
+        <Skeleton className="w-full rounded-md aspect-3/2" />
         <Skeleton className="h-6 w-3/4 mx-auto rounded-md" />
       </div>
     );
@@ -30,19 +30,24 @@ export default function ProjectCard({ project, loading }) {
 
   return (
     <Link
-      className="flex flex-col gap-2 p-2 bg-white border border-gray-200 w-fit h-fit funny-rotate rounded-xl"
+      className="flex flex-col gap-2 p-2 bg-white border border-gray-200 w-full h-fit funny-rotate rounded-xl"
       to={`/projects/${slug}`}
     >
+      {/* `removeWrapper` drops HeroUI's wrapper div, which carries an inline
+          `max-width: fit-content`. An image that hasn't loaded has no intrinsic
+          width, so that collapses the box to 0 and the card visibly shrinks
+          until the image decodes. */}
       <Image
+        removeWrapper
         src={imageUrl}
         alt={name}
-        className="object-cover transition-opacity duration-500 rounded-md h-52 w-96 sm:w-60 sm:h-40 animate-fade-in opacity-0"
+        className="object-cover w-full transition-opacity duration-500 rounded-md aspect-3/2 opacity-0"
         onLoad={(e) => e.target.classList.remove("opacity-0")}
       />
 
       <span
         ref={textRef}
-        className={`w-96 sm:w-60 h-6 truncate ${
+        className={`w-full h-6 truncate ${
           isOverflowing ? "text-left" : "text-center"
         }`}
       >
