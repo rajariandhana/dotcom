@@ -1,13 +1,22 @@
-import { ScrollShadow, Spinner, Textarea } from "@heroui/react";
+import { AnimatePresence } from "motion/react";
 import ChatbotMessage from "./ChatbotMessage";
+import TypingIndicator from "./TypingIndicator";
 
 export default function ChatbotMessages({ messages, loading }) {
   return (
-    <ScrollShadow className="flex flex-col gap-4">
+    <>
       {messages.map((msg, idx) => (
-        <ChatbotMessage key={idx} role={msg.role} content={msg.content} />
+        <ChatbotMessage
+          key={idx}
+          role={msg.role}
+          content={msg.content}
+          isError={msg.isError}
+        />
       ))}
-      {loading && <ChatbotMessage role={"server"} loading={true} />}
-    </ScrollShadow>
+      <AnimatePresence>
+        {loading && <TypingIndicator key="typing" />}
+      </AnimatePresence>
+      <div className="shrink-0 h-1" />
+    </>
   );
 }

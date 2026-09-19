@@ -181,3 +181,43 @@ h2 {
 .tomo-mono {
   font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, monospace;
 }
+
+/* ── Chatbot message bubbles ───────────────────────────────────────── */
+
+/* react-markdown emits block elements whose default margins would break the
+   tight bubble padding, so collapse the outer ones and keep inner spacing small. */
+.chat-markdown > :first-child {
+  margin-top: 0;
+}
+
+.chat-markdown > :last-child {
+  margin-bottom: 0;
+}
+
+.chat-markdown p {
+  @apply my-2;
+}
+
+.chat-markdown ul {
+  @apply my-2 list-disc pl-5;
+}
+
+.chat-markdown ol {
+  @apply my-2 list-decimal pl-5;
+}
+
+.chat-markdown li {
+  @apply my-0.5;
+}
+
+.chat-markdown a {
+  @apply underline underline-offset-2;
+}
+
+.chat-markdown code {
+  @apply rounded bg-black/10 px-1 py-0.5 text-[13px];
+}
+
+.chat-markdown strong {
+  @apply font-semibold;
+}

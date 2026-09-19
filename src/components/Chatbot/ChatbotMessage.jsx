@@ -1,18 +1,29 @@
-import { Spinner } from "@heroui/react";
+import { motion } from "motion/react";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 
-export default function ChatbotMessage({ role, content, loading }) {
+export default function ChatbotMessage({ role, content, isError }) {
+  const isClient = role === "client";
+
   return (
-    <div
-      className={`w-4/5 lg:w-3/4 whitespace-pre-wrap rounded-xl px-3 pt-1 pb-2 border shadow-md ${role === "client" ? "self-end bg-primary-100 border-primary-100 text-primary" : "self-start bg-secondary-100 border-secondary-100 text-secondary"}`}
+    <motion.div
+      className={`flex flex-col ${isClient ? "items-end" : "items-start"}`}
+      initial={{ opacity: 0, y: 10 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.18, ease: "easeOut" }}
     >
-      <span className="text-xs">{role === "client" ? "You" : "Chatbot"}</span>
-      {loading ? (
-        <Spinner color="secondary" variant="dots" />
-      ) : (
+      <div
+        className={[
+          "chat-markdown max-w-[85%] sm:max-w-[75%] px-4 py-3 text-[15px] leading-relaxed rounded-2xl",
+          isError
+            ? "bg-stone-50 border border-stone-200 text-stone-500 rounded-tl-md"
+            : isClient
+              ? "bg-black text-white rounded-tr-md"
+              : "bg-white border border-stone-200 text-black rounded-tl-md",
+        ].join(" ")}
+      >
         <ReactMarkdown remarkPlugins={[remarkGfm]}>{content}</ReactMarkdown>
-      )}
-    </div>
+      </div>
+    </motion.div>
   );
 }
