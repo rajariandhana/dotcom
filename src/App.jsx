@@ -20,7 +20,7 @@ import PrivacyPolicy from "./components/PrivacyPolicy/PrivacyPolicy";
 import Cipher from "./components/Chiper/Chiper";
 import Luv from "./components/Luv";
 import BitMore from "./components/Projects/bitmore/BitMore";
-import AshesOfAlengka from "./components/Projects/ashes-of-alengka/AshesOfAlengka";
+import ExternalRedirect from "./components/ExternalRedirect";
 import Tomo from "./components/Projects/tomo/Tomo";
 
 function App() {
@@ -28,12 +28,15 @@ function App() {
     <Routes>
       <Route element={<Layout fullwidth={true} />}>
         <Route path="/projects/bitmore" element={<BitMore />} />
-        <Route path="/projects/ashes-of-alengka" element={<AshesOfAlengka />} />
         <Route path="/projects/tomo" element={<Tomo />} />
       </Route>
       <Route element={<Layout />}>
         <Route path="/" element={<Home />} />
         <Route path="/projects" element={<Projects />} />
+        <Route
+          path="/projects/ashes-of-alengka"
+          element={<ExternalRedirect to="https://ashesofalengka.com" />}
+        />
         <Route path="/projects/:project_slug" element={<ProjectDetail />} />
         <Route path="/experience" element={<Experience />} />
         <Route path="/gallery" element={<Gallery />} />

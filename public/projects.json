@@ -75,7 +75,8 @@
     "demo": "https://ashes-of-alengka.ralfazza.com",
     "cover": "/projects/ashes-of-alengka/shot-arena.jpg",
     "size": "",
-    "category": "game"
+    "category": "game",
+    "external": "https://ashesofalengka.com"
   },
   {
     "name": "BaseGame",
@@ -95,21 +96,42 @@
     "size": "",
     "category": "game"
   },
-  {
-    "name": "Mercusuram",
-    "slug": "mercusuram",
+	{
+    "name": "Boombatag 2024",
+    "slug": "boombatag-2024",
     "techs": [
-      "Godot",
-      "GDScript"
+      "Unity",
+      "C#",
+      "Figma"
     ],
-    "description": "IGI Game Jam 2025 is a game jam held by University of Indonesia with this year's theme \"Purpose in the Unknown\". My game is about a lighthouse (meaning mercusuar in Indonesia) that must shine it's light towards incoming ship preventing them from crashing into the island. The game submitted for the competition has a lot of bugs and implemented features since the it happens at the same time with GMTK's Game Jam meaning I only have 15 hours working on this game. After the jam ended I fixed the bugs and implement more features such as tutorial screen, audio, even more obstacles like sharks and tornadoes.",
+    "description": "Used for Schematics ITS 2024, the game is inspired from the infamous \"Keep Talking and Nobody Explodes.\"",
     "images": [
-      "/projects/mercusuram/1.webp",
-      "/projects/mercusuram/2.webp"
+      "/projects/boombatag-2024/1.webp",
+      "/projects/boombatag-2024/5.webp",
+      "/projects/boombatag-2024/6.webp"
     ],
-    "repo": "https://github.com/rajariandhana/IGI-Game-Jam-2025",
-    "demo": "https://rj-game-studio.itch.io/mercusuram",
-    "size": "",
+    "repo": "",
+    "demo": "",
+    "size": "WIDE",
+    "category": "game"
+  },
+  {
+    "name": "Box of Curiosity",
+    "slug": "box-of-curiosity",
+    "techs": [
+      "Unity",
+      "C#"
+    ],
+    "description": "We created a game that were played with over 1000 participants online for the Schematics 2024 Event.\"",
+    "images": [
+      "/projects/box-of-curiosity/1.webp",
+      "/projects/box-of-curiosity/3.webp",
+      "/projects/box-of-curiosity/4.webp",
+      "/projects/box-of-curiosity/5.webp"
+    ],
+    "repo": "",
+    "demo": "",
+    "size": "WIDE",
     "category": "game"
   },
   {
@@ -126,6 +148,23 @@
     ],
     "repo": "https://github.com/rajariandhana/GMTK-Game-Jam-2025",
     "demo": "https://loliakulka.itch.io/q-q-joker",
+    "size": "",
+    "category": "game"
+  },
+	{
+    "name": "Mercusuram",
+    "slug": "mercusuram",
+    "techs": [
+      "Godot",
+      "GDScript"
+    ],
+    "description": "IGI Game Jam 2025 is a game jam held by University of Indonesia with this year's theme \"Purpose in the Unknown\". My game is about a lighthouse (meaning mercusuar in Indonesia) that must shine it's light towards incoming ship preventing them from crashing into the island. The game submitted for the competition has a lot of bugs and implemented features since the it happens at the same time with GMTK's Game Jam meaning I only have 15 hours working on this game. After the jam ended I fixed the bugs and implement more features such as tutorial screen, audio, even more obstacles like sharks and tornadoes.",
+    "images": [
+      "/projects/mercusuram/1.webp",
+      "/projects/mercusuram/2.webp"
+    ],
+    "repo": "https://github.com/rajariandhana/IGI-Game-Jam-2025",
+    "demo": "https://rj-game-studio.itch.io/mercusuram",
     "size": "",
     "category": "game"
   },
@@ -302,44 +341,6 @@
     "demo": "https://sikma.ralfazza.com",
     "size": "TALL",
     "category": "web"
-  },
-  {
-    "name": "Boombatag 2024",
-    "slug": "boombatag-2024",
-    "techs": [
-      "Unity",
-      "C#",
-      "Figma"
-    ],
-    "description": "Used for Schematics ITS 2024, the game is inspired from the infamous \"Keep Talking and Nobody Explodes.\"",
-    "images": [
-      "/projects/boombatag-2024/1.webp",
-      "/projects/boombatag-2024/5.webp",
-      "/projects/boombatag-2024/6.webp"
-    ],
-    "repo": "",
-    "demo": "",
-    "size": "WIDE",
-    "category": "game"
-  },
-  {
-    "name": "Box of Curiosity",
-    "slug": "box-of-curiosity",
-    "techs": [
-      "Unity",
-      "C#"
-    ],
-    "description": "We created a game that were played with over 1000 participants online for the Schematics 2024 Event.\"",
-    "images": [
-      "/projects/box-of-curiosity/1.webp",
-      "/projects/box-of-curiosity/3.webp",
-      "/projects/box-of-curiosity/4.webp",
-      "/projects/box-of-curiosity/5.webp"
-    ],
-    "repo": "",
-    "demo": "",
-    "size": "WIDE",
-    "category": "game"
   },
   {
     "name": "Minesweeper",
