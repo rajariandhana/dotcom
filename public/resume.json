@@ -7,21 +7,6 @@
 		"github": "https://github.com/rajariandhana"
   },
   "education": [
-		{
-			"key": "its-surabaya",
-			"link": "https://www.its.ac.id",
-      "university": "Institut Teknologi Sepuluh Nopember",
-      "location": "Surabaya, Indonesia",
-      "degree": "Bachelor of Informatics Engineering",
-      "gpa": "3.44/4.0",
-      "date": "August 2022 - October 2026",
-      "coursework": [
-        "Data Structures",
-        "Database Management",
-        "Web Programming",
-        "Framework-Based Programming"
-      ]
-    },
     {
 			"key": "uq",
 			"link": "https://www.uq.edu.au",
@@ -36,6 +21,21 @@
         "Operating Systems Architecture",
         "Vulnerability Assessment and Penetration Testing",
         "Programming in the Large"
+      ]
+    },
+		{
+			"key": "its-surabaya",
+			"link": "https://www.its.ac.id",
+      "university": "Institut Teknologi Sepuluh Nopember",
+      "location": "Surabaya, Indonesia",
+      "degree": "Bachelor of Informatics Engineering",
+      "gpa": "3.44/4.0",
+      "date": "August 2022 - July 2026",
+      "coursework": [
+        "Data Structures",
+        "Database Management",
+        "Web Programming",
+        "Framework-Based Programming"
       ]
     }
   ],

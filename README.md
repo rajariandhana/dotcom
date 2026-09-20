@@ -53,6 +53,11 @@ open website path using URL will result in 404 not found
 - 3d.ralfazza.com, made in Godot, BaseGame github releases
 - Languages (not programming) I'm using: Indonesia, IELTS 8.0, Duolingo Japanese
 - move photos into the repo instead of fetching from supabase
+- create `/contact`: shows literally ALL my links from professional accounts to game accounts?:
+	- email, github, linkedin, 
+	- social media: instagram, spotify (private THAT playlist first), threads, facebook, discord
+	- games: PUB Mobile, Mobile Legends,
+	- duolingo, strava
 
 Card Language
 
