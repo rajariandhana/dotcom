@@ -1,6 +1,8 @@
 import type { IconType } from "react-icons";
 import { FaEnvelope, FaGithub, FaInstagram, FaLinkedinIn } from "react-icons/fa6";
 
+import { site } from "./site";
+
 /**
  * Single source of truth for site navigation. The desktop sidebar and the
  * mobile drawer both render from these lists, so add or rename pages here.
@@ -55,7 +57,7 @@ export const socialLinks: readonly SocialLink[] = [
   { label: "GitHub", href: "https://github.com/rajariandhana", icon: FaGithub },
   { label: "LinkedIn", href: "https://linkedin.com/in/rajariandhana", icon: FaLinkedinIn },
   { label: "Instagram", href: "https://instagram.com/rajariandhana", icon: FaInstagram },
-  { label: "Email", href: "mailto:rajariandhana@gmail.com", icon: FaEnvelope },
+  { label: "Email", href: `mailto:${site.email}`, icon: FaEnvelope },
 ];
 
 /**

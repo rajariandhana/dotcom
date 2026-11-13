@@ -30,6 +30,7 @@
   --shadow-sidebar: var(--sidebar-shadow);
   --shadow-bar: var(--bar-shadow);
   --spacing-sidebar: var(--sidebar-width);
+  --spacing-tile: var(--grid-size); /* p-tile, gap-tile … one grid square (90px) */
 }
 
 /* ---- Plus Jakarta Sans stylistic sets (see src/config/display.ts) ---- */

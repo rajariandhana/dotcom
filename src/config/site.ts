@@ -4,6 +4,7 @@ export const site = {
   name: "Ralfazza Rajariandhana",
   role: "Software Engineer",
   quote: "I like building cool stuff",
+  email: "rajariandhana@gmail.com",
   avatar: {
     src: "/profile-silhouette-flat.webp",
     alt: "Silhouette of Ralfazza",
