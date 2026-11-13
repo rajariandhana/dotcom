@@ -25,7 +25,7 @@ export const navGroups = [
     items: [
       { label: "Projects", href: "/projects" },
       { label: "Experience", href: "/experience" },
-      { label: "Gallery", href: "/gallery" },
+      { label: "Tech Tree", href: "/tech-tree" },
     ],
   },
   {
