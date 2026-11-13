@@ -1,0 +1,59 @@
+@import "tailwindcss";
+@import "@heroui/styles";
+
+/*
+ * Brand theme — values from Figma (Personal › ralfazza.com › Variable collection).
+ * Unlayered, so it wins over HeroUI's default light theme in @layer theme.
+ * Only the light theme is used: <html> is pinned to class="light" data-theme="light".
+ */
+:root {
+  --accent: oklch(0.6437 0.2423 29.36); /* Figma "Accent"  #FF2D20 */
+  --accent-foreground: var(--white);
+  --background: oklch(0.9702 0 0); /* Figma "Default" #F5F5F5 */
+  --surface: oklch(0.9846 0.0017 247.84); /* sidebar fill  #F9FAFB */
+  --link: var(--accent);
+  --focus: var(--accent);
+
+  /* Figma "Grid/Color" and the 90px "Grid tile" components */
+  --grid-color: rgb(30 30 30 / 0.12);
+  --grid-size: 90px;
+
+  /* Sidebar edge — Figma drop shadow 4/4/4, black 25% */
+  --sidebar-shadow: 4px 4px 4px rgb(0 0 0 / 0.25);
+  --bar-shadow: 0 4px 4px rgb(0 0 0 / 0.25); /* same shadow, cast downward for the mobile bar */
+  --sidebar-width: 360px;
+}
+
+@theme inline {
+  --font-sans: var(--font-plus-jakarta-sans), ui-sans-serif, system-ui, sans-serif;
+  --color-grid: var(--grid-color);
+  --shadow-sidebar: var(--sidebar-shadow);
+  --shadow-bar: var(--bar-shadow);
+  --spacing-sidebar: var(--sidebar-width);
+}
+
+/* ---- Plus Jakarta Sans stylistic sets (see src/config/display.ts) ---- */
+html[data-font-set="lancip"] {
+  font-feature-settings: "ss01";
+}
+html[data-font-set="lurus"] {
+  font-feature-settings: "ss02";
+}
+html[data-font-set="lingkar"] {
+  font-feature-settings: "ss03";
+}
+
+/* ---- Grid background (see src/config/display.ts) ----
+ * Lines: 1px top + left stroke per tile. Dots: 3px dot centred in each tile.
+ * The opaque sidebar and mobile bar sit on top, so the grid shows in the content area.
+ */
+html[data-grid="lines"] body {
+  background-image:
+    linear-gradient(to right, var(--grid-color) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--grid-color) 1px, transparent 1px);
+  background-size: var(--grid-size) var(--grid-size);
+}
+html[data-grid="dots"] body {
+  background-image: radial-gradient(circle at center, var(--grid-color) 1.5px, transparent 2px);
+  background-size: var(--grid-size) var(--grid-size);
+}

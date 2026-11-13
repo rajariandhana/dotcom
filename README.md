@@ -1,15 +1,19 @@
 # dotcom
 
+Next.js 16 (App Router, TypeScript) · Tailwind CSS v4 · HeroUI v3. Use `bun`, not npm.
+
 ```sh
-cp .env.example .env
-# fill .env with secrets
+cp .env.example .env.local
+# fill .env.local with secrets (NEXT_PUBLIC_* names)
 
-npm if
-npm run dev
-# open http://localhost:5173/
-
-npm i @heroui/react @tailwindcss/vite @tanstack/react-query axios framer-motion react-icons react-router tailwindcss
+bun install
+bun run dev
+# open http://localhost:3000/
 ```
+
+- Navigation (sidebar + mobile drawer): `src/config/navigation.ts`
+- Font stylistic set and grid background defaults: `src/config/display.ts`
+- Brand colors (HeroUI theme overrides): `src/app/globals.css`
 
 Todos:
 
