@@ -9,6 +9,9 @@
     "lint": "eslint"
   },
   "packageManager": "bun@1.2.8",
+  "engines": {
+    "node": ">=20.9.0"
+  },
   "trustedDependencies": [
     "sharp",
     "unrs-resolver"
