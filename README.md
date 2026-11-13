@@ -90,3 +90,12 @@ future features:
 ## Random
 - is it possible for Claude to crawl through Threads Posts, then create a post that would have lots of engagement.
 - Develop a RAG system where the document comes from JSON. Use Python, Google Gemini API, and FastAPI for the server. Make it so if I call an HTTP request it could answer a question I provide.
+
+## Ideas
+- remove Gallery route, move it under hobbies
+Hobbies:
+/music
+/photography
+/baking
+- group Projects, Experience, Tech Tree -> more cohesive SWEN group
+- actually yes let's add dark mode

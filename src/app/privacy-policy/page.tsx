@@ -14,13 +14,13 @@ const contact = [
 ] as const;
 
 /**
- * Laid out on the background grid: on larger screens the left edge, the
- * vertical rhythm and the card width are whole grid tiles (90px), so text
- * starts on a grid line. Cards reuse the sidebar's square, hard drop shadow.
+ * Padding and max width come from the content area in app/layout.tsx; here
+ * the sections are spaced one grid tile (90px) apart on larger screens.
+ * Cards are edged with the shared 1px block border (no shadow).
  */
 export default function PrivacyPolicyPage() {
   return (
-    <article className="flex max-w-[calc(var(--spacing-tile)*9)] flex-col gap-12 px-6 py-12 sm:gap-tile sm:p-tile">
+    <article className="flex flex-col gap-12 sm:gap-tile">
       <h1 className="text-5xl leading-none font-normal tracking-tight text-foreground sm:text-7xl lg:text-[5rem]">
         Privacy Policy
       </h1>
@@ -29,7 +29,7 @@ export default function PrivacyPolicyPage() {
         <h2 id="policy-heading" className="text-sm font-bold tracking-widest text-accent uppercase">
           Your data
         </h2>
-        <p className="bg-surface p-6 text-lg leading-relaxed text-pretty text-foreground shadow-sidebar sm:p-8 sm:text-xl sm:leading-relaxed text-justify">
+        <p className="bg-surface p-6 text-lg leading-relaxed text-pretty text-foreground border border-block sm:p-8 sm:text-xl sm:leading-relaxed text-justify">
           We do not collect, store, sell, or share any personal user data. Any information processed
           through the application is used only temporarily to provide the requested functionality
           and is not retained after the request is completed. We do not maintain user accounts,
@@ -43,7 +43,7 @@ export default function PrivacyPolicyPage() {
         <h2 id="contact-heading" className="text-sm font-bold tracking-widest text-accent uppercase">
           Contact information
         </h2>
-        <dl className="divide-y divide-separator bg-surface text-foreground shadow-sidebar">
+        <dl className="divide-y divide-block border border-block bg-surface text-foreground">
           {contact.map((row) => (
             <div
               key={row.label}

@@ -7,10 +7,10 @@
  * Only the light theme is used: <html> is pinned to class="light" data-theme="light".
  */
 :root {
-  --accent: oklch(0.6437 0.2423 29.36); /* Figma "Accent"  #FF2D20 */
+	--accent: #ff2d20; /* Figma "Accent" */
   --accent-foreground: var(--white);
-  --background: oklch(0.9702 0 0); /* Figma "Default" #F5F5F5 */
-  --surface: oklch(0.9846 0.0017 247.84); /* sidebar fill  #F9FAFB */
+  --background: #f5f5f4; /* previous site's page background (Tailwind stone-100) */
+  --surface: #f9fafb; /* sidebar fill  #F9FAFB */
   --link: var(--accent);
   --focus: var(--accent);
 
@@ -18,19 +18,31 @@
   --grid-color: rgb(30 30 30 / 0.12);
   --grid-size: 90px;
 
-  /* Sidebar edge — Figma drop shadow 4/4/4, black 25% */
-  --sidebar-shadow: 4px 4px 4px rgb(0 0 0 / 0.25);
-  --bar-shadow: 0 4px 4px rgb(0 0 0 / 0.25); /* same shadow, cast downward for the mobile bar */
+  /* Menu (sidebar, mobile bar and its dropdown) — same as the previous site's
+   * HeroUI v2 navbar: translucent white over a blur, edged by a 1px divider. */
+  --menu: rgb(255 255 255 / 0.7);
+  --menu-separator: rgb(17 17 17 / 0.15);
   --sidebar-width: 360px;
+
+  /* Surfaces / blocks (cards, panels) are edged with a 1px border, never a shadow —
+   * same as the previous site's cards (Tailwind gray-200). Use `border border-block`. */
+  --block-border: #e5e7eb;
+
+  /* HeroUI form fields (search, select, inputs) follow the same rule: border, no shadow. */
+  --field-shadow: none;
+  --field-border: var(--block-border);
+  --field-border-width: 1px;
 }
 
 @theme inline {
   --font-sans: var(--font-plus-jakarta-sans), ui-sans-serif, system-ui, sans-serif;
   --color-grid: var(--grid-color);
-  --shadow-sidebar: var(--sidebar-shadow);
-  --shadow-bar: var(--bar-shadow);
+  --color-menu: var(--menu);
+  --color-menu-separator: var(--menu-separator);
+  --color-block: var(--block-border);
   --spacing-sidebar: var(--sidebar-width);
   --spacing-tile: var(--grid-size); /* p-tile, gap-tile … one grid square (90px) */
+  --container-content: calc(var(--grid-size) * 9); /* max-w-content: content column, 810px */
 }
 
 /* ---- Plus Jakarta Sans stylistic sets (see src/config/display.ts) ---- */
@@ -46,15 +58,24 @@ html[data-font-set="lingkar"] {
 
 /* ---- Grid background (see src/config/display.ts) ----
  * Lines: 1px top + left stroke per tile. Dots: 3px dot centred in each tile.
- * The opaque sidebar and mobile bar sit on top, so the grid shows in the content area.
+ * The sidebar and mobile bar sit on top; the grid shows faintly through their blur.
+ *
+ * Drawn on a fixed layer behind the page so it stays put while content scrolls.
+ * (Not `background-attachment: fixed` — iOS Safari ignores it and scrolls anyway.)
  */
-html[data-grid="lines"] body {
+html:is([data-grid="lines"], [data-grid="dots"]) body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background-size: var(--grid-size) var(--grid-size);
+}
+html[data-grid="lines"] body::before {
   background-image:
     linear-gradient(to right, var(--grid-color) 1px, transparent 1px),
     linear-gradient(to bottom, var(--grid-color) 1px, transparent 1px);
-  background-size: var(--grid-size) var(--grid-size);
 }
-html[data-grid="dots"] body {
+html[data-grid="dots"] body::before {
   background-image: radial-gradient(circle at center, var(--grid-color) 1.5px, transparent 2px);
-  background-size: var(--grid-size) var(--grid-size);
 }

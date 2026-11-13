@@ -11,7 +11,7 @@ import { UtilityLinks } from "./UtilityLinks";
  */
 export function Sidebar() {
   return (
-    <aside className="sticky top-0 z-10 hidden h-dvh w-sidebar shrink-0 overflow-y-auto overscroll-contain bg-surface text-accent shadow-sidebar lg:block">
+    <aside className="sticky top-0 z-10 hidden h-dvh w-sidebar shrink-0 overflow-y-auto overscroll-contain border-e border-menu-separator bg-menu text-accent backdrop-blur-lg backdrop-saturate-150 lg:block">
       <div className="flex min-h-full flex-col justify-between gap-16 p-16">
         <div className="flex flex-col gap-16">
           <MenuLink href="/" label={site.domain} className="leading-none" />
