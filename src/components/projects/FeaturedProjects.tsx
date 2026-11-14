@@ -43,7 +43,7 @@ export async function FeaturedProjects({ projects }: { projects: Project[] }) {
   return (
     <section
       aria-label="Featured projects"
-      className="flex items-start gap-(--featured-gap) [--featured-gap:1rem] sm:[--featured-gap:2.5rem]"
+      className="flex items-start gap-(--featured-gap) [--featured-gap:1rem]"
     >
       <FeaturedTile tile={large} large className="min-w-0 flex-1" />
       {n > 0 && (
