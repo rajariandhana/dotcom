@@ -20,10 +20,19 @@
   {
     "key": "2025",
     "label": "2025",
-    "techs": [
-      "React.js",
-      "Tailwindcss"
-    ],
-    "text": "After years of hearing React.js I finally tried it and... wow I like it a lot. When I was still using vanilla JavaScript I usually create a script to create reusable components and when I tried React, \"huh it's so easy now\". In 2025 React became my goto frontend."
+    "techs": ["React.js", "Tailwindcss"],
+    "text": "After years of hearing React.js I finally tried it and... wow I like it a lot. When I was still using vanilla JavaScript I usually create a script to create reusable components and when I tried React, \"huh it's so easy now\". Since 2025 React became my goto frontend."
+  },
+  {
+    "key": "2026-v1",
+    "label": "2026 Version 1",
+    "techs": ["React.js", "Vite", "Tailwind CSS", "HeroUI", "TanStack Query", "Supabase"],
+    "text": "Same React and Tailwind as 2025, with a fresh coat of HeroUI. Content now comes from Supabase through TanStack Query, the Gallery got proper photo albums, and there's a chatbot you can ask about me. I want to explain my development story, so projects like Tomo and Ashes of Alengka got their own writeups page."
+  },
+  {
+    "key": "2026-v2",
+    "label": "2026 Version 2",
+    "techs": ["Next.js", "TypeScript", "Tailwind CSS", "HeroUI", "TanStack Query"],
+    "text": "The version you're looking at. With software engineer constantly changing everyday I decided to use [Claude Code](https://claude.com/product/claude-code) as a tool to help me rewrite my website with Next.js and TypeScript. I don't want it to be some AI slop. I researched [Apple's Design Principle](https://developer.apple.com/design/human-interface-guidelines) to know what makes a website feel natural and comfortable for users. My favorite would be the Tech Tree, a new way to display my growth as a programmer."
   }
 ]
