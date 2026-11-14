@@ -7,18 +7,21 @@ import {
   display,
   fontSets,
   gridStyles,
+  taglineStyles,
   type FontSet,
   type GridStyle,
+  type TaglineStyle,
 } from "@/config/display";
 
 /**
- * Development-only "debugbar" for trying font sets and grid styles live.
+ * Development-only "debugbar" for trying font sets, grid styles and the tagline live.
  * It edits the <html> data attributes directly; to change what ships,
  * edit the defaults in src/config/display.ts.
  */
 export function DebugBar() {
   const [fontSet, setFontSet] = useState<FontSet>(display.fontSet);
   const [grid, setGrid] = useState<GridStyle>(display.grid);
+  const [tagline, setTagline] = useState<TaglineStyle>(display.tagline);
 
   const pick = (keys: Iterable<unknown>) => String([...keys][0]);
 
@@ -67,6 +70,36 @@ export function DebugBar() {
             {Object.entries(gridStyles).map(([id, { label }]) => (
               <ToggleButton key={id} id={id}>
                 {label}
+              </ToggleButton>
+            ))}
+          </ToggleButtonGroup>
+        </Field>
+
+        <Field label="Tagline">
+          <ToggleButtonGroup
+            size="sm"
+            selectionMode="single"
+            disallowEmptySelection
+            aria-label="Tagline font"
+            selectedKeys={[tagline]}
+            onSelectionChange={(keys) => {
+              const value = pick(keys) as TaglineStyle;
+              setTagline(value);
+              document.documentElement.dataset.tagline = value;
+            }}
+          >
+            {Object.entries(taglineStyles).map(([id, style]) => (
+              <ToggleButton
+                key={id}
+                id={id}
+                // Like the font set buttons, each set's label is drawn in that set.
+                style={
+                  "feature" in style
+                    ? { fontFeatureSettings: style.feature ? `"${style.feature}"` : "normal" }
+                    : undefined
+                }
+              >
+                {style.label}
               </ToggleButton>
             ))}
           </ToggleButtonGroup>

@@ -12,6 +12,11 @@ type MenuLinkProps = {
   className?: string;
   /** Called on click — the mobile drawer uses it to close itself. */
   onNavigate?: () => void;
+  /**
+   * Bold and marked as current while its page is open (default). Off for the
+   * wordmark, so on `/` only the Home item is highlighted.
+   */
+  highlightActive?: boolean;
 };
 
 /**
@@ -42,10 +47,11 @@ function MenuLinkView({
   label,
   className = "",
   onNavigate,
+  highlightActive = true,
   pathname,
 }: MenuLinkProps & { pathname: string | null }) {
-  const active = isActiveHref(pathname, href);
-  const ariaCurrent = pathname === href ? "page" : active ? "true" : undefined;
+  const active = highlightActive && isActiveHref(pathname, href);
+  const ariaCurrent = !highlightActive ? undefined : pathname === href ? "page" : active ? "true" : undefined;
 
   return (
     <Link

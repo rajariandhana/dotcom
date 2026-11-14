@@ -12,6 +12,10 @@ import { useEffect, useRef, useState, type ReactNode } from "react";
  * so content scrolling underneath doesn't show through the text. The page's
  * <main> clips horizontal overflow, which keeps that strip from adding a
  * sideways scroll.
+ *
+ * On mobile the stuck title also shrinks from the pages' 32px to 20px, to take
+ * less of the small screen. The 12px it loses in height is added back as
+ * margin below it at the same pace, so the content underneath doesn't jump.
  */
 export function StickyHeading({ children, className = "" }: { children: ReactNode; className?: string }) {
   const ref = useRef<HTMLHeadingElement>(null);
@@ -41,8 +45,12 @@ export function StickyHeading({ children, className = "" }: { children: ReactNod
       data-stuck={stuck || undefined}
       className={[
         "sticky top-16 z-20 -mt-4 py-4 lg:top-0",
-        // background strip, hidden until stuck
-        "before:pointer-events-none before:absolute before:inset-y-0 before:-left-6 before:-right-[100vw] before:-z-10 sm:before:-left-tile",
+        // mobile: smaller once stuck (font-size and margin animate together, so nothing below moves)
+        "max-lg:data-stuck:mb-3 max-lg:data-stuck:text-xl",
+        "transition-[font-size,margin-bottom] duration-200 ease-out motion-reduce:transition-none",
+        // background strip, hidden until stuck. It starts 1px above the title, tucked under the
+        // mobile bar (which sits on top), so rounding at fractional zoom can't leave a see-through seam.
+        "before:pointer-events-none before:absolute before:-top-px before:bottom-0 before:-left-6 before:-right-[100vw] before:-z-10 sm:before:-left-tile",
         "before:border-b before:border-menu-separator before:bg-menu before:backdrop-blur-lg before:backdrop-saturate-150",
         "before:opacity-0 before:transition-opacity before:duration-200 data-stuck:before:opacity-100 motion-reduce:before:transition-none",
         className,

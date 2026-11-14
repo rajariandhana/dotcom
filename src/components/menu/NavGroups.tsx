@@ -1,4 +1,4 @@
-import { mobileHomeLink, navGroups } from "@/config/navigation";
+import { navGroups } from "@/config/navigation";
 
 import { MenuLink } from "./MenuLink";
 
@@ -19,12 +19,9 @@ export function NavGroups({
   const s = styles[variant];
   return (
     <div className={`flex flex-col ${s.groups}`}>
-      {navGroups.map((group, index) => (
+      {navGroups.map((group) => (
         <ul key={group.id} className="flex flex-col">
-          {(variant === "drawer" && index === 0
-            ? [mobileHomeLink, ...group.items]
-            : group.items
-          ).map((item) => (
+          {group.items.map((item) => (
             <li key={item.href}>
               <MenuLink {...item} className={s.link} onNavigate={onNavigate} />
             </li>

@@ -2,6 +2,8 @@ import Image from "next/image";
 
 import { site } from "@/config/site";
 
+import { MixedFontText } from "./MixedFontText";
+
 /** Avatar, name, role and quote. Large and stacked in the sidebar; compact in the drawer. */
 export function Identity({ variant }: { variant: "sidebar" | "drawer" }) {
   if (variant === "drawer") {
@@ -36,7 +38,9 @@ export function Identity({ variant }: { variant: "sidebar" | "drawer" }) {
         <p className="text-xl leading-none font-extrabold">{site.name}</p>
         <p className="leading-none font-medium">{site.role}</p>
       </div>
-      <p className="leading-none font-medium">“{site.quote}”</p>
+      <p className="leading-none font-medium">
+        “<MixedFontText text={site.quote} />”
+      </p>
     </div>
   );
 }

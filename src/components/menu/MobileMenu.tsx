@@ -80,7 +80,7 @@ export function MobileMenu() {
           the containing block for the fixed dropdown below and squash it into the bar. */}
       <div aria-hidden className="absolute inset-0 -z-10 bg-menu backdrop-blur-lg backdrop-saturate-150" />
 
-      <MenuLink href="/" label={site.domain} className="leading-none" onNavigate={close} />
+      <MenuLink href="/" label={site.domain} className="leading-none" onNavigate={close} highlightActive={false} />
 
       <Button
         ref={toggleRef}
@@ -106,7 +106,7 @@ export function MobileMenu() {
             animate={{ clipPath: "inset(0 0 0% 0)" }}
             exit={{ clipPath: "inset(0 0 100% 0)" }}
             transition={{ duration: reduceMotion ? 0 : 0.3, ease: [0.32, 0.72, 0, 1] }}
-            className="fixed inset-x-0 top-16 bottom-0 overflow-y-auto overscroll-contain bg-menu text-accent backdrop-blur-xl backdrop-saturate-150"
+            className="fixed inset-x-0 top-16 bottom-0 overflow-y-auto overscroll-none bg-menu text-accent backdrop-blur-xl backdrop-saturate-150"
           >
             <motion.div
               initial={{ opacity: 0, y: -8 }}

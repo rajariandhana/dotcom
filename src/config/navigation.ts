@@ -23,6 +23,8 @@ export const navGroups = [
   {
     id: "primary",
     items: [
+      // Highlighted only on `/` itself (see isActiveHref).
+      { label: "Home", href: "/" },
       { label: "Projects", href: "/projects" },
       { label: "Experience", href: "/experience" },
       { label: "Tech Tree", href: "/tech-tree" },
@@ -35,16 +37,10 @@ export const navGroups = [
       { label: "Hobbies", href: "/hobbies" },
       { label: "Website History", href: "/history" },
       { label: "FAQ", href: "/faq" },
+      { label: "Chatbot", href: "/chatbot" },
     ],
   },
 ] as const satisfies readonly NavGroup[];
-
-/**
- * Mobile menu only: shown at the top of the first group, before Projects.
- * The desktop sidebar has no Home item — the wordmark links home there.
- * Highlighted only on `/` itself (see isActiveHref).
- */
-export const mobileHomeLink = { label: "Home", href: "/" } as const satisfies NavLink;
 
 /** Pinned to the bottom of the menu. */
 export const utilityLinks = [

@@ -49,6 +49,14 @@
   --container-content: calc(var(--grid-size) * 9); /* max-w-content: content column, 810px */
 }
 
+/* ---- No rubber-band bounce at the top and bottom of the page ----
+ * macOS and iOS browsers otherwise drag the whole page past its edge and spring it back.
+ * Set on both html and body, as browsers differ in which one is the scroller. */
+html,
+body {
+  overscroll-behavior-y: none;
+}
+
 /* ---- Plus Jakarta Sans stylistic sets (see src/config/display.ts) ---- */
 html[data-font-set="lancip"] {
   font-feature-settings: "ss01";
@@ -58,6 +66,25 @@ html[data-font-set="lurus"] {
 }
 html[data-font-set="lingkar"] {
   font-feature-settings: "ss03";
+}
+
+/* ---- Tagline font set (`tagline` in src/config/display.ts), independent of the site's ----
+ * One set for the whole tagline, or "random": each letter holds a random set in
+ * --letter-font (see MixedFontText.tsx). */
+html[data-tagline="default"] [data-mixed-font] {
+  font-feature-settings: normal;
+}
+html[data-tagline="lancip"] [data-mixed-font] {
+  font-feature-settings: "ss01";
+}
+html[data-tagline="lurus"] [data-mixed-font] {
+  font-feature-settings: "ss02";
+}
+html[data-tagline="lingkar"] [data-mixed-font] {
+  font-feature-settings: "ss03";
+}
+html[data-tagline="random"] [data-mixed-font] > span {
+  font-feature-settings: var(--letter-font, normal);
 }
 
 /* ---- Grid background (see src/config/display.ts) ----
@@ -82,6 +109,25 @@ html[data-grid="lines"] body::before {
 }
 html[data-grid="dots"] body::before {
   background-image: radial-gradient(circle at center, var(--grid-color) 1.5px, transparent 2px);
+}
+
+/* ---- Coming-soon crane: the hanging brick sways from the trolley (see ComingSoon.tsx) ---- */
+@keyframes crane-sway {
+  from {
+    rotate: -4deg;
+  }
+  to {
+    rotate: 4deg;
+  }
+}
+.crane-load {
+  transform-origin: 150px 44px;
+  animation: crane-sway 2.4s ease-in-out infinite alternate;
+}
+@media (prefers-reduced-motion: reduce) {
+  .crane-load {
+    animation: none;
+  }
 }
 
 /* ---- Tech tree leaves grow in, staggered from the trunk (see TechTree.tsx) ---- */

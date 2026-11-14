@@ -2,8 +2,8 @@
  * Site-wide display options. Change the defaults here; in development the debugbar
  * panel (bottom-right) lets you flip them live without editing this file.
  *
- * Both values are written to <html> as data attributes (`data-font-set`,
- * `data-grid`) and styled in `src/app/globals.css`.
+ * Every value is written to <html> as a data attribute (`data-font-set`,
+ * `data-grid`, `data-tagline`) and styled in `src/app/globals.css`.
  */
 
 /**
@@ -21,14 +21,27 @@ export type FontSet = keyof typeof fontSets;
 
 /** Matches Figma's "Grid background" component set (Style=Lines / Style=Dots). */
 export const gridStyles = {
+  off: { label: "Off" },
   lines: { label: "Lines" },
   dots: { label: "Dots" },
-  off: { label: "Off" },
 } as const;
 
 export type GridStyle = keyof typeof gridStyles;
 
-export const display: { fontSet: FontSet; grid: GridStyle } = {
+/**
+ * The sidebar tagline's own font set, independent of `fontSet`: one of the
+ * sets above for every letter, or "random" for a random set per letter (see
+ * MixedFontText).
+ */
+export const taglineStyles = {
+  ...fontSets,
+  random: { label: "Randomized" },
+} as const;
+
+export type TaglineStyle = keyof typeof taglineStyles;
+
+export const display: { fontSet: FontSet; grid: GridStyle; tagline: TaglineStyle } = {
   fontSet: "default",
-  grid: "lines",
+  grid: "off",
+  tagline: "random",
 };

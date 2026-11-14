@@ -23,6 +23,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       data-theme="light"
       data-font-set={display.fontSet}
       data-grid={display.grid}
+      data-tagline={display.tagline}
     >
       <body className="bg-background font-sans text-foreground antialiased">
         <Providers>
