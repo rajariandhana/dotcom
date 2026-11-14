@@ -1,8 +1,12 @@
+import { ThemeToggle } from "@/components/ThemeToggle";
 import { socialLinks, utilityLinks } from "@/config/navigation";
 
 import { MenuLink } from "./MenuLink";
 
-/** Bottom-pinned group: policy links and social icons. */
+/**
+ * Bottom-pinned group: policy links and social icons, plus the theme toggle in
+ * the sidebar (on mobile it sits in the top bar instead, see MobileMenu).
+ */
 export function UtilityLinks({
   variant,
   onNavigate,
@@ -38,6 +42,11 @@ export function UtilityLinks({
             </li>
           );
         })}
+        {variant === "sidebar" && (
+          <li className="ms-auto">
+            <ThemeToggle />
+          </li>
+        )}
       </ul>
     </div>
   );

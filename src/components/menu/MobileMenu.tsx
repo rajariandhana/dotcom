@@ -4,6 +4,7 @@ import { Button } from "@heroui/react";
 import { AnimatePresence, motion, useReducedMotion } from "motion/react";
 import { useCallback, useEffect, useId, useRef, useState } from "react";
 
+import { ThemeToggle } from "@/components/ThemeToggle";
 import { site } from "@/config/site";
 
 import { Identity } from "./Identity";
@@ -82,18 +83,21 @@ export function MobileMenu() {
 
       <MenuLink href="/" label={site.domain} className="leading-none" onNavigate={close} highlightActive={false} />
 
-      <Button
-        ref={toggleRef}
-        isIconOnly
-        variant="ghost"
-        aria-label={isOpen ? "Close menu" : "Open menu"}
-        aria-expanded={isOpen}
-        aria-controls={panelId}
-        onPress={() => setIsOpen((open) => !open)}
-        className="group -me-2 text-accent"
-      >
-        <MenuToggleIcon />
-      </Button>
+      <div className="-me-2 flex items-center gap-1">
+        <ThemeToggle />
+        <Button
+          ref={toggleRef}
+          isIconOnly
+          variant="ghost"
+          aria-label={isOpen ? "Close menu" : "Open menu"}
+          aria-expanded={isOpen}
+          aria-controls={panelId}
+          onPress={() => setIsOpen((open) => !open)}
+          className="group text-accent"
+        >
+          <MenuToggleIcon />
+        </Button>
+      </div>
 
       <AnimatePresence>
         {isOpen && (

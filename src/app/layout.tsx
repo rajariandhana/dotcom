@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 
 import { DebugBar } from "@/components/debug/DebugBar";
 import { Menu } from "@/components/menu/Menu";
+import { ThemeScript } from "@/components/ThemeScript";
 import { display } from "@/config/display";
 import { site } from "@/config/site";
 
@@ -16,14 +17,20 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
+    // Prerendered light; themeInitScript switches the theme before paint, so <html>'s
+    // class and data-theme may differ from the server HTML on purpose.
     <html
       lang="en"
       className={`light ${plusJakartaSans.variable}`}
       data-theme="light"
+      suppressHydrationWarning
       data-font-set={display.fontSet}
       data-grid={display.grid}
       data-tagline={display.tagline}
     >
+      <head>
+        <ThemeScript />
+      </head>
       <body className="bg-background font-sans text-foreground antialiased">
         <Providers>
           <div className="min-h-dvh lg:flex">

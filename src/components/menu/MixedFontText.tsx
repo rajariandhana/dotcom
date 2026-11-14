@@ -1,6 +1,5 @@
 "use client";
 
-import { usePathname } from "next/navigation";
 import { useEffect, useRef } from "react";
 
 import { fontSets } from "@/config/display";
@@ -10,7 +9,7 @@ const features = Object.values(fontSets).map(({ feature }) => (feature ? `"${fea
 
 /**
  * Text where every letter is drawn with a random Plus Jakarta Sans alternate,
- * re-rolled on each page load and each navigation — while `data-tagline` on
+ * rolled once per full page load — while `data-tagline` on
  * <html> is "random" (src/config/display.ts); otherwise every letter uses the
  * one set it names.
  *
@@ -18,18 +17,19 @@ const features = Object.values(fontSets).map(({ feature }) => (feature ? `"${fea
  * hydration matches and the page still prerenders. Letters without an alternate
  * in a set simply look the same. Screen readers get the whole text once instead
  * of letter by letter.
+ *
+ * It lives in the menu, which stays mounted while you move between pages with
+ * the menu links, so the letters keep their look until the page is reloaded.
  */
 export function MixedFontText({ text, className }: { text: string; className?: string }) {
   const ref = useRef<HTMLSpanElement>(null);
-  const pathname = usePathname();
-
   useEffect(() => {
     for (const letter of ref.current?.children ?? []) {
       // A variable, not font-feature-settings itself, so globals.css can ignore it when the
       // tagline is set to a single font set (display.ts) instead of "random".
       (letter as HTMLElement).style.setProperty("--letter-font", features[Math.floor(Math.random() * features.length)]);
     }
-  }, [pathname]);
+  }, []);
 
   return (
     <span className={className}>

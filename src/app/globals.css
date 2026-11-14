@@ -3,8 +3,8 @@
 
 /*
  * Brand theme — values from Figma (Personal › ralfazza.com › Variable collection).
- * Unlayered, so it wins over HeroUI's default light theme in @layer theme.
- * Only the light theme is used: <html> is pinned to class="light" data-theme="light".
+ * Unlayered, so it wins over HeroUI's default themes in @layer theme. These are
+ * the light values; the dark ones override them just below.
  */
 :root {
 	--accent: #ff2d20; /* Figma "Accent" */
@@ -35,6 +35,37 @@
   --field-shadow: none;
   --field-border: var(--block-border);
   --field-border-width: 1px;
+}
+
+/*
+ * Dark theme — the same roles on Tailwind's warm stone scale, mirroring the light
+ * theme's stone background. Applies when <html> carries data-theme="dark" (set by
+ * the theme toggle, see src/lib/theme.ts); the selector outranks :root above.
+ * HeroUI's own dark variables (foreground, muted, chips…) come from the same switch.
+ */
+html[data-theme="dark"] {
+  --background: #0c0a09; /* stone-950 */
+  --surface: #1c1917; /* stone-900 */
+  --grid-color: rgb(245 245 244 / 0.08);
+  --menu: rgb(12 10 9 / 0.7);
+  --menu-separator: rgb(245 245 244 / 0.12);
+  --block-border: #292524; /* stone-800 */
+  --bark: #a8a29e; /* stone-400 */
+  --field-background: var(--surface);
+}
+
+/* Tech logos that are only black or grey (public/tech/) would vanish on a dark
+ * leaf or chip, so dark mode inverts them to white. Add any new one-colour logo here. */
+html[data-theme="dark"]
+  :is(
+    img[src$="/tech/express.svg"],
+    img[src$="/tech/github.svg"],
+    img[src$="/tech/heroui.svg"],
+    img[src$="/tech/ollama.svg"],
+    img[src$="/tech/unity.svg"],
+    img[src$="/tech/vercel.svg"]
+  ) {
+  filter: invert(1);
 }
 
 @theme inline {
@@ -109,6 +140,30 @@ html[data-grid="lines"] body::before {
 }
 html[data-grid="dots"] body::before {
   background-image: radial-gradient(circle at center, var(--grid-color) 1.5px, transparent 2px);
+}
+
+/* ---- Theme switch reveal (Magic UI Animated Theme Toggler, see components/ui/) ----
+ * The toggler swaps themes inside a View Transition and grows the new snapshot
+ * out of the button with a clip-path animation. From Magic UI's registry: turn off
+ * the default cross-fade. Plus the hooks its source sets but the registry CSS
+ * leaves out: hold the new snapshot at its collapsed clip-path until the
+ * animation starts, and match the transition's length to the animation. */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
+}
+/* HeroUI's base styles take the page out of view transitions (:root { view-transition-name: none }),
+ * which leaves nothing to reveal: the theme would just snap and the transition end at once. Put the
+ * page back in only while the toggler is switching (it sets this attribute before the transition). */
+html[data-magicui-theme-vt="active"] {
+  view-transition-name: root;
+}
+html[data-magicui-theme-vt="active"]::view-transition-new(root) {
+  clip-path: var(--magicui-theme-vt-clip-from);
+}
+html[data-magicui-theme-vt="active"]::view-transition-group(root) {
+  animation-duration: var(--magicui-theme-toggle-vt-duration);
 }
 
 /* ---- Coming-soon crane: the hanging brick sways from the trolley (see ComingSoon.tsx) ---- */
