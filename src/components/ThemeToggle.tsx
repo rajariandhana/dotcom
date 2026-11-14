@@ -30,6 +30,7 @@ export function ThemeToggle({ className = "" }: { className?: string }) {
       aria-label={label}
       title={label}
       className={`grid size-10 place-items-center rounded-lg transition-transform duration-150 hover:-rotate-12 hover:scale-110 focus-visible:outline-2 focus-visible:outline-focus [&_svg]:size-5 ${className}`}
+			duration={600}
     />
   );
 }
