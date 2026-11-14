@@ -11,7 +11,7 @@ export function ComingSoon() {
       <ConstructionIllustration className="w-full max-w-80" />
       <div className="flex flex-col items-center gap-2">
         <h2 className="text-xl font-bold sm:text-2xl">Coming soon</h2>
-        <p className="max-w-md leading-relaxed text-pretty text-muted">
+        <p className="max-w-md leading-relaxed text-pretty text-muted text-sm sm:text-md">
           Apologies for the inconvenience. <br /> This page is under
           construction.
         </p>

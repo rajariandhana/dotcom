@@ -1,8 +1,8 @@
 import { Chip } from "@heroui/react";
 import type { Metadata } from "next";
 import Image from "next/image";
-import type { ReactNode } from "react";
 
+import { LinkedText } from "@/components/LinkedText";
 import { StickyHeading } from "@/components/StickyHeading";
 import { HistoryGallery } from "@/components/history/HistoryGallery";
 import {
@@ -120,29 +120,4 @@ async function HistoryItem({
       </article>
     </li>
   );
-}
-
-// "[label](https://…)" in a history text becomes a link; everything else stays plain text.
-const LINK = /\[([^\]]+)\]\((https?:\/\/[^)\s]+)\)/g;
-
-function LinkedText({ text }: { text: string }) {
-  const parts: ReactNode[] = [];
-  let last = 0;
-  for (const match of text.matchAll(LINK)) {
-    parts.push(text.slice(last, match.index));
-    parts.push(
-      <a
-        key={match.index}
-        href={match[2]}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="text-accent underline underline-offset-2 hover:decoration-2 focus-visible:outline-2 focus-visible:outline-focus"
-      >
-        {match[1]}
-      </a>,
-    );
-    last = match.index + match[0].length;
-  }
-  parts.push(text.slice(last));
-  return parts;
 }

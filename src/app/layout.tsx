@@ -12,7 +12,6 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: { default: site.domain, template: `%s · ${site.domain}` },
   description: `${site.name} — ${site.role}`,
-  icons: { icon: "/ProfilePicture.webp" },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
