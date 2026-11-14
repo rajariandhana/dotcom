@@ -7,7 +7,13 @@
  * the light values; the dark ones override them just below.
  */
 :root {
-	--accent: #ff2d20; /* Figma "Accent" */
+	 /* Figma "Accent" */
+	--accent: #ff2d20;
+	/* --accent: #9777c9; */
+	/* --accent: #05d1a8; */
+	/* --accent: #139bfa; */
+	/* --accent: #fc482e; */
+	/* --accent: #fec700; */
   --accent-foreground: var(--white);
   --background: #f5f5f4; /* previous site's page background (Tailwind stone-100) */
   --surface: #f9fafb; /* sidebar fill  #F9FAFB */
@@ -181,6 +187,162 @@ html[data-magicui-theme-vt="active"]::view-transition-group(root) {
 }
 @media (prefers-reduced-motion: reduce) {
   .crane-load {
+    animation: none;
+  }
+}
+
+/* ---- Hobbies page toys (see src/components/hobbies/) ---- */
+/* A plucked ukulele string shakes and settles. */
+@keyframes string-ring {
+  0%,
+  100% {
+    translate: 0 0;
+  }
+  10% {
+    translate: 0 -3px;
+  }
+  25% {
+    translate: 0 2.5px;
+  }
+  40% {
+    translate: 0 -1.5px;
+  }
+  60% {
+    translate: 0 1px;
+  }
+  80% {
+    translate: 0 -0.5px;
+  }
+}
+.string-ring {
+  animation: string-ring 0.6s ease-out;
+}
+/* Steam wisps drift up and fade; a stir makes them rise faster for a moment. */
+@keyframes wisp {
+  from {
+    opacity: 0;
+    translate: 0 14px;
+  }
+  40% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    translate: 0 -10px;
+  }
+}
+.steam .wisp {
+  animation: wisp 2.4s ease-in-out infinite;
+}
+.steam-burst .wisp {
+  animation-duration: 0.9s;
+  animation-iteration-count: 3;
+}
+@keyframes spoon-stir {
+  25% {
+    rotate: -18deg;
+  }
+  50% {
+    rotate: 6deg;
+  }
+  75% {
+    rotate: -12deg;
+  }
+}
+.spoon-stir {
+  animation: spoon-stir 0.7s ease-in-out;
+}
+@keyframes bubble {
+  from {
+    scale: 0;
+    opacity: 1;
+  }
+  70% {
+    scale: 1.2;
+    opacity: 1;
+  }
+  to {
+    scale: 1.4;
+    opacity: 0;
+  }
+}
+.bubble {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: bubble 0.6s ease-out both;
+}
+@keyframes flame {
+  50% {
+    scale: 1 0.88;
+  }
+}
+.flame {
+  transform-box: fill-box;
+  transform-origin: bottom;
+  animation: flame 0.5s ease-in-out infinite;
+}
+/* The Pokéball drops in, then wobbles three times before it clicks. */
+@keyframes ball-wobble {
+  0% {
+    translate: 0 -40px;
+    rotate: 0deg;
+  }
+  15% {
+    translate: 0 0;
+  }
+  22%,
+  44%,
+  66% {
+    rotate: 0deg;
+  }
+  30% {
+    rotate: -18deg;
+  }
+  37% {
+    rotate: 14deg;
+  }
+  52% {
+    rotate: -16deg;
+  }
+  59% {
+    rotate: 12deg;
+  }
+  74% {
+    rotate: -12deg;
+  }
+  81% {
+    rotate: 8deg;
+  }
+  100% {
+    translate: 0 0;
+    rotate: 0deg;
+  }
+}
+.ball-wobble {
+  transform-origin: 50% 90%;
+  animation: ball-wobble 2.3s ease-in-out both;
+}
+@keyframes ball-spark {
+  from {
+    opacity: 1;
+    transform: translate(-50%, -50%) rotate(var(--angle)) translateY(-40px);
+  }
+  to {
+    opacity: 0;
+    transform: translate(-50%, -50%) rotate(var(--angle)) translateY(-78px);
+  }
+}
+.ball-spark {
+  animation: ball-spark 0.6s ease-out both;
+}
+@media (prefers-reduced-motion: reduce) {
+  .string-ring,
+  .steam .wisp,
+  .spoon-stir,
+  .bubble,
+  .flame,
+  .ball-wobble,
+  .ball-spark {
     animation: none;
   }
 }
