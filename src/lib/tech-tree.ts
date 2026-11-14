@@ -47,7 +47,10 @@ export type TreeConfig = {
 
 // Seeds picked by eye from a batch for the most balanced fork at each size.
 export const treeConfigs = {
-  small: { width: 340, leaf: 36, crownX: 152, crownY: 255, trunkHeight: 115, trunkRadius: 9, step: 4, influence: 75, reach: 6, twigs: 260, leafShell: 0.3, seed: 11 },
+  // Phones: the desktop tree's shape scaled to phone width (wide crown on a short trunk), with
+  // the crown a little taller than a straight scale so 38 leaves still fit at a tappable size
+  // (an exact scale-down leaves ~20px leaves). Seed picked for the fewest touching leaves.
+  small: { width: 340, leaf: 28, crownX: 155, crownY: 140, trunkHeight: 62, trunkRadius: 7, step: 4, influence: 55, reach: 6, twigs: 260, leafShell: 0.5, seed: 17 },
   medium: { width: 560, leaf: 40, crownX: 250, crownY: 215, trunkHeight: 125, trunkRadius: 12, step: 5, influence: 90, reach: 7, twigs: 340, leafShell: 0.45, seed: 7 },
   large: { width: 800, leaf: 46, crownX: 350, crownY: 225, trunkHeight: 140, trunkRadius: 16, step: 6, influence: 110, reach: 8, twigs: 420, leafShell: 0.5, seed: 11 },
 } as const satisfies Record<string, TreeConfig>;

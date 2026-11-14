@@ -15,7 +15,8 @@ export default function TechTreePage() {
         Tech Tree
       </StickyHeading>
 
-      <p className="max-w-prose text-muted">
+      {/* Pulled up under the title like the other page intros; a sibling, so the title keeps sticking. */}
+      <p className="-mt-7 max-w-prose text-muted">
         A beautiful tree full of technologies I&apos;ve used before, I wonder if
         one day it&apos;ll grow into a forrest.
         <br />
