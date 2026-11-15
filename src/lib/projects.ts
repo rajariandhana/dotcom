@@ -1,3 +1,4 @@
+import type { GalleryImage } from "@/components/Gallery";
 import { featuredProjectSlugs } from "@/config/projects";
 
 import projectsData from "../../public/projects.json";
@@ -46,4 +47,15 @@ export function projectHref(project: Project): { href: string; external: boolean
   return project.external
     ? { href: project.external, external: true }
     : { href: `/projects/${project.slug}`, external: false };
+}
+
+/** Gallery images for the detail page: `images`, or just `cover` when there are none. */
+export function projectGallery(project: Project): GalleryImage[] {
+  const srcs = project.images.length > 0 ? project.images : project.cover ? [project.cover] : [];
+  return srcs.map((src, i) => ({ src, alt: `${project.name}, image ${i + 1} of ${srcs.length}` }));
+}
+
+/** Projects that get a page at /projects/<slug> (the rest link to their own site). */
+export function projectsWithPages(): Project[] {
+  return projects.filter((project) => !project.external);
 }

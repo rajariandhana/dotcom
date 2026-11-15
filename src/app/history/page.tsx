@@ -1,16 +1,10 @@
-import { Chip } from "@heroui/react";
 import type { Metadata } from "next";
-import Image from "next/image";
 
+import { Gallery } from "@/components/Gallery";
 import { LinkedText } from "@/components/LinkedText";
 import { StickyHeading } from "@/components/StickyHeading";
-import { HistoryGallery } from "@/components/history/HistoryGallery";
-import {
-  findTech,
-  getHistoryShots,
-  histories,
-  type HistoryEntry,
-} from "@/lib/history";
+import { TechChips } from "@/components/TechChips";
+import { getHistoryShots, histories, type HistoryEntry } from "@/lib/history";
 
 export const metadata: Metadata = {
   title: "Website History",
@@ -78,40 +72,17 @@ async function HistoryItem({
           <h2 id={id} className="text-xl font-bold sm:text-2xl">
             {entry.label}
           </h2>
-          <ul
-            aria-label="Technologies"
-            className="flex flex-wrap items-center gap-1.5"
-          >
-            {entry.techs.map((name) => {
-              const tech = findTech(name);
-              return (
-                <li key={name}>
-                  <Chip
-                    size="sm"
-                    variant="soft"
-                    color="accent"
-                    className="gap-1.5"
-                  >
-                    {tech && (
-                      <Image
-                        src={`/tech/${tech.icon}.svg`}
-                        alt=""
-                        width={14}
-                        height={14}
-                        unoptimized
-                        className="size-3.5"
-                      />
-                    )}
-                    {tech?.name ?? name}
-                  </Chip>
-                </li>
-              );
-            })}
-          </ul>
+          <TechChips techs={entry.techs} />
         </div>
 
         {shots.length > 0 && (
-          <HistoryGallery shots={shots} label={entry.label} />
+          <Gallery
+            label={`Screenshots of the ${entry.label} site`}
+            images={shots.map((shot, i) => ({
+              src: shot.src,
+              alt: `${entry.label}, screenshot ${i + 1} of ${shots.length}`,
+            }))}
+          />
         )}
 
         <p className="border border-block bg-surface p-4 leading-relaxed text-pretty sm:p-5">

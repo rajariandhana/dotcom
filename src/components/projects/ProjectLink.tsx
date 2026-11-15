@@ -24,7 +24,8 @@ export function ProjectLink({
     );
   }
   return (
-    <Link href={href} className={className} style={style}>
+    // prefetch: also fetch the page's content (it reads the slug), not just the shared shell.
+    <Link href={href} prefetch className={className} style={style}>
       {children}
     </Link>
   );
