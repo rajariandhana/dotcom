@@ -11,7 +11,7 @@ export function TechChips({ techs }: { techs: readonly string[] }) {
       {techs.map((name) => {
         const tech = findTech(name);
         return (
-          <li key={name}>
+          <li key={name} className="flex">
             <Chip size="sm" variant="soft" color="accent" className="gap-1.5">
               {tech && (
                 <Image

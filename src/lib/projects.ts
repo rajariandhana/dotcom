@@ -17,10 +17,17 @@ export type Project = {
   demo?: string;
   size?: string;
   category?: string;
+  year: number;
+  /** Kind of work, e.g. "personal" or "university project". Free text; the filter lists whatever is used. */
+  type?: string;
+  /** Set to false to keep a project in projects.json without showing it anywhere. */
+  enabled?: boolean;
 };
 
-/** All projects, in the order they appear in projects.json. */
-export const projects: readonly Project[] = projectsData;
+/** All enabled projects, in the order they appear in projects.json (newest year first). */
+export const projects: readonly Project[] = (projectsData as Project[]).filter(
+  (project) => project.enabled !== false,
+);
 
 export function getProject(slug: string): Project | undefined {
   return projects.find((project) => project.slug === slug);

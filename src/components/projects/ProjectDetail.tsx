@@ -25,7 +25,7 @@ export function ProjectDetail({ project }: { project: Project }) {
 }
 
 /**
- * Page shell: back link, sticky project name, techs and links. Children go
+ * Page shell: back link, sticky project name, year, techs and links. Children go
  * below it. The heading stays a direct child of the page column so it sticks.
  */
 export function ProjectPage({ project, children }: { project: Project; children?: ReactNode }) {
@@ -43,6 +43,7 @@ export function ProjectPage({ project, children }: { project: Project; children?
 
       {/* Pulled up under the title like the other page intros. */}
       <div className="-mt-7 flex flex-col gap-4">
+        <p className="text-sm font-medium text-muted tabular-nums">{project.year}</p>
         <TechChips techs={project.techs} />
         <ProjectLinks project={project} />
       </div>

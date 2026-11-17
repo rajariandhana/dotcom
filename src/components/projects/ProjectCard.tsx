@@ -5,7 +5,7 @@ import { projectImage, type Project } from "@/lib/projects";
 
 import { ProjectLink } from "./ProjectLink";
 
-/** A row in the project list: thumbnail, name, clamped description, tech chips. */
+/** A row in the project list: thumbnail, name and year, clamped description, tech chips. */
 export function ProjectCard({ project }: { project: Project }) {
   const image = projectImage(project);
   return (
@@ -26,9 +26,12 @@ export function ProjectCard({ project }: { project: Project }) {
       </div>
 
       <div className="flex min-w-0 flex-1 flex-col gap-1.5 sm:gap-2">
-        <h3 className="text-base leading-tight font-semibold group-hover:text-accent sm:text-xl">
-          {project.name}
-        </h3>
+        <div className="flex items-baseline justify-between gap-3">
+          <h3 className="text-base leading-tight font-semibold group-hover:text-accent sm:text-xl">
+            {project.name}
+          </h3>
+          <span className="shrink-0 text-sm text-muted tabular-nums">{project.year}</span>
+        </div>
         {/* Cut off with an ellipsis once it runs past the space it has. */}
         <p className="line-clamp-2 text-sm leading-snug text-muted sm:line-clamp-3 sm:text-base">
           {project.description}

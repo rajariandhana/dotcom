@@ -15,7 +15,9 @@
     "demo": "https://tomo.ralfazza.com",
     "size": "",
     "category": "web",
-    "cover": "/projects/tomo/cover.png"
+    "cover": "/projects/tomo/cover.png",
+    "year": 2026,
+    "type": "personal"
   },
   {
     "name": "bitmore",
@@ -34,7 +36,9 @@
     "repo": "",
     "demo": "",
     "size": "",
-    "category": "web"
+    "category": "web",
+    "year": 2026,
+    "type": "competition"
   },
   {
     "name": "The Weekly Roast",
@@ -56,7 +60,9 @@
     "repo": "https://github.com/rajariandhana/fnb-diary",
     "demo": "https://the-weekly-roast.ralfazza.com",
     "size": "",
-    "category": "web"
+    "category": "web",
+    "year": 2026,
+    "type": "personal"
   },
   {
     "name": "Ashes of Alengka",
@@ -76,7 +82,9 @@
     "cover": "/projects/ashes-of-alengka/shot-arena.jpg",
     "size": "",
     "category": "game",
-    "external": "https://ashesofalengka.com"
+    "external": "https://ashesofalengka.com",
+    "year": 2026,
+    "type": "competition"
   },
   {
     "name": "BaseGame",
@@ -94,45 +102,56 @@
     "repo": "https://github.com/rajariandhana/BaseGame",
     "demo": "https://basegame.ralfazza.com",
     "size": "",
-    "category": "game"
-  },
-	{
-    "name": "Boombatag 2024",
-    "slug": "boombatag-2024",
-    "techs": [
-      "Unity",
-      "C#",
-      "Figma"
-    ],
-    "description": "Used for Schematics ITS 2024, the game is inspired from the infamous \"Keep Talking and Nobody Explodes.\"",
-    "images": [
-      "/projects/boombatag-2024/1.webp",
-      "/projects/boombatag-2024/5.webp",
-      "/projects/boombatag-2024/6.webp"
-    ],
-    "repo": "",
-    "demo": "",
-    "size": "WIDE",
-    "category": "game"
+    "category": "game",
+    "year": 2026,
+    "type": "personal"
   },
   {
-    "name": "Box of Curiosity",
-    "slug": "box-of-curiosity",
+    "name": "HereToo",
+    "slug": "heretoo",
     "techs": [
-      "Unity",
-      "C#"
+      "React",
+      "TypeScript",
+      "FastAPI",
+      "ZoomSDK",
+      "Ollama API"
     ],
-    "description": "We created a game that were played with over 1000 participants online for the Schematics 2024 Event.\"",
+    "description": "Improved hybrid meetings through interest-based participant matching and LLM-generated conversation topics. Coordinated project planning and architected the REST API system, successfully integrating a React frontend with FastAPI backend services and the Zoom Meeting SDK.",
     "images": [
-      "/projects/box-of-curiosity/1.webp",
-      "/projects/box-of-curiosity/3.webp",
-      "/projects/box-of-curiosity/4.webp",
-      "/projects/box-of-curiosity/5.webp"
+      "/projects/heretoo/1.webp",
+      "/projects/heretoo/2.webp",
+      "/projects/heretoo/3.webp",
+      "/projects/heretoo/4.webp",
+      "/projects/heretoo/5.webp",
+      "/projects/heretoo/6.webp",
+      "/projects/heretoo/7.webp",
+      "/projects/heretoo/8.webp"
     ],
     "repo": "",
     "demo": "",
-    "size": "WIDE",
-    "category": "game"
+    "size": "",
+    "category": "web",
+    "year": 2025,
+    "type": "University Project"
+  },
+  {
+    "name": "Forkable Virtual Disk",
+    "slug": "forkable-virtual-disk",
+    "techs": [
+      "OpenBSD",
+      "C",
+      "UNIX"
+    ],
+    "description": "Engineered a forkable virtual filesystem that simulates circular-disk behavior, providing low-level management of filesystem records, disk blocks, and data references. Implemented filesystem to disk mapping and data storage mechanisms in C on UNIX, demonstrating practical understanding of operating systems and low-level systems programming.",
+    "images": [
+      "/projects/forkable-virtual-disk/1.webp"
+    ],
+    "repo": "",
+    "demo": "",
+    "size": "",
+    "category": "other",
+    "year": 2025,
+    "type": "University Project"
   },
   {
     "name": "QQ Joker",
@@ -149,9 +168,11 @@
     "repo": "https://github.com/rajariandhana/GMTK-Game-Jam-2025",
     "demo": "https://loliakulka.itch.io/q-q-joker",
     "size": "",
-    "category": "game"
+    "category": "game",
+    "year": 2025,
+    "type": "competition"
   },
-	{
+  {
     "name": "Mercusuram",
     "slug": "mercusuram",
     "techs": [
@@ -166,7 +187,9 @@
     "repo": "https://github.com/rajariandhana/IGI-Game-Jam-2025",
     "demo": "https://rj-game-studio.itch.io/mercusuram",
     "size": "",
-    "category": "game"
+    "category": "game",
+    "year": 2025,
+    "type": "competition"
   },
   {
     "name": "SEA Catering",
@@ -191,7 +214,9 @@
     "repo": "https://github.com/rajariandhana/seacatering",
     "demo": "https://seacatering.vercel.app",
     "size": "",
-    "category": "web"
+    "category": "web",
+    "year": 2025,
+    "type": "competition"
   },
   {
     "name": "(Not) Space Invaders",
@@ -207,26 +232,9 @@
     "repo": "",
     "demo": "",
     "size": "",
-    "category": "game"
-  },
-  {
-    "name": "Wasteless",
-    "slug": "wasteless",
-    "techs": [
-      "Express.js",
-      "React",
-      "Tailwindcss",
-      "sqlite"
-    ],
-    "description": "Web based application as a bridge between students and canteen staff to reduce canteen food waste. Students can order food in advance, gave feedbacks, and even suggest new menus. Staffs can monitor which menu are popular, amount of orders to prepare.",
-    "images": [
-      "/projects/wasteless/1.webp",
-      "/projects/wasteless/2.webp"
-    ],
-    "repo": "",
-    "demo": "https://wasteless.uqcloud.net",
-    "size": "",
-    "category": "web"
+    "category": "game",
+    "year": 2025,
+    "type": "University Project"
   },
   {
     "name": "SIPUTIH",
@@ -246,7 +254,72 @@
     "repo": "",
     "demo": "https://siputih-its.com",
     "size": "",
-    "category": "web"
+    "category": "web",
+    "year": 2025,
+    "type": "Other"
+  },
+  {
+    "name": "Wasteless",
+    "slug": "wasteless",
+    "techs": [
+      "Express.js",
+      "React",
+      "Tailwindcss",
+      "sqlite"
+    ],
+    "description": "Web based application as a bridge between students and canteen staff to reduce canteen food waste. Students can order food in advance, gave feedbacks, and even suggest new menus. Staffs can monitor which menu are popular, amount of orders to prepare.",
+    "images": [
+      "/projects/wasteless/1.webp",
+      "/projects/wasteless/2.webp"
+    ],
+    "repo": "",
+    "demo": "https://wasteless.uqcloud.net",
+    "size": "",
+    "category": "web",
+    "year": 2025,
+    "type": "University Project"
+  },
+  {
+    "name": "Boombatag 2024",
+    "slug": "boombatag-2024",
+    "techs": [
+      "Unity",
+      "C#",
+      "Figma"
+    ],
+    "description": "Used for Schematics ITS 2024, the game is inspired from the infamous \"Keep Talking and Nobody Explodes.\"",
+    "images": [
+      "/projects/boombatag-2024/1.webp",
+      "/projects/boombatag-2024/5.webp",
+      "/projects/boombatag-2024/6.webp"
+    ],
+    "repo": "",
+    "demo": "",
+    "size": "WIDE",
+    "category": "game",
+    "year": 2024,
+    "type": "organization/volunteer"
+  },
+  {
+    "name": "Box of Curiosity",
+    "slug": "box-of-curiosity",
+    "techs": [
+      "Unity",
+      "C#"
+    ],
+    "description": "We created a game that were played with over 1000 participants online for the Schematics 2024 Event.\"",
+    "images": [
+      "/projects/box-of-curiosity/1.webp",
+      "/projects/box-of-curiosity/3.webp",
+      "/projects/box-of-curiosity/4.webp",
+      "/projects/box-of-curiosity/5.webp"
+    ],
+    "repo": "",
+    "demo": "",
+    "size": "WIDE",
+    "category": "game",
+    "year": 2024,
+    "type": "organization/volunteer"
   },
   {
     "name": "Rajawali Holdings Indonesia",
@@ -264,7 +337,9 @@
     "repo": "",
     "demo": "https://rajawaliholdings.com",
     "size": "",
-    "category": "web"
+    "category": "web",
+    "year": 2024,
+    "type": "Other"
   },
   {
     "name": "SIMPENAN | Sistem Informasi Media Penting dan Aman",
@@ -283,7 +358,9 @@
     "repo": "https://github.com/NETICS-Laboratory/symmetric-data-encryption-application-simpenan",
     "demo": "https://simpenan.ralfazza.com",
     "size": "WIDE",
-    "category": "web"
+    "category": "web",
+    "year": 2024,
+    "type": "University Project"
   },
   {
     "name": "Alpro x Three.js",
@@ -300,7 +377,9 @@
     "repo": "https://github.com/rajariandhana/ComputerGraphicsFP",
     "demo": "",
     "size": "WIDE",
-    "category": "other"
+    "category": "other",
+    "year": 2024,
+    "type": "University Project"
   },
   {
     "name": "GOOFYAH | Goal Organizer For You At Hand",
@@ -320,7 +399,9 @@
     "repo": "https://github.com/rajariandhana/goofyah",
     "demo": "",
     "size": "TALL",
-    "category": "web"
+    "category": "web",
+    "year": 2024,
+    "type": "University Project"
   },
   {
     "name": "SIKMA | Sistem Informasi Kesehatan Mahasiswa",
@@ -340,7 +421,9 @@
     "repo": "https://github.com/rajariandhana/sikma",
     "demo": "https://sikma.ralfazza.com",
     "size": "TALL",
-    "category": "web"
+    "category": "web",
+    "year": 2024,
+    "type": "University Project"
   },
   {
     "name": "Minesweeper",
@@ -360,25 +443,9 @@
     "repo": "https://github.com/rajariandhana/minesweeper",
     "demo": "https://minesweeper.ralfazza.com",
     "size": "BOX-SM",
-    "category": "game"
-  },
-  {
-    "name": "Checkers",
-    "slug": "checkers",
-    "techs": [
-      "Unity",
-      "C#"
-    ],
-    "description": "Just a replication of a checkers game. Unfortunately it is a bit difficult to put it on the web so I am sorry about the aspect ratio",
-    "images": [
-      "/projects/checkers/1.webp",
-      "/projects/checkers/2.webp",
-      "/projects/checkers/3.webp"
-    ],
-    "repo": "https://github.com/rajariandhana/dev_checkers",
-    "demo": "https://checkers.ralfazza.com",
-    "size": "BOX-SM",
-    "category": "game"
+    "category": "game",
+    "year": 2024,
+    "type": "personal"
   },
   {
     "name": "FoodGrub",
@@ -399,7 +466,29 @@
     "repo": "https://github.com/rajariandhana/fpcamin",
     "demo": "https://foodgrub.ralfazza.com",
     "size": "BOX-LG",
-    "category": "web"
+    "category": "web",
+    "year": 2024,
+    "type": "personal"
+  },
+  {
+    "name": "Checkers",
+    "slug": "checkers",
+    "techs": [
+      "Unity",
+      "C#"
+    ],
+    "description": "Just a replication of a checkers game. Unfortunately it is a bit difficult to put it on the web so I am sorry about the aspect ratio",
+    "images": [
+      "/projects/checkers/1.webp",
+      "/projects/checkers/2.webp",
+      "/projects/checkers/3.webp"
+    ],
+    "repo": "https://github.com/rajariandhana/dev_checkers",
+    "demo": "https://checkers.ralfazza.com",
+    "size": "BOX-SM",
+    "category": "game",
+    "year": 2023,
+    "type": "personal"
   },
   {
     "name": "Boombatag 2023",
@@ -420,7 +509,9 @@
     "repo": "",
     "demo": "",
     "size": "WIDE",
-    "category": "game"
+    "category": "game",
+    "year": 2023,
+    "type": "organization/volunteer"
   },
   {
     "name": "Escape Card",
@@ -440,7 +531,9 @@
     "repo": "",
     "demo": "",
     "size": "WIDE",
-    "category": "game"
+    "category": "game",
+    "year": 2023,
+    "type": "organization/volunteer"
   },
   {
     "name": "StudyKanji",
@@ -460,7 +553,9 @@
     "repo": "https://github.com/rajariandhana/kanji",
     "demo": "https://studykanji.ralfazza.com",
     "size": "TALL",
-    "category": "web"
+    "category": "web",
+    "year": 2023,
+    "type": "personal"
   },
   {
     "name": "Postitivity",
@@ -482,7 +577,9 @@
     "repo": "",
     "demo": "https://postitivity.000webhostapp.com/",
     "size": "BOX-LG",
-    "category": "web"
+    "category": "web",
+    "year": 2023,
+    "type": "University Project"
   },
   {
     "name": "ServiceHub",
@@ -501,6 +598,8 @@
     ],
     "demo": "https://www.figma.com/proto/TQB7eNQb8QwwgKid9RwAT0/ServiceHub?node-id=1-3&starting-point-node-id=1%3A3&mode=design&t=EcjVJJ0KtK4EcMot-1",
     "size": "TALL",
-    "category": "other"
+    "category": "other",
+    "year": 2023,
+    "type": "University Project"
   }
 ]
