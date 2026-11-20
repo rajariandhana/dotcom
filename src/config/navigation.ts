@@ -38,6 +38,8 @@ export const navGroups = [
       { label: "Website History", href: "/history" },
       { label: "FAQ", href: "/faq" },
       { label: "Chatbot", href: "/chatbot" },
+      // Playground, listed only in `bun dev`. The pages still ship, so /test works in production by URL.
+      ...(process.env.NODE_ENV === "development" ? [{ label: "Test", href: "/test" }] : []),
     ],
   },
 ] as const satisfies readonly NavGroup[];
