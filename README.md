@@ -97,5 +97,9 @@ Hobbies:
 /music
 /photography
 /baking
-- group Projects, Experience, Tech Tree -> more cohesive SWEN group
-- actually yes let's add dark mode
+- coding since 2019 (15 y.o.)
+- freelance/assignment/personal projects
+- GIFs vs video -> find out
+- improve tech tree in mobile
+- random facts about me
+- motion appear
