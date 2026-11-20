@@ -36,8 +36,9 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           <div className="min-h-dvh lg:flex">
             <Menu />
             {/* Content area: one grid tile (90px) of padding on larger screens so pages
-                start on a grid line; children stack in a column, capped at 9 tiles wide. */}
-            <main id="content" className="min-w-0 flex-1 overflow-x-clip px-6 py-12 sm:p-tile">
+                start on a grid line; children stack in a column, capped at 9 tiles wide.
+                A size container so full-bleed pages can measure it (see globals.css). */}
+            <main id="content" className="@container min-w-0 flex-1 overflow-x-clip px-6 py-12 sm:p-tile">
               <div className="flex max-w-content flex-col gap-8">{children}</div>
             </main>
           </div>

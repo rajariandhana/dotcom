@@ -86,6 +86,47 @@ html[data-theme="dark"]
   --container-content: calc(var(--grid-size) * 9); /* max-w-content: content column, 810px */
 }
 
+/* ---- Project pages with their own design (app/projects/tomo, app/projects/bitmore) ----
+ * Brand colours, fixed in both themes: these pages keep their product's look. */
+@theme {
+  --color-bitmore-yellow: #fffb00;
+  --color-bitmore-black: #0c0c0c;
+  --color-bitmore-white: #fafafa;
+  --color-bitmore-gray: #262626;
+
+  --color-tomo-blue: #2563eb;
+  --color-tomo-blue-deep: #1d4ed8;
+  --color-tomo-blue-100: #dbeafe;
+  --color-tomo-blue-50: #eff6ff;
+  --color-tomo-orange: #f97316;
+  --color-tomo-orange-50: #fff7ed;
+  --color-tomo-ink: #0f172a;
+  --color-tomo-slate: #64748b;
+  --color-tomo-paper: #f8fafc;
+  --color-tomo-line: #e2e8f0;
+}
+
+/* A page whose root carries data-full-bleed fills the whole content area beside
+ * the menu, so its coloured bands reach the edges: it pulls itself out over
+ * <main>'s padding (px-6 py-12, p-tile from sm) and past the 9-tile cap.
+ * <main> is a size container, so 100cqw is its content width.
+ *
+ * This is done on the page itself, not with a #content:has(...) rule: Next keeps
+ * a page you navigated away from mounted (display: none) to restore it on Back,
+ * and a :has() rule would still match it and strip the padding off the next page. */
+[data-full-bleed] {
+  --bleed-x: 1.5rem;
+  --bleed-y: 3rem;
+  width: calc(100cqw + 2 * var(--bleed-x));
+  margin: calc(-1 * var(--bleed-y)) calc(-1 * var(--bleed-x));
+}
+@media (width >= 40rem) {
+  [data-full-bleed] {
+    --bleed-x: var(--grid-size);
+    --bleed-y: var(--grid-size);
+  }
+}
+
 /* ---- No rubber-band bounce at the top and bottom of the page ----
  * macOS and iOS browsers otherwise drag the whole page past its edge and spring it back.
  * Set on both html and body, as browsers differ in which one is the scroller. */
